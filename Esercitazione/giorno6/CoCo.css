@@ -1,0 +1,32 @@
+body{
+    width: 1000px;
+    background-color: coral;
+}
+.Main-Container{
+    
+    width: 500px;
+    border: 1px solid black;
+    border-radius: 10px;
+    background-color: antiquewhite;
+    margin: 20px;
+    justify-content: center;
+    padding: 40px;
+    justify-content: center;
+}
+
+.menu{
+     
+    width: 100px;
+    border: 1px solid black;
+    border-radius: 10px;
+    background-color: antiquewhite;
+    margin: 20px;
+    justify-content: center;
+    padding: 40px;
+}
+
+li a{
+    
+    text-align: center;
+
+}

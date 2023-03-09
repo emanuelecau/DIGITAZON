@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lezione 3</title>
+    <style>
+        html{
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 16px;
+            background-color: rgb(38, 59, 16);
+        }
+        #boxes {
+            padding: 1rem;
+            background-color: aquamarine;
+            color: aliceblue;
+            border: 1rem;
+        }
+        #boxes div {
+            background-color: rgb(38, 80, 66);
+            color: aliceblue;
+            /*
+            padding-top: 10px ;
+            padding-left: 10px;
+            padding-bottom: 10px;
+            padding-right: 10px;
+            il REM entra in valore con la radice es html font sixe 16px andrà a moltiplicare tutti i rem sotto
+            */
+            padding: 1.2rem;
+            margin: 0 0 3rem 0;
+            border: 0.8rem solid rgb(100, 149, 237, 0.4);
+        }
+        #boxes div:last-child{
+            margin-bottom: 0;
+        }
+        #boxes div h1 span{
+            background-color: darkgoldenrod;
+            padding: 1.3rem;
+            width: 100px;
+            height: 100px;
+            display: inline-block;
+            line-height: 100px;
+            border-radius: 100%;
+        }
+        #boxes div h1 {
+            background-color: rgb(165, 42, 42, 0.4); /* quarto val opacità*/
+            font-size: 1.9rem;
+            width: 100%;
+        }
+        
+    </style>
+</head>
+<body>
+   <section id="boxes">
+    <div>
+        <h1>
+            <span>prima box</span> 
+        </h1>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Et asperiores praesentium ratione voluptates, tempora itaque, quis quisquam reiciendis molestiae sequi minus cum nulla repudiandae facilis reprehenderit ex dolores quidem commodi?
+    </div>
+
+    <div>
+        <h1>
+            seconda box
+        </h1>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Possimus consectetur debitis minima, ducimus aperiam eum soluta voluptate ratione velit earum nemo doloremque ex pariatur corporis tempore odio voluptatem itaque architecto.
+    </div>
+
+    <div>
+       <h1>
+        terza box
+    </h1> 
+       Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore temporibus assumenda, vel maiores veniam magnam cum quidem sed quas labore aspernatur a maxime alias unde vero corporis eveniet debitis exercitationem.
+    </div>
+    <div>
+        <h1>
+         quarta box
+     </h1> 
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore temporibus assumenda, vel maiores veniam magnam cum quidem sed quas labore aspernatur a maxime alias unde vero corporis eveniet debitis exercitationem.
+     </div>
+   </section>
+    <div>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Numquam natus maxime ipsam, totam rem illum magni, architecto tenetur suscipit autem nesciunt, doloremque nulla ipsa reiciendis. Dolores reiciendis accusamus suscipit sit?
+    </div>
+    
+</body>
+</html>

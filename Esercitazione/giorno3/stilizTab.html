@@ -1,0 +1,101 @@
+<html></html><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table{
+            width: 100%;
+            text-align: center;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            border-collapse: collapse;
+            border: 1px solid;
+        }
+        table thead tr{
+            background-color: rgb(102, 114, 110);
+            border-bottom: 5px solid rgb(32, 29, 22);
+        }
+        table th, table td {
+            padding: 10px;
+        }
+        table td{
+            background-color: darkgray;
+        }
+        table tbody tr:nth-child(even) td{
+            background-color: rgb(23, 167, 100);
+        }
+        caption{
+            font-size: 1.5rem;
+        }
+        #ul1 li{
+            list-style-type: square;
+            font-size: 0.5rem 0.5rem;
+            text-align: center;
+            display:inline-block;
+            border-radius: 15%;
+            padding: 12px;
+        }
+        #ul1 li:nth-child(odd){
+            background-color: beige;
+            color: blueviolet;
+           
+        }
+        #ul1 li:nth-child(even){
+            background-color: brown;
+        }
+
+        
+    </style>
+</head>
+<body>
+    <h1>tabella css</h1>
+
+    <table>
+        <caption>studenti</caption>
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>fullname</th>
+            <th>location</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>ID</td>
+            <td>fullname</td>
+            <td>location</td>
+        </tr>
+        <tr>
+            <td>ID</td>
+            <td>fullname</td>
+            <td>location</td>
+        </tr>
+        <tr>
+            <td>ID</td>
+            <td>fullname</td>
+            <td>location</td>
+        </tr>
+        <tr>
+            <td>ID</td>
+            <td>fullname</td>
+            <td>location</td>
+        </tr>
+        </tbody>
+    </table>
+
+    <h1>liste css</h1>
+
+    <ul id="ul1">
+        <li>voce lista</li>
+        <li>voce lista</li>
+        <li>voce lista</li>
+        <li>voce lista</li>
+        <li>voce lista</li>
+        <li>voce lista</li>
+        <li>voce lista</li>
+    </ul>
+    
+</body>
+</html>

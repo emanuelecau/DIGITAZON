@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!-- ex#1
+creare un layout in cui vengono stilizzate 3 tabelle a piacere
+
+ex#2
+creare un layout in cui vengono stilizzate 3 liste a piacere
+
+ex#3
+creare un layout di un blog nuovo utilizzando tutte le nozioni viste finora, in cui sono contenuti 5 articoli.
+Gli articoli avranno titolo, descrizione, tags, autore. 
+Nella pagina abbiamo anche un menu di navigazione con 4 link (non occorre creare 4 link) -->
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>esercizio1</title>
+
+
+    <style>
+        html{
+            font-family: 'Courier New', Courier, monospace
+        }
+        h1{
+            text-align: center;
+            margin: 15%;
+        }
+        table{
+            background-color: rgba(231, 98, 9, 0.7);
+            border: 5px double rgb(15, 89, 107);
+            padding: 10px; ;
+            text-align: center;
+            width: 50%;
+            align-content: center;
+            margin-left: 25%;
+            margin-top: 100px;
+            margin-bottom: 100px;
+            color: rgb(251, 251, 252);
+        }
+
+        .aesthetic2{
+            background-color: rgba(101, 112, 105, 0.7);
+            border: 5px inset rgb(218, 100, 32);
+            padding: 10px; ;
+            text-align: center;
+            width: 50%;
+            align-content: center;
+            margin-left: 25%;
+            margin-top: 100px;
+            margin-bottom: 100px;
+            color: rgb(122, 58, 21);
+        }
+
+        .aesthetic{
+            background-color: rgba(133, 125, 125, 0.7);
+            border: 5px solid goldenrod;
+            border-radius: 5%;
+            padding: 10px; ;
+            text-align: center;
+            width: 50%;
+            align-content: center;
+            margin-left: 25%;
+            margin-top: 100px;
+            margin-bottom: 100px;
+            color: aliceblue;
+        }
+
+        caption{
+            color: rgb(133, 125, 125, 0.7);
+            font-size: large;
+            font-style: oblique;
+            font-weight: bolder;
+
+        }
+
+        table thead {
+            background-color: rgb(114, 114, 92);
+            color: rgb(243, 243, 229);
+            text-align: center;
+        }
+        table td{
+            background-color: rgb(103, 173, 173, 0.5);
+        }
+        table tr:nth-child(even) {
+            background-color: antiquewhite;
+        }
+         
+        #last-visu{
+            background-color: rgba(237, 245, 215, 0.7);
+            border: 5px groove rgb(32, 165, 218);
+            border-radius: 10%;
+            padding: 10px; ;
+            text-align: center;
+            width: 50%;
+            align-content: center;
+            margin-left: 25%;
+            margin-top: 100px;
+            margin-bottom: 100px;
+            color: rgb(57, 93, 124);
+        }
+        
+         
+    </style>
+</head>
+<body>
+    <h1>Prima tabella</h1>
+
+    <table class="aesthetic">
+        <caption>Workers</caption> 
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Days</th>
+                <th>City</th>
+            </tr>
+        </thead>
+
+        <div class="">
+            <tr>
+                <td>Toto</td>
+                <td>7</td>
+                <td>Berlino</td>
+            </tr>
+            <tr>
+                <td>Mario</td>
+                <td>7</td>
+                <td>Roma</td>
+            </tr>
+            <tr>
+                <td>Gigi</td>
+                <td>5</td>
+                <td>Barcellona</td>
+            </tr>
+            <tr>
+                <td>Carlo</td>
+                <td>5</td>
+                <td>Catania</td>
+            </tr>
+        </div>
+
+    </table>
+    
+    <h1>Seconda tabella</h1>
+
+    
+    <table class="aesthetic2">
+        
+        <caption>Workers</caption> 
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>phone</th>
+                    <th>Weeks</th>
+                </tr>
+            </thead>
+                <tr>
+                    <td>Toto</td>
+                    <td>3334445</td>
+                    <td>3</td>
+                </tr>
+                <tr>
+                    <td>Mario</td>
+                    <td>3335556</td>
+                    <td>3</td>
+                </tr>
+                <tr>
+                    <td>Gigi</td>
+                    <td>3336664</td>
+                    <td>5</td>
+                </tr>
+                <tr>
+                    <td>Carlo</td>
+                    <td>3335557</td>
+                    <td>5</td>
+                </tr>
+            
+    </table>
+  
+    
+    <h1>terza tabella</h1>
+
+    <table >
+        <caption>Workers</caption> 
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Contract</th>
+                    <th>Duration</th>
+                </tr>
+            </thead>
+            
+                <tr>
+                    <td>Toto</td>
+                    <td>Full-time</td>
+                    <td>3y</td>
+                </tr>
+                <tr>
+                    <td>Mario</td>
+                    <td>Full-time</td>
+                    <td>3y</td>
+                </tr>
+                <tr>
+                    <td>Gigi</td>
+                    <td>Part-time</td>
+                    <td>2y</td>
+                </tr>
+                <tr>
+                    <td>Carlo</td>
+                    <td>Part-time</td>
+                    <td>2y</td>
+                </tr>
+    
+    </table>
+    
+    
+    <h1>Quarta tabella</h1>
+
+    <table id="last-visu">
+        <caption>Workers</caption> 
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Industry</th>
+                    <th>Knowledge</th>
+                </tr>
+            </thead>
+                <tr>
+                    <td>Toto</td>
+                    <td>Adidas</td>
+                    <td>yes</td>
+                </tr>
+                <tr>
+                    <td>Mario</td>
+                    <td>Nike</td>
+                    <td>yes</td>
+                </tr>
+                <tr>
+                    <td>Gigi</td>
+                    <td>Balenciaga</td>
+                    <td>no</td>
+                </tr>
+                <tr>
+                    <td>Carlo</td>
+                    <td>Reebock</td>
+                    <td>no</td>
+                </tr>
+
+    </table>
+</body>
+</html>

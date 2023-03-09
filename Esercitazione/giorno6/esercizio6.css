@@ -1,0 +1,133 @@
+*{
+    box-sizing: border-box;
+}
+
+header div{
+    width: 100%;
+    background-color: coral;
+
+}
+header div img{
+    max-width: 50px;
+    margin: 5px 5px;
+}
+header div h1{
+    text-align: center;
+    width: fit-content;
+}
+
+body{
+    background-color: coral;
+}
+
+.main-sec{
+    width: 70%;
+}
+
+.left{
+    float: left;
+    width: 70%;
+}
+.right{
+    float: right;
+    width: 30%;
+}
+/* .left div{
+    background-color: aquamarine;
+    width: 70%;
+    margin-bottom: 25px;
+    color: black; 
+    display: block;  
+} */
+
+
+
+
+div .right{
+    background-color:aqua ;
+    width: 30%;
+    margin-bottom: 25px;
+    color: black;
+    display: block;
+}
+
+.clear-row{
+    clear: both;
+}
+
+/* header h1{
+    float: left;
+}
+header h2{
+    float: right;
+}
+
+header  img{
+    max-width: 30px;
+    margin: 10px 10px;
+    
+} */
+
+section{
+    background-color: grey;
+    width: fit-content;
+    float: left;
+    margin-top: 0; 
+    
+}
+
+section div{
+    background-color: aqua;
+    width: fit-content;
+    padding: 20px;
+    display: inline-block;
+    margin: 20px 20px;
+    border: 2px solid black;
+
+}
+
+
+
+section div p{
+    color: brown;
+    text-align: center;
+    
+}
+
+#div-right{
+    background-color: aquamarine;
+    width: 30%;
+    
+    border:2px solid black;
+}
+#div-right div{
+    background-color: rgb(50, 85, 73);
+    width: 30%;
+    
+    border:2px solid black;
+}
+#div-right img {
+    width: 50px;
+    margin: 10px 20px;
+    border: 2px solid black;
+    border-radius: 50%;
+    
+}
+div{
+    background-color: rgb(50, 85, 73);
+    width: 30%;
+    float: right;
+    border:2px solid black;
+
+}
+
+
+
+.articles article{
+    background-color: blueviolet;
+    width: 30%;
+    border: 2px solid black;
+    display: inline-block;
+    padding: 5px;
+    margin-left: 0;
+}

@@ -1,0 +1,40 @@
+body {
+    background-color: rgb(25, 36, 33);
+    color: aliceblue;
+}
+
+h1 {
+    background-color: rgb(56, 78, 71);
+    color: aliceblue;
+}
+h2 {
+    align-content: center;
+    margin-left: 25%;  
+}
+a {
+    color: aliceblue;
+}
+
+img {
+    align-content: center;
+    margin-left: 25%;
+
+}
+
+table {
+    color: aliceblue;
+    background-color: rgb(56, 78, 71);
+    align-content: center;
+    margin-left: 25%;
+}
+
+
+
+label{
+    align-content: center;
+    margin-left: 25%;
+}
+input {
+    
+    margin-left: 25%;
+}
