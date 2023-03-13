@@ -12,7 +12,7 @@ html{
 
 .headbar{
     display: flex;
-    background-color: rgb(236, 244, 250);
+    background-color: rgb(200, 222, 240);
     justify-content: space-between;
     flex-direction: row;
     margin: 0 ;
@@ -112,7 +112,7 @@ img:hover{
     display: flex;
     flex-direction: row;
     justify-content: center;
-    background-color: #fff;
+    background-color: rgb(255, 255, 255);
     padding-top: 30px;
 }
 .mid-bar-style{
@@ -122,7 +122,6 @@ img:hover{
     margin-left: 15px;
     font-size: x-small;
 }
-
 .mid-bar-style:hover{
     cursor: pointer;
     background-color: rgb(177, 177, 177);
@@ -172,7 +171,7 @@ section{
     width: 100%;
     padding: 10px;
     font-family: 'YouTube Sans', sans-serif;
-    font-size: x-small;
+    font-size: small;
     font-weight: lighter;
     display: flex;
     align-items: center;
@@ -184,7 +183,7 @@ section{
     background-color: rgb(214, 211, 206);
     border-radius: 12px;
     cursor: pointer;
-    font-size: smaller;
+    font-size: medium ;
     background-position: 100%;
 }
 .container i{
