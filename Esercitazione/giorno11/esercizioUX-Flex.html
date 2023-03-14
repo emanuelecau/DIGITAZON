@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UX-FLEX</title>
+    <link rel="stylesheet" href="esercizioUX-Flex.css">
+    <script src="https://kit.fontawesome.com/4db4e27520.js" crossorigin="anonymous"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Amatic+SC&family=Roboto:ital,wght@1,100&family=Tilt+Prism&display=swap');
+      </style>
+    
+        </head>
+        <body>
+
+</head>
+
+
+    <!-------CONSEGNA------------------------------------------------
+
+ * pulsante per login
+ * pulsante per registrazione
+ * o eventualmente avatar dell'utente al posto dei primi due punti
+ * logo o immagine a caso con comportamento come spiegato a lezione
+ * 10 prodotti a vostra scelta, acquistabili, mostrati a centro pagina
+ * in una colonna a parte il carrello con dentro due prodotti e un bottone per l'acquisto di cio' che e' nel carrello
+
+I focus di questo esercizio sono due: Flex e UX. -->
+<header>
+
+<div class="firstTop">
+ <div class="logo"><img src="/Esercitazione/giorno10/calicos.jpg" alt=""></div>
+ 
+    <div class="welcome">
+         <div>With</div><div>Editing</div><div>Log</div><div>Can</div><div>Open</div><div>Main</div><div>Elaboration</div>
+    </div>
+    <button onclick="document.getElementById('id01').style.display='block'" style="width:fit-content; border: 1.5px solid rgb(79, 154, 156);border-radius: 50%;">Login</button>
+        
+    <div id="id01" class="modal">
+      
+      <form class="modal-content animate" action="esercizioUX-Flex.html" method="post">
+        <div class="imgcontainer">
+          <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+          <img src="Volcom-member.jpg" alt="Avatar" class="avatar">
+        </div>
+    
+        <div class="container">
+          <label for="uname"><b>Username</b></label>
+          <input type="text" placeholder="Enter Username" name="uname" required>
+    
+          <label for="psw"><b>Password</b></label>
+          <input type="password" placeholder="Enter Password" name="psw" required>
+            
+          <button type="submit">Login</button>
+          <label>
+            <input type="checkbox" checked="checked" name="remember"> Remember me
+          </label>
+        </div>
+    
+        <div class="container" style="background-color:antiquewhite">
+          <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+          <span class="psw">Forgot <a href="#">password?</a></span>
+        </div>
+      </form>
+    </div>
+</div>
+
+<hr>
+
+<div class="secondTop">
+    <div class="location"> 
+        <form action="esercizioUX-Flex.html" method="get">
+          <label class="label" for="Location">Location <em>click on me</em></label>
+           <input  class="hide" list="Location" name="Location" id="Location">
+                <datalist id="Location">
+                    <option value="Europe">
+                    <option value="Asia">
+                    <option value="America">
+                    <option value="Oceania">
+                    <option value="Africa">
+                </datalist>
+        </form>
+    </div>
+
+    <div class="nav">
+        <nav>
+            <ul>
+                <li>products</li>
+                <li>us</li>
+                <li>sales</li>
+                <li>gender</li>
+            </ul>
+        </nav>
+    </div>
+</div>
+<hr>
+
+<div class="terdTop">
+    <input  type="button" value="carrello">
+</div>
+
+</header>
+<hr>
+<main>
+
+        <div class="sub"><input type="button" value="Sign Up"></div>
+        <div><em id="sconto"> Sconto del 25% per i nuovi registrati</em></div>
+    
+</main>
+<hr>
+
+<div class="sell">
+    <div>
+        <img src="Volcom-shirt1.jpg" alt="">
+        <p><em>special t shirt 75$</em> </p>
+    </div>
+    <div>
+        <img src="Volcom-shirt2.jpg" alt="">
+        <p><em>special t shirt 75$</em> </p>
+    </div>
+    <div>
+        <img src="Volcom-shirt3.jpg" alt="">
+        <p><em>special t shirt 75$</em> </p>
+    </div>
+    <div>
+        <img src="Volcom-shirt4.jpg" alt="">
+        <p><em>special t shirt 75$</em> </p>
+    </div>
+    <div>
+        <img src="Volcom-shirt5.jpg" alt="">
+        <p><em>special t shirt 75$</em> </p>
+    </div>
+</div>
+    
+
+
+
+</body>
+</html>
