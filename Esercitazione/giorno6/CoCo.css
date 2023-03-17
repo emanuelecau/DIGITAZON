@@ -1,60 +1,213 @@
-html{
+*{
     margin: 0;
-
+    padding: 0;
+    box-sizing: border-box;
 }
 body{
-    width: 1000px;
-    background-color: coral;
+    
+}
+header{
+    top: 0;
+    position: fixed;
+    width: 100%;
+    background-color: rgb(139, 98, 43);
+    opacity: 1;
+
 }
 
-
-.menu{
-     
+div.menu{
+    display: flex;
     width: 100%;
     height: 20%;
-    border: 1px solid black;
-    border-radius: 10px;
-    background-color: antiquewhite;
-    margin: 20px 0 0 0;
-    padding: 40px;
+    padding: 10px;
     text-decoration: none;
-    display: inline-block;
+    justify-content: space-between;
+    
+   
+
 }
 
 nav{
-    background-color: aquamarine;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+#logo{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px dotted chocolate;
+    cursor: pointer;
+}
+#logo:hover{
+    transform: scale(1.5);
+    transition: 0.5s;
+}
+a{
+    text-decoration: none;
+    color: bisque;
+}
+a:hover{
+    text-decoration: none;
+    color: rgb(255, 118, 21);
+     
+}
+
+ul{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
 }
 
 li {
-    
     text-align: center;
     display: inline-block;
-    text-decoration: none;
-    margin-right: 30px;
-
 }
 
-.Main-Container{
-    display: flex;
-    width: 100%;
-    border: 1px solid black;
-    border-radius: 10px;
-    background-color: antiquewhite;
-    margin: 20px 0 0 0;
-    justify-content: center;
-    padding: 40px;
+li:hover{
+    transform: scale(1.2);
+    transition: 0.5s;
+}
+#login{
+    color:rgb(255, 118, 21) ;
+    border: 1px solid orangered;
+    padding: 2px 25px;
+    border-radius: 3px;
+
+}
+#login:hover{
+    color: gold;
+    transform:rotate(1turn);
+    transition: 1s;
+}
+#login:hover a{
+    color: gold;
+}
+
+
+/* ---------------MAIN---------------------- */
+
+main{
+    height: 500px;
+    background-image: url(../giorno11/sunset-hiking-like-ants-marching.jpg);
+    background-size: cover;
+    border-bottom: 2px solid orange;
     
 }
-
 .mid-cont{
+    padding: 40px;
     display: flex;
-    width: fit-content;
-    border: 1px solid gray;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+
+}
+h2{
+    align-items: center;
+    text-align: center;
+    font-size: 50px;
 }
 
-.coco-cont{
-    display: flex;
-    width: 30%;
-    border: 1px solid gray;
+p{
+    padding: 5px;
+    font-size: x-small;
+    color: rgb(0, 0, 0, 0.5);
+    text-align: center;
+}
+
+button{
+    margin-top: 10px;
+    width: 200px;
+    height: 20px;
+    font-size: xx-small;
+    border-radius: 5px;
+    border: 1px solid chocolate;
+    background-color: coral;
+    color: bisque;
+    cursor: pointer;
     
 }
+button:hover{
+    transform: scale(1.3);
+    transition: 0.5s;
+    color: whitesmoke;
+}
+
+/* --------------3R----------------- */
+
+.story{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    background-color: rgb(139, 98, 43);
+    padding-top: 40px;
+    padding-bottom: 40px;
+    
+
+}
+
+.division3{
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(139, 98, 43);
+    width: 33%;
+    align-items: center;
+    
+
+}
+
+.img{
+    width: 300px;
+    display: block;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 10px;
+    opacity: 0.6;
+    margin-bottom: 20px;
+    
+    
+}
+
+.img:hover{
+    transform: scale(1.02);
+    transition: 0.5s;
+    opacity: 1;
+    
+}
+
+.name-img{
+    text-align: center;
+    font-size: 20px;
+    color: orange;
+    cursor: pointer;
+    border: 1px dotted orangered;
+    border-radius: 2px;
+    padding: 5px
+    
+
+}
+
+footer{
+    width: 100%;
+
+}
+
+.copirtght{
+    display: flex;
+    justify-content: space-evenly;
+    background-color: rgb(71, 48, 39);
+    color: rgb(160, 155, 149);
+    
+    border: 1px solid rgb(194, 140, 119);
+}
+
+.copirtght li{
+    border: 1px solid rgb(199, 149, 116);
+    border-radius: 2px;
+    padding: 5px 15px;
+    font-size: xx-small;
+    cursor: pointer;
+    margin: 5px 0 ;
