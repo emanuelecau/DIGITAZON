@@ -5,8 +5,6 @@
 }
 
 header{
-    top: 0;
-    position: fixed;
     width: 100%;
     background-color: rgb(139, 98, 43);
 
@@ -19,15 +17,14 @@ div.menu{
     padding: 10px;
     text-decoration: none;
     justify-content: space-between;
-    
-   
-
+    flex-direction: column;
 }
 
 nav{
     display: flex;
     justify-content: center;
     width: 100%;
+    
 }
 #logo{
     width: 50px;
@@ -55,11 +52,13 @@ ul{
     width: 100%;
     justify-content: space-around;
     align-items: center;
+    flex-direction: column;
+    gap: 5px;
 }
 
-li {
+.menu li {
     text-align: center;
-    display: inline-block;
+    display: none;
 }
 
 li:hover{
@@ -81,7 +80,14 @@ li:hover{
 #login:hover a{
     color: gold;
 }
+i{
+    font-size: 20px;
+    cursor: pointer;
+}
 
+i:hover{
+    color: coral;
+}
 
 /* ---------------MAIN---------------------- */
 
@@ -154,10 +160,11 @@ button:hover{
     width: 100%;
     display: flex;
     justify-content: space-between;
-    flex-direction: row;
+    flex-direction: column;
     background-color: rgb(139, 98, 43);
     padding-top: 40px;
     padding-bottom: 40px;
+    align-items: center;
     
 
 }
@@ -166,7 +173,7 @@ button:hover{
     display: flex;
     flex-direction: column;
     background-color: rgb(139, 98, 43);
-    width: 33%;
+    width: 100%;
     align-items: center;
     
 
@@ -179,7 +186,7 @@ button:hover{
     cursor: pointer;
     border-radius: 10px;
     opacity: 0.6;
-    margin-bottom: 20px;
+    margin:10px 0;
     
     
 }
@@ -198,7 +205,8 @@ button:hover{
     cursor: pointer;
     border: 1px dotted orangered;
     border-radius: 2px;
-    padding: 5px
+    padding: 5px;
+    margin: 10px 0;
     
 
 }
@@ -241,7 +249,7 @@ h2{
     color: darkcyan;
     align-items: center;
     text-align: center;
-    font-size: 80px;
+    font-size: 60px;
 }
 p{
     color:  rgb(139, 98, 43);
@@ -254,11 +262,19 @@ footer{
 
 .copirtght{
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     background-color: rgb(71, 48, 39);
     color: rgb(160, 155, 149);
-    
+    width: 100%;
     border: 1px solid rgb(194, 140, 119);
+}
+
+.copirtght ul{
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    justify-content: center;
+
 }
 
 .copirtght li{
@@ -273,6 +289,281 @@ footer{
 
 
 @media screen and (min-width: 420px) {
+    header{
+        top: 0;
+        position: fixed;
+        width: 100%;
+        background-color: rgb(139, 98, 43);
+    
+    }
+    
+    div.menu{
+        display: flex;
+        width: 100%;
+        height: 20%;
+        padding: 10px;
+        text-decoration: none;
+        justify-content: space-between;
+        
+       
+    
+    }
+    
+    nav{
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+    #logo{
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        border: 2px dotted chocolate;
+        cursor: pointer;
+    }
+    #logo:hover{
+        transform: scale(1.5);
+        transition: 0.5s;
+    }
+    a{
+        text-decoration: none;
+        color: bisque;
+    }
+    a:hover{
+        text-decoration: none;
+        color: rgb(255, 118, 21);
+         
+    }
+    
+    ul{
+        display: flex;
+        width: 100%;
+        justify-content: space-around;
+        align-items: center;
+        flex-direction: row;
+    }
+
+    ul i{
+        display: none;
+        visibility: hidden;
+    }
+
+    .menu li{
+        display: block;
+    }
+    
+    li {
+        text-align: center;
+        display: inline-block;
+    }
+    
+    li:hover{
+        transform: scale(1.2);
+        transition: 0.5s;
+    }
+    #login{
+        color:rgb(255, 118, 21) ;
+        border: 1px solid orangered;
+        padding: 2px 25px;
+        border-radius: 3px;
+    
+    }
+    #login:hover{
+        color: gold;
+        transform:rotate(1turn);
+        transition: 1s;
+    }
+    #login:hover a{
+        color: gold;
+    }
+    
+    
+    /* ---------------MAIN---------------------- */
+    
+    main{
+        height: 500px;
+        background-image: url(../giorno11/sunset-hiking-like-ants-marching.jpg);
+        background-size: cover;
+        border-bottom: 2px solid orange;
+        
+        
+    }
+    .mid-cont{
+        padding: 40px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        align-content: center;
+    }
+    
+    h1{
+        align-items: center;
+        text-align: center;
+        font-size: 80px;
+        color:rgb(226, 200, 85);
+    }
+    
+    p{
+        padding: 5px;
+        font-size: x-small;
+        color: rgb(0, 0, 0, 0.5);
+        text-align: center;
+        
+    }
+    
+     .mid-cont  > div > div::first-letter{
+        color: coral;
+    }
+    
+    .rowdiv{
+        display: flex;
+        font-size: 15px;
+        font-style: italic;
+        color: gray;
+        width: fit-content;
+    }
+    
+    
+    button{
+        margin-top: 10px;
+        width: 200px;
+        height: 20px;
+        font-size: xx-small;
+        border-radius: 5px;
+        border: 1px solid chocolate;
+        background-color:coral;
+        color: bisque;
+        cursor: pointer;
+        
+    }
+    button:hover{
+        transform: scale(1.3);
+        transition: 0.5s;
+        color: whitesmoke;
+    }
+    
+    /* --------------3R----------------- */
+    
+    .story{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        background-color: rgb(139, 98, 43);
+        padding-top: 40px;
+        padding-bottom: 40px;
+    
+    }
+    
+    .division3{
+        display: flex;
+        flex-direction: column;
+        background-color: rgb(139, 98, 43);
+        width: 33%;
+        align-items: center;
+        
+    
+    }
+    
+    .img{
+        width: 300px;
+        display: block;
+        align-items: center;
+        cursor: pointer;
+        border-radius: 10px;
+        opacity: 0.6;
+        margin-bottom: 20px;
+        
+        
+    }
+    
+    .img:hover{
+        transform: scale(1.02);
+        transition: 0.5s;
+        opacity: 1;
+        
+    }
+    
+    .name-img{
+        text-align: center;
+        font-size: 20px;
+        color: orange;
+        cursor: pointer;
+        border: 1px dotted orangered;
+        border-radius: 2px;
+        padding: 5px
+        
+    
+    }
+    .introduction{
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        flex-direction: column;
+    }
+    
+    
+    
+    .introduction::before{
+        content: "";
+        position: absolute;
+        top: 0px;
+        bottom: 0px;
+        right: 0px;
+        left: 0px;
+        background-image: url(../giorno11/sand-surface-texture-background-zen-peace-concept.jpg);
+        background-size: cover;
+        background-position: top center;
+        opacity: 0.3;
+    }
+    .introduction p,
+    .introduction div,
+    .introduction h2{
+        position: relative;
+    }
+    
+    .introduction div{
+        margin-bottom: 50px;
+        border: none;
+        padding: 10px;
+     
+    }
+    h2{
+        color: darkcyan;
+        align-items: center;
+        text-align: center;
+        font-size: 80px;
+    }
+    p{
+        color:  rgb(139, 98, 43);
+    }
+    
+    footer{
+        width: 100%;
+    
+    }
+    
+    .copirtght{
+        display: flex;
+        justify-content: space-evenly;
+        background-color: rgb(71, 48, 39);
+        color: rgb(160, 155, 149);
+        
+        border: 1px solid rgb(194, 140, 119);
+    }
+    
+    .copirtght li{
+        border: 1px solid rgb(199, 149, 116);
+        border-radius: 2px;
+        padding: 5px 15px;
+        font-size: xx-small;
+        cursor: pointer;
+        margin: 5px 0 ;
+    }
+
     
 }
     
