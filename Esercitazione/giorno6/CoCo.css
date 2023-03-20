@@ -3,15 +3,12 @@
     padding: 0;
     box-sizing: border-box;
 }
-body{
-    
-}
+
 header{
     top: 0;
     position: fixed;
     width: 100%;
     background-color: rgb(139, 98, 43);
-    opacity: 1;
 
 }
 
@@ -94,6 +91,7 @@ main{
     background-size: cover;
     border-bottom: 2px solid orange;
     
+    
 }
 .mid-cont{
     padding: 40px;
@@ -102,12 +100,13 @@ main{
     flex-direction: column;
     align-items: center;
     align-content: center;
-
 }
-h2{
+
+h1{
     align-items: center;
     text-align: center;
-    font-size: 50px;
+    font-size: 80px;
+    color:rgb(226, 200, 85);
 }
 
 p{
@@ -115,7 +114,21 @@ p{
     font-size: x-small;
     color: rgb(0, 0, 0, 0.5);
     text-align: center;
+    
 }
+
+ .mid-cont  > div > div::first-letter{
+    color: coral;
+}
+
+.rowdiv{
+    display: flex;
+    font-size: 15px;
+    font-style: italic;
+    color: gray;
+    width: fit-content;
+}
+
 
 button{
     margin-top: 10px;
@@ -124,7 +137,7 @@ button{
     font-size: xx-small;
     border-radius: 5px;
     border: 1px solid chocolate;
-    background-color: coral;
+    background-color:coral;
     color: bisque;
     cursor: pointer;
     
@@ -189,6 +202,50 @@ button:hover{
     
 
 }
+.introduction{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+}
+
+
+
+.introduction::before{
+    content: "";
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    right: 0px;
+    left: 0px;
+    background-image: url(../giorno11/sand-surface-texture-background-zen-peace-concept.jpg);
+    background-size: cover;
+    background-position: top center;
+    opacity: 0.3;
+}
+.introduction p,
+.introduction div,
+.introduction h2{
+    position: relative;
+}
+
+.introduction div{
+    margin-bottom: 50px;
+    border: none;
+    padding: 10px;
+ 
+}
+h2{
+    color: darkcyan;
+    align-items: center;
+    text-align: center;
+    font-size: 80px;
+}
+p{
+    color:  rgb(139, 98, 43);
+}
 
 footer{
     width: 100%;
@@ -211,3 +268,11 @@ footer{
     font-size: xx-small;
     cursor: pointer;
     margin: 5px 0 ;
+}
+
+
+
+@media screen and (min-width: 420px) {
+    
+}
+    
