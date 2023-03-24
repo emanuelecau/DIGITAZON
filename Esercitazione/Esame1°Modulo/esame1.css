@@ -597,8 +597,30 @@ h4:hover{
         cursor: text;
         transition: 0.5s;
         color: var(--notic);
+    }img:hover{
+        transition: 0.5s;
+        transform: scale(1.07);
+        border: 1px solid var(--notic);
     }
-
+    span:hover{
+        color: black;
+        transition: 0.5s;
+        cursor: pointer;
+    }
+    
+    i:hover,
+    h4:hover{
+        cursor: pointer;
+        transition: 0.5s;
+        color: var(--notic);
+    }
+    .search-b button:hover,
+    .search-b span:hover
+    {   display: none;
+        cursor: text;
+        transition: 0.5s;
+        color: aquamarine;
+    }
 
 }
 
