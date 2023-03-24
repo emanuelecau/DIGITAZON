@@ -27,12 +27,14 @@ i{
 main{
     display: flex;
     background-color: var(--bgc);
-    height: 200vh;
+    height: fit-content;
+    
 }
 .left-bar{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    
 }
 .left-bar > div{
     display: flex;
@@ -53,7 +55,8 @@ main{
     border-top-left-radius: 22px;
     box-shadow: -9px -1px 12px -7px rgba(0,0,0,0.75);
     border: 1px solid rgb(85, 84, 84);
-
+    height: 690px;
+ 
 }
 .top-chat{
     display: flex;
@@ -104,10 +107,7 @@ main{
     display: flex;
     padding: 5px;
     width: 90%;
-    
-    
 }
-
 button{
     border-radius: 50%;
     width: 40px;
@@ -121,9 +121,7 @@ button img{
 .text-m{
     display: flex;
     flex-direction: column;
-    width: 100%;
-    
-    
+    width: 100%; 
 }
 .contact{
     padding-left: 5px;
@@ -163,7 +161,7 @@ p{
 #icon{
     display: flex;
     align-items: end;
-    position: fixed;
+    position:absolute;
     right: 5px;
     top: 40px;
 }
@@ -174,9 +172,461 @@ p{
     border: 1px solid rgb(85, 84, 84);
     border-left: none;
 }
+
 .inside-b{
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+}
+.scroller {
+    position: relative;
+    width: auto;
+    padding-left: 200px;
+    height: 603px;
+    overflow-y: scroll;
+    background-image: url(sand.jpg);
+}
+.box-chat{
+    display: flex;
+    flex-direction: column;
+}
+.chat-align{
+    display: flex;
+    justify-content: flex-start;
+    margin: 5px 0 ;
+}
+.first-chat{
+    background-color: var(--bgc2);
+    padding: 5px;
+    border-radius: 10px;
+    display: flex;
+    width: fit-content;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 10px;
+}
+.salvatop{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.salvatop h3{
+    color:black;
+    font-size: 16px;
+}
+.salvatop h4{
+    font-size: x-small;
+    align-self: flex-end;
+}
+.inside-b p{
+    font-size: small;
+    color: rgba(0,0,0,0.75);
+}
+.chat-align2{
+    display: flex;
+    justify-content: end;
+}
+.second-chat{
+    background-color: var(--notic);
+    padding: 5px;
+    border-radius: 10px;
+    display: flex;
+    width: fit-content;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-content: end;
+    margin: 5px 0;
+    padding: 10px;
+}
+footer{
+    width: 100%;
+    padding: 3px;
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--bgc);
+    border: 1px solid rgba(0,0,0,0.75);
+}
+.foot{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.f-foot{
+    width: 20%;
+    display: flex;
+    justify-content: space-between
+}
+.s-foot{
+    display: flex;
+    justify-content: end;
+    margin-left: auto;
+    
+}
+.message-c{
+    display: none;
+}
+img:hover{
+    transition: 0.5s;
+    transform: scale(1.07);
+    border: 1px solid var(--notic);
+}
+span:hover{
+    color: black;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+i:hover,
+h4:hover{
+    cursor: pointer;
+    transition: 0.5s;
+    color: var(--notic);
+}
+.search-b button:hover,
+.search-b span:hover
+{
+    cursor: text;
+    transition: 0.5s;
+    color: aquamarine;
+}
+
+
+@media(max-width: 420px){
+    :root{
+        --bgc:#5487AB;
+        --bgc2:#769FBC;
+        --textc:#F8FAFC;
+        --textc2:#E2ECF1;
+        --notic:#5AD8D1;
+    }
+    header{
+        display: none;
+        
+        justify-content: space-between;
+        background-color: var(--bgc);
+        color: var(--textc);
+    }
+    span{
+        color: var(--textc);
+    }
+    i{
+        color: var(--textc);
+        padding: 5px;
+        font-size: 12px;
+    }
+    main{
+        display: flex;
+        background-color: var(--bgc);
+        height: fit-content;
+        flex-direction: column;
+        
+    }
+    .left-bar{
+        
+        display: flex;
+        flex-direction: row;
+        
+        
+    }
+    .left-bar > div{
+        display: flex;
+        flex-direction:row;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 5px;
+    }
+    .left-bar img{
+        border-radius: 50%;
+        border: 1px solid var(--textc);
+    }
+    /* central-div */
+    .chat-b{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        background-color: var(--bgc2);
+        border-top-left-radius: 22px;
+        box-shadow: -9px -1px 12px -7px rgba(0,0,0,0.75);
+        border: 1px solid rgb(85, 84, 84);
+        height: 690px;
+     
+    }
+    .top-chat{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 5px;
+        padding-left: 5px;
+        color: var(--textc);
+    }
+    .search-b{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    
+    }
+    .search-b button{
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        background-color: #97C9DB;
+        border-radius: 4px;
+        border-bottom: 2px solid #C7E2EB ;
+        margin: 5px 10px  ;
+        align-items: center;
+        padding: 0 5px;
+        cursor: text;
+        width: 100%;
+        height: 28px;
+    }
+    .search-b button span,
+    .search-b button i{
+        font-size: x-small;
+        color: var(--textc2);
+    }
+    .archivied{
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        margin-left: 10%;
+        margin-bottom: 7px;
+    }
+    .archivied span{
+        font-size: small;
+        margin-left: 5px;
+    }
+    .message{
+        display: flex;
+        padding: 5px;
+        width: 90%;
+    }
+    button{
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+    }
+    button img{
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+    }
+    .text-m{
+        display: flex;
+        flex-direction: column;
+        width: 100%; 
+    }
+    .contact{
+        padding-left: 5px;
+        width: 100%;
+        display: flex;
+        justify-content: space-between; 
+        align-items: center; 
+    }
+    .contact span{
+        color: var(--notic);
+    }
+    h4{
+        font-size: 14px;
+        color: var(--textc);
+    }
+    .contact-m{
+        display: flex;
+        padding-left: 5px;
+        align-items: center;
+    }
+    .contact-m span{
+        display: flex;
+        align-items: center;
+        margin-left: auto;
+    }
+    .button{
+        border-radius: 50%;
+        width: 10px;
+        height: 10px;
+        background-color: var(--notic);
+        font-size: 5px;
+        
+    }
+    p{
+        font-size: 8px;
+    }
+    #icon{
+        display: flex;
+        align-items: end;
+        position:absolute;
+        right: 5px;
+        top: 40px;
+    }
+    #icon i{
+        margin:0 5px;
+    }
+    .top-bar{
+        display: none;
+        border: 1px solid rgb(85, 84, 84);
+        border-left: none;
+    }
+    
+    .inside-b{
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        flex-direction: column;
+        height: fit-content;
+    }
+    .scroller {
+        display: none;
+        position: relative;
+        width: auto;
+        padding-left: 200px;
+        height: 603px;
+        overflow-y: scroll;
+        background-image: url(sand.jpg);
+    }
+    .box-chat{
+        display: flex;
+        flex-direction: column;
+    }
+    .chat-align{
+        display: flex;
+        justify-content: flex-start;
+        margin: 5px 0 ;
+    }
+    .first-chat{
+        background-color: var(--bgc2);
+        padding: 5px;
+        border-radius: 10px;
+        display: flex;
+        width: fit-content;
+        flex-direction: column;
+        justify-content: flex-start;
+        padding: 10px;
+    }
+    .salvatop{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .salvatop h3{
+        color:black;
+        font-size: 16px;
+    }
+    .salvatop h4{
+        font-size: x-small;
+        align-self: flex-end;
+    }
+    .inside-b p{
+        font-size: small;
+        color: rgba(0,0,0,0.75);
+    }
+    .chat-align2{
+        display: flex;
+        justify-content: end;
+    }
+    .second-chat{
+        background-color: var(--notic);
+        padding: 5px;
+        border-radius: 10px;
+        display: flex;
+        width: fit-content;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-content: end;
+        margin: 5px 0;
+        padding: 10px;
+    }
+    footer{
+        display: none;
+        width: 100%;
+        padding: 3px;
+        justify-content: space-between;
+        background-color: var(--bgc);
+        border: 1px solid rgba(0,0,0,0.75);
+    }
+    .foot{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+    .f-foot{
+        width: 20%;
+        display: flex;
+        justify-content: space-between
+    }
+    .s-foot{
+        display: flex;
+        justify-content: end;
+        margin-left: auto;
+        
+    }
+    .message-c{
+        display: flex;
+        width: fit-content;
+        align-items: center;
+    }
+    div .message-c{
+        width: fit-content;
+        display: flex;
+        align-items: center;
+    }
+    .message-c button{
+        display: flex;
+        align-items: center;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background-color: var(--notic);
+        margin-top: 10px;
+        margin-bottom: 10px;
+        margin-left: 70px;
+    }
+    .message-c button i{
+        font-size: 30px;
+    }
+    .message-c button i:hover{
+        color: aquamarine;
+        transition: 0.5s;
+        transform: scale(1.07);
+    }
+    .search-b button:hover{
+        cursor: text;
+        transition: 0.5s;
+        color: var(--notic);
+    }
+
+
+}
+
+
+/* .scroller::before{
+    content: "";
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    right: 0px;
+    left: 0px;
+    background-image: url(../Esame1°Modulo/sand.jpg);
+    background-size: cover;
+    background-position: top center;
+    opacity: 0.3;
     
 }
 
 
-
+.inside-b::before{
+    content: "";
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    right: 0px;
+    left: 0px;
+    background-image: url(../Esame1°Modulo/sand.jpg);
+    background-size: cover;
+    background-position: top center;
+    opacity: 0.3;
+} */
