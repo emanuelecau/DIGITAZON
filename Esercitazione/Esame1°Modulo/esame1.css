@@ -106,7 +106,7 @@ main{
 .message{
     display: flex;
     padding: 5px;
-    width: 90%;
+    width: 100%;
 }
 button{
     border-radius: 50%;
@@ -248,14 +248,17 @@ footer{
     justify-content: space-between;
     background-color: var(--bgc);
     border: 1px solid rgba(0,0,0,0.75);
+    align-items: center;
 }
 .foot{
     width: 100%;
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 .f-foot{
-    width: 20%;
+    align-items: center;
+    width: 100%;
     display: flex;
     justify-content: space-between
 }
@@ -402,7 +405,7 @@ h4:hover{
     .message{
         display: flex;
         padding: 5px;
-        width: 90%;
+        width: 100%;
     }
     button{
         border-radius: 50%;
@@ -549,17 +552,19 @@ h4:hover{
         border: 1px solid rgba(0,0,0,0.75);
     }
     .foot{
+        display: none;
         width: 100%;
         display: flex;
         justify-content: space-between;
     }
     .f-foot{
+        display: none;
         width: 20%;
         display: flex;
         justify-content: space-between
     }
     .s-foot{
-        display: flex;
+        display: none;
         justify-content: end;
         margin-left: auto;
         
@@ -616,7 +621,7 @@ h4:hover{
     }
     .search-b button:hover,
     .search-b span:hover
-    {   display: none;
+    {   display:flex;
         cursor: text;
         transition: 0.5s;
         color: aquamarine;
