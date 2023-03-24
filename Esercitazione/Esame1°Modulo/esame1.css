@@ -621,7 +621,7 @@ h4:hover{
     }
     .search-b button:hover,
     .search-b span:hover
-    {   display:flex;
+    {   display: flex;
         cursor: text;
         transition: 0.5s;
         color: aquamarine;
