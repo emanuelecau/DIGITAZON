@@ -4,8 +4,8 @@
     box-sizing: border-box;
 }
 :root{
-    --bgc:#5487AB;
-    --bgc2:#769FBC;
+    --bgc:#63969C;
+    --bgc2:#82ABB0;
     --textc:#F8FAFC;
     --textc2:#E2ECF1;
     --notic:#5AD8D1;
@@ -55,7 +55,7 @@ main{
     border-top-left-radius: 22px;
     box-shadow: -9px -1px 12px -7px rgba(0,0,0,0.75);
     border: 1px solid rgb(85, 84, 84);
-    height: 690px;
+    height: 707px;
  
 }
 .top-chat{
@@ -107,6 +107,11 @@ main{
     display: flex;
     padding: 5px;
     width: 100%;
+}
+.message:hover{
+    transition: 0.5s;
+    background-color: var(--bgc);
+    cursor: pointer;
 }
 button{
     border-radius: 50%;
@@ -172,7 +177,6 @@ p{
     border: 1px solid rgb(85, 84, 84);
     border-left: none;
 }
-
 .inside-b{
     position: relative;
     display: flex;
@@ -299,15 +303,14 @@ h4:hover{
 
 @media(max-width: 420px){
     :root{
-        --bgc:#5487AB;
-        --bgc2:#769FBC;
+        --bgc:#63969C;
+        --bgc2:#82ABB0;
         --textc:#F8FAFC;
         --textc2:#E2ECF1;
         --notic:#5AD8D1;
     }
     header{
         display: none;
-        
         justify-content: space-between;
         background-color: var(--bgc);
         color: var(--textc);
@@ -326,6 +329,9 @@ h4:hover{
         height: fit-content;
         flex-direction: column;
         
+    }
+    .mid{
+        display: none;
     }
     .left-bar{
         
@@ -375,7 +381,7 @@ h4:hover{
         display: flex;
         justify-content: space-between;
         flex-direction: row;
-        background-color: #97C9DB;
+        background-color: #63969C;
         border-radius: 4px;
         border-bottom: 2px solid #C7E2EB ;
         margin: 5px 10px  ;
@@ -403,9 +409,15 @@ h4:hover{
         margin-left: 5px;
     }
     .message{
+        background-color: #82ABB0;
         display: flex;
         padding: 5px;
         width: 100%;
+    }
+
+    .message:hover{
+        transition: 0.5s;
+        background-color: var(--bgc);
     }
     button{
         border-radius: 50%;
@@ -475,7 +487,7 @@ h4:hover{
     
     .inside-b{
         width: 100%;
-        display: flex;
+        display: none;
         justify-content: flex-start;
         align-items: center;
         flex-direction: column;
@@ -495,7 +507,7 @@ h4:hover{
         flex-direction: column;
     }
     .chat-align{
-        display: flex;
+        display: none;
         justify-content: flex-start;
         margin: 5px 0 ;
     }
@@ -503,7 +515,7 @@ h4:hover{
         background-color: var(--bgc2);
         padding: 5px;
         border-radius: 10px;
-        display: flex;
+        display: none;
         width: fit-content;
         flex-direction: column;
         justify-content: flex-start;
@@ -511,7 +523,7 @@ h4:hover{
     }
     .salvatop{
         width: 100%;
-        display: flex;
+        display: none;
         align-items: center;
         justify-content: space-between;
     }
@@ -528,14 +540,14 @@ h4:hover{
         color: rgba(0,0,0,0.75);
     }
     .chat-align2{
-        display: flex;
+        display: none;
         justify-content: end;
     }
     .second-chat{
         background-color: var(--notic);
         padding: 5px;
         border-radius: 10px;
-        display: flex;
+        display: none;
         width: fit-content;
         flex-direction: column;
         justify-content: flex-end;
@@ -579,6 +591,7 @@ h4:hover{
         display: flex;
         align-items: center;
     }
+
     .message-c button{
         display: flex;
         align-items: center;
@@ -591,6 +604,7 @@ h4:hover{
         margin-left: 70px;
     }
     .message-c button i{
+        display: block;
         font-size: 30px;
     }
     .message-c button i:hover{
@@ -612,7 +626,7 @@ h4:hover{
         transition: 0.5s;
         cursor: pointer;
     }
-    
+
     i:hover,
     h4:hover{
         cursor: pointer;
@@ -625,6 +639,10 @@ h4:hover{
         cursor: text;
         transition: 0.5s;
         color: aquamarine;
+    }
+    .message:hover{
+        transition: 0.5s;
+        background-color: var(--bgc);
     }
 
 }
