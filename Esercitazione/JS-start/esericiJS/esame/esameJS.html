@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+//         1 - Trova chi spende piu’ e chi spende meno
+// Vi viene fornita una stringa che rappresenta le spese di ogni reparto della vostra societa’, la
+// richiesta e’ che troviate il nome del reparto che spende di più e quello che spende meno,
+// con i relativi importi totali.
+// Segue un esempio di questa stringa:
+// Dovete scrivere quindi una funzione che data in ingresso una stringa simile a quella data sia
+// in grado di sommare tutti gli importi e ritornare quanto richiesto, cio’ che puo’ cambiare sono
+// i nomi e il numero dei sellers e gli importi, la struttura rimarra’ la stessa.
+// In questo esempio andrebbe ritornato un risultato di questo tipo:
+
+`cancelleria
+500
+40
+60
+
+servizi igienici
+1000
+1
+200
+
+vendite
+0
+`
+// faccio un array di oggetti con le mie variabili 
+// iterno dentro l array di oggetti con un foreach
+// mi calcolo la media singola delle spese dei vai nomi usando reduce
+//confronto poi con dei cicli if per definire i valori di spesa max e spesa min 
+// ora come faccio a ritornare i due oggetti non avendo una funznione?
+// dopo averli creati li pusho dentro un array
+let sellers = [
+            {reparto: "Cancelleria",       spese: [500, 40, 60]},
+            {reparto: "Servizi igienici",  spese: [1000, 1, 200]},
+            {reparto: "Vendite",           spese: [0]},
+        ];
+        let SpesaMax = 0;
+        let topSeller = "";
+        let SpesaMin = Number.MAX_VALUE;
+        let lowSeller = "";
+        let arr = []
+
+     
+        sellers.forEach(function (rep) {
+            
+            let spese = rep.spese.reduce(function (totale, SingolaSpesa) {
+                return totale + SingolaSpesa;
+            });
+
+            if (spese > SpesaMax) {
+                SpesaMax = spese;
+                topSeller = rep.reparto;
+            }
+            if (spese < SpesaMin) {
+                SpesaMin = spese;
+                lowSeller = rep.reparto;
+            }
+        }) 
+            let arrobj1={
+            'reparto': topSeller,
+            'spesa': SpesaMax
+            }
+            let arrobj2={
+            'reparto': lowSeller,
+            'spesa': SpesaMin
+             }
+
+            arr.push(arrobj1)
+            arr.push(arrobj2)   
+
+
+        console.log(`Il seller che spende di più è ${topSeller} con una spesa di ${SpesaMax}`)
+        console.log(`Il seller che spende di meno è ${lowSeller} con una spesa di ${SpesaMin}`)
+
+
+
+// 2 - Oh, non puoi farci niente. Siamo tutti pazzi qui.
+// Scrivere una funzione che sia in grado di dire se una data stringa in ingresso sia o meno
+// “pazza”.
+// Una stringa e’ “pazza” se:
+// ● non ha un soggetto, un soggetto puo’ essere solo: “Lui”, “Lei”, “Egli”, “Ella”
+// ● finisce con “?!?”
+// ● contiene la stringa “Cthulhu”
+// ● inizia e finisce con una parola che finisce in “are”, o “ere”, o “ire”
+// ● inizia con della punteggiatura, quindi con uno tra “,.!?:;-~”
+// Basta uno dei suddetti “requisiti di pazzia” per rendere una frase “pazza”; a meno che la
+// stringa contenga una di queste stringhe, in quel caso la stringa non e’ mai “pazza”:
+// ● Church
+// ● mare
+// Esempi di stringhe pazze:
+// ● .Quando guardi a lungo nell’abisso, l’abisso ti guarda dentro.
+// ● Andare a rimirare
+// Esempi di stringhe non pazze:
+// ● Lui e’ pazzo.
+// ● ~ Pensava sempre al mare come a la mar, come lo chiamano in spagnolo quando lo
+// amano ~
+// ● ~ Papa’, come sta Church? 
+
+//pseudocodice
+//dichiaro la mia funzione che prende in ingresso una stringa
+    //farò un ciclo sulla mia stringa data come unico parametro alla funzione e analizzare ogni carattere
+        //farò un if di condizione dove specificherò cosa non deve includere per essere una stringa normale
+        //un else che invece mi stamperà in caso di presenza di caratteri o parole specifiche che la stringa data è MAD
+
+
+function madString(string){
+    let stringa = string.split(' ')
+    let goodSigns = ['lui','lei','egli','ella',]
+    let purifyWord = ['mare','church']
+    let madSigns= ['are','ere','ire']
+    let madSymbol = [',','.','!','?',':',';','-','~']
+     let state = ''
+    for (let i = 0; i < stringa.length; i++) {
+        if (!purifyWord.includes(stringa[i]) || !goodSigns.includes(stringa[i]) ||stringa[i].includes('ere'|| 'are' || 'ire')||  madSymbol.includes(stringa[i].charAt(0)) ){
+            state='pazzia'
+        }else{
+            state = 'normalità'
+            } 
+        }
+    return `la stringa ${stringa.join(' ')} ha lo stato di ${state}`
+}
+console.log(madString('ciao a lei'));
+
+    </script>
+</body>
+</html>
