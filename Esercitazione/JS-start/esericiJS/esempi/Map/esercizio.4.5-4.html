@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ex4</title>
+  </head>
+  <body>
+    <script>
+      //         Ex 4
+      // creare una mappa che rappresenta 5 stili CSS a piacere e stamparla in output.
+      // Creare la funzione showCSS che prende in ingresso la precedente mappa e stampa tutti i suoi elementi.
+      // ---------------------------------------
+
+      const mappy = new Map([
+        ["color", "white"],
+        ["font-size", "35px"],
+        ["width", "110px"],
+        ["height", "110px"],
+        ["display", "flex"],
+      ]);
+      console.log(mappy);
+
+      function showCSS(map) {
+        for (let i = 0; i < map.length; i++) {
+          const mapp = map[i];
+          if (mapp == mappy) console.log(mapp);
+          return mappy;
+        }
+      }
+
+      mappy.forEach(function (v, k) {
+        console.log(k + " = " + v);
+      });
+    </script>
+  </body>
+</html>

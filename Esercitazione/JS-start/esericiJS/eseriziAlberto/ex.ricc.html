@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //         Ex 1
+
+      // Realizzare l'apposita strategia per stampare la stringa 'Riccardo' invertita in output.
+
+      // Tempo massimo: 5 minuti
+      // */
+
+      function invertString(params) {
+        let invert = "";
+        for (let i = params.length - 1; i >= 0; i--) {
+          invert += params[i];
+        }
+        return invert;
+      }
+      invertString("Riccardo");
+      console.log(invertString("Riccardo"));
+
+      // Altro metodo
+
+      let string = "Riccardo";
+      let invert = "";
+      if (typeof string == "string") {
+        invert = string.split("").reverse().join("");
+        console.log(invert);
+      }
+
+      /*
+ Ex 2
+data la stringa 'Riccardo'
+realizzare l'apposita strategia per stampare in output l'ultimo carattere maiuscolo concatenato a un underscore e al primo carattere minuscolo:
+
+O_r 
+*/
+      let stringa = "riccardo";
+      let word = "";
+      word =
+        stringa.charAt(stringa.length - 1).toUpperCase() +
+        "_" +
+        stringa.charAt(0);
+
+      console.log(word);
+
+      /*
+  Ex 3
+*/
+
+      // creare l'apposita strategia per rappresentare, tramite oggetto, uno studente. Lo studente avrà:
+      // idMatricola: 14
+      // nomeCompleto: Luigi Verdi
+      // voti: 6, 7, 7
+
+      // Stampare in output la stringa tramite apposito algoritmo:
+
+      // il terzo voto dello studente con id 14 (Luigi Verdi) è 7
+
+      const student = {
+        idMatricola: 14,
+        nomeCompleto: "Luigi Verdi",
+        voti: [6, 7, 7],
+      };
+      console.log(
+        `lo studente con id ${student.idMatricola} di nome ${student.nomeCompleto} ha come terzo voto ${student.voti[2]}`
+      );
+
+      let studente = {};
+      studente.set("name", "rodolfo");
+      studente.set("age", 23);
+      studente.set("job", "baker");
+
+      console.log(studente);
+    </script>
+  </body>
+</html>

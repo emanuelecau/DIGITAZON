@@ -56,6 +56,13 @@ ul{
     gap: 5px;
 }
 
+
+ul div{
+    align-self:center ;
+    width: 200px;
+    text-align: center;
+}
+
 .menu li {
     text-align: center;
     display: none;
@@ -76,6 +83,7 @@ li:hover{
     color: gold;
     transform:rotate(1turn);
     transition: 1s;
+    background-color: coral;
 }
 #login:hover a{
     color: gold;
@@ -87,6 +95,7 @@ i{
 
 i:hover{
     color: coral;
+
 }
 
 /* ---------------MAIN---------------------- */
@@ -133,11 +142,12 @@ p{
     font-style: italic;
     color: gray;
     width: fit-content;
+    flex-direction: column;
 }
 
 
 button{
-    margin-top: 10px;
+    
     width: 200px;
     height: 20px;
     font-size: xx-small;
@@ -294,7 +304,6 @@ footer{
         position: fixed;
         width: 100%;
         background-color: rgb(139, 98, 43);
-    
     }
     
     div.menu{
@@ -304,9 +313,6 @@ footer{
         padding: 10px;
         text-decoration: none;
         justify-content: space-between;
-        
-       
-    
     }
     
     nav{
@@ -346,6 +352,9 @@ footer{
     ul i{
         display: none;
         visibility: hidden;
+    }
+    ul div{
+        width: fit-content;
     }
 
     .menu li{
@@ -422,11 +431,11 @@ footer{
         font-style: italic;
         color: gray;
         width: fit-content;
+        flex-direction: row;
     }
     
     
     button{
-        margin-top: 10px;
         width: 200px;
         height: 20px;
         font-size: xx-small;
@@ -435,6 +444,7 @@ footer{
         background-color:coral;
         color: bisque;
         cursor: pointer;
+        
         
     }
     button:hover{
@@ -554,7 +564,9 @@ footer{
         
         border: 1px solid rgb(194, 140, 119);
     }
-    
+    .copirtght ul{
+        justify-content: space-evenly;
+    }
     .copirtght li{
         border: 1px solid rgb(199, 149, 116);
         border-radius: 2px;

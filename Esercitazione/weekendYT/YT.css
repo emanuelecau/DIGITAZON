@@ -12,19 +12,17 @@ html{
 
 .headbar{
     display: flex;
-    background-color: rgb(200, 222, 240);
+    background-color:#fff;
     justify-content: space-between;
     flex-direction: row;
     margin: 0 ;
     align-items: center;
     padding-top: 5px;
     padding-bottom: 5px ;
-}
-header.headbar{
-    background: #fff;
-    position: static;
+    border-bottom: 1.2px solid black;
+    position: sticky;
     top: 0;
-    border-bottom: 1.2px solid rgb(0, 0, 0, 0.5)
+   
 }
 .logo{
     display: flex;
@@ -108,7 +106,7 @@ img:hover{
 .link > div i{
    width: fit-content;
 }
-.mid-bar{
+div.mid-bar{
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -152,8 +150,7 @@ div.scroll{
     flex-direction: column;
 }
 section{
-    width: 1264px;
-    height: 1264px;
+    width: fit-content;
     background-color: #fff;
     display: flex;
 }
@@ -242,7 +239,9 @@ iframe {
 .box-right span:last-child{
     font-size: x-small;
     font-style: italic;
-    opacity: 0.7;
+    color: #928d8d;
+    display: flex;
+    
 }
 .box-right img{
     display: flex;

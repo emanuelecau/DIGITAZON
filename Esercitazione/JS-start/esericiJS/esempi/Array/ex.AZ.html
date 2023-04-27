@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //         creare una variabile che contenga il seguente array
+      // [ 'mario', 'luigi', 'peach', 'daisy' ]
+      // stampare in output:
+      // DY
+      // PH
+      // LI
+      // MO
+
+      let stamp = "";
+      function lastAndFirst(params) {
+        for (let i = params.length - 1; i >= 0; i--) {
+          stamp = params[i].charAt(0) + params[i].charAt(params[i].length - 1);
+          console.log(stamp.toUpperCase());
+        }
+      }
+
+      console.log(lastAndFirst(["mario", "luigi", "peach", "daisy"]));
+    </script>
+  </body>
+</html>

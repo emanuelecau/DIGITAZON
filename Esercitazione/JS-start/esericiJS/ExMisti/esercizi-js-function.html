@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>eserciziJsFunction</title>
+  </head>
+  <body>
+    <script>
+      //         Ex 1
+      // creare una funzione 'ope' che prende in ingresso una stringa e due numeri.
+      // controlla il valore della stringa.
+      // Se è '+' restituisci la somma dei due numeri
+      // Se è '-' restituisci la differenza dei due numeri
+      // Se è '*' o 'x' restituisci la moltiplicazione dei due numeri
+      // Se è '/' restituisci la divisione dei due numeri
+      // altrimenti restituisci 0
+
+      // Chiama la funzione ope 4 volte variando ogni volta i valori utilizzati e stampa in console i risultati
+
+      // Ex 2
+      // creare una funzione 'invertString' che prende in ingresso una stringa e la restituisce invertita.
+      // Chiamare la funzione con i seguenti valori e stampare i risulati in console:
+      // - javascript
+      // - console
+      // - anna
+      // - 100
+      // Nota: se il valore non è una stringa, ma un numero, stampa il numero moltiplicato per 10.
+      // Se il valore non è una stringa ne un numero, stampa 'errore'
+
+      // Ex 3
+      // crea una funzione 'xRayArray' che prende in ingresso un array e mi stampa:
+      // - la lunghezza dell'array
+      // - se l'array contiene SOLO numeri o meno
+      // - se l'array è vuoto
+      // - se è un array oppure un altro tipo di dato
+      // La funzione NON restituisce nessun valore.
+      // Chiamare la funzione con i seguenti valori:
+      // - [10, 20, 30]
+      // - []
+      // - ['ciao', 100]
+      // - 'ciao'
+
+      // Ex 4
+      // crea una funzione 'isPalindrome' che prende una stringa in ingresso e mi dice se è palindroma.
+      // Chiamare la funzione con i seguenti valori:
+      // - anna
+      // - itopinonavevanonipoti
+      // - ugo
+      // NON copiare algoritmi dal web (me ne accorgo  )
+
+      // Ex 5
+      // creare una funzione 'evenInMatrix' che mi restituisce un contatore che tiene traccia di tutti i numeri pari presenti in una matrice passata in ingresso (controllare tutti gli array di un array).
+      // Chiamare la funzione con i seguenti valori:
+      // -
+      // [
+      //   [1, 3, 3],
+      //   [2, 3, 3],
+      //   [4, 9, 8]
+      // ]
+      // -
+      // [
+      //   [2, 1, 6],
+      //   [3, 4, -10],
+      //   [9, 9, 240]
+      // ]
+
+      //         Ex 1
+      // creare una funzione 'ope' che prende in ingresso una stringa e due numeri.
+      // controlla il valore della stringa.
+      // Se è '+' restituisci la somma dei due numeri
+      // Se è '-' restituisci la differenza dei due numeri
+      // Se è '*' o 'x' restituisci la moltiplicazione dei due numeri
+      // Se è '/' restituisci la divisione dei due numeri
+      // altrimenti restituisci 0
+
+      // Chiama la funzione ope 4 volte variando ogni volta i valori utilizzati e stampa in console i risultati
+      let result = 0;
+      function ope(a, b, c) {
+        if (
+          typeof a == "string" &&
+          typeof b == "number" &&
+          typeof c == "number"
+        ) {
+          if (a == "+") result = b + c;
+          if (a == "-") result = b - c;
+          if (a == "*" || a == "x") result = b * c;
+          if (a == "/") result = b / c;
+        } else console.log("valore stringa zero");
+      }
+
+      ope("-", 5, 5);
+      console.log(result);
+      ope("+", 4, 3);
+      console.log(result);
+      ope("*", 5, 2);
+      console.log(result);
+      ope("/", 7, 2);
+      console.log(result);
+      console.log();
+
+      // Ex 2
+      // creare una funzione 'invertString' che prende in ingresso una stringa e la restituisce invertita.
+      // Chiamare la funzione con i seguenti valori e stampare i risulati in console:
+      // - javascript
+      // - console
+      // - anna
+      // - 100
+      // Nota: se il valore non è una stringa, ma un numero, stampa il numero moltiplicato per 10.
+      // Se il valore non è una stringa ne un numero, stampa 'errore'
+      let revert = "";
+      function invertstring(s) {
+        for (let i = s.length - 1; i >= 0; i--) {
+          if (typeof s == "string") revert += s[i];
+        }
+        if (typeof s == "number") revert = s * 10;
+        else console.log("errore");
+      }
+      invertstring(80);
+      console.log(revert);
+      invertstring(10);
+      console.log(revert);
+      invertstring(true);
+
+      // Ex 3
+      // crea una funzione 'xRayArray' che prende in ingresso un array e mi stampa:
+      // - la lunghezza dell'array
+      // - se l'array contiene SOLO numeri o meno
+      // - se l'array è vuoto
+      // - se è un array oppure un altro tipo di dato
+      // La funzione NON restituisce nessun valore.
+      // Chiamare la funzione con i seguenti valori:
+      // - [10, 20, 30]
+      // - []
+      // - ['ciao', 100]
+      // - 'ciao'
+
+      function xRayArray(params) {
+        console.log("la lunghezza dell'array è: " + params.length);
+        if (Array.isArray(params)) {
+          if (params.every((elem) => typeof elem == "number")) {
+            console.log("l'array contiene solo numeri ");
+          } else {
+            console.log(
+              "l'array continene almeno un elemento che non è un numero "
+            );
+          }
+          if (params.length == 0) {
+            console.log("l'array è vuoto");
+          } else {
+            console.log("l'array non è vuoto");
+          }
+        } else {
+          console.log("l'elemento non è un array ma è: " + typeof params);
+        }
+      }
+      xRayArray([10, 30, 40]);
+      console.log("--------------");
+      xRayArray(["caio", 10]);
+      console.log("--------------");
+      xRayArray("ciao");
+
+      //ARRAY.ISARRAY è UNA CLASSE CHE MI PERMETTE DI CAPIRE SE IL MIO DATO è UN ARRAY
+
+      // Ex 4
+      // crea una funzione 'isPalindrome' che prende una stringa in ingresso e mi dice se è palindroma.
+      // Chiamare la funzione con i seguenti valori:
+      // - anna
+      // - itopinonavevanonipoti
+      // - ugo
+      // NON copiare algoritmi dal web (me ne accorgo  )
+      const poli = ["anna", "itopinonavevanonipoti", "ugo", "gigi", "aaaa"];
+      function isPalindrome(string) {
+        return string == string.split("").reverse().join("");
+      }
+      for (let p = 0; p < poli.length; p++) {
+        if (isPalindrome(poli[p]) == true) {
+          console.log(poli[p] + "/" + " è una parola palindroma");
+        } else {
+          console.log(poli[p] + "/" + " non è una parola palindroma");
+        }
+      }
+
+      // Ex 5
+      // creare una funzione 'evenInMatrix' che mi restituisce un contatore che tiene traccia di tutti i numeri pari presenti in una matrice passata in ingresso (controllare tutti gli array di un array).
+      // Chiamare la funzione con i seguenti valori:
+      // -
+      // [
+      //   [1, 3, 3],
+      //   [2, 3, 3],
+      //   [4, 9, 8]
+      // ]
+      // -
+      // [
+      //   [2, 1, 6],
+      //   [3, 4, -10],
+      //   [9, 9, 240]
+      // ]
+      function evenInMatrix(matrix) {
+        let odd = 0;
+        for (let m1 = 0; m1 < matrix.length; m1++) {
+          for (let m2 = 0; m2 < matrix[m1].length; m2++) {
+            if (matrix[m1][m2] % 2 == 0) {
+              odd++;
+            }
+          }
+        }
+
+        return odd;
+      }
+
+      const mat1 = [
+        [1, 3, 3],
+        [2, 3, 3],
+        [4, 9, 8],
+      ];
+      const mat2 = [
+        [2, 1, 6],
+        [3, 4, -10],
+        [9, 9, 240],
+      ];
+      console.log(evenInMatrix(mat1));
+      console.log(evenInMatrix(mat2));
+    </script>
+  </body>
+</html>

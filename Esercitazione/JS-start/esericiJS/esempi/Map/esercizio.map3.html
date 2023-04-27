@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>esercizio2</title>
+  </head>
+  <body>
+    <script>
+      //       Ex 2
+      // creare la funzione countVowels che prende in ingresso una stringa, e restituisce una mappa che avrà per chiavi tutte le vocali alfabetiche e per rispettivi valori il numero di occorrenze di ogni vocale nella stringa
+      // es 'ciao a tutti'   produce  { a => 2, e => 0, i => 2, o => 1, u => 1 }
+      // ---------------------------------------
+      let mapy = new Map();
+      let word = "magicamente";
+      let countA = 0;
+      let countE = 0;
+      let countI = 0;
+      let countO = 0;
+      let countU = 0;
+
+      function countVowels(string) {
+        console.log("ciao");
+
+        for (let i = 0; i < string.length; i++) {
+          if (string[i] == "a") countA++;
+          if (string[i] == "e") countE++;
+          if (string[i] == "i") countI++;
+          if (string[i] == "o") countO++;
+          if (string[i] == "u") countU++;
+        }
+        mapy.set("a", countA);
+        mapy.set("e", countE);
+        mapy.set("i", countI);
+        mapy.set("o", countO);
+        mapy.set("u", countU);
+        console.log(mapy);
+
+        console.log(countA, countE, countI, countO, countU);
+      }
+
+      console.log(word);
+
+      countVowels("magicamente");
+    </script>
+  </body>
+</html>

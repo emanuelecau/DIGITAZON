@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //         1 - Find and replace
+      // Scrivere una funzione che riceva in ingresso tre stringhe:
+      // ● la prima sara’ un testo
+      // ● la seconda sara’ una parola che andra’ cercata nel testo
+      // ● la terza sara’ la parola da sostituire al posto della seconda
+      // La funzione deve quindi produrrei lo stesso effetto che si ottiene quando si fa find and
+      // replace di una parola in un testo.
+      // Si assuma che:
+      // ● la seconda e la terza stringa siano sempre e solo una parola, mai una frase, quindi
+      // non ci saranno spazi
+      // ● sulle stringhe non esistano i metodi indexOf, replace, e similari, dovete scrivere voi
+      // l’algoritmo
+      // ● la seconda e la terza parola non necessariamente devono avere lo stesso numero di
+      // caratteri
+      // Ricordate che le stringhe in JavaScript sono trattate in modo simile agli array.
+      // La funzione deve ritornare la nuova stringa aggiornata.
+
+      //pseudo codice
+      //il metodo .split applicabile alle stringhe le trasforma in array ciò che viene inserito nelle ( ) del metodo determina il modo di separare un elemento dall'altro
+      //si potrebbe quibdi applicare il metodo .split al primo parametro ovvero alla nostra frase da analizzare
+      //così facendo mettendo tra le (' ') uno spazio andremo a dividere il nostro array in 3 distinti indici
+      // sarà così poi facile ciclare il nostro array ottenuto dal primo parametro e mettergli una condizione a seconda dell'indice di ogni giro
+      // cerchiamo però di risolvere in maniera manuale ciò che invece il metodo .split ci da in maniera automatica
+      // cicliamo il primo parametro cioè la nostra frase
+      // mettiamo la condizione che individua string[i] == ' ' e quando lo trova aggiunge a myString uno spazio
+
+      // se invece string[i] == all ultimo indice di se stesso la riporto con un .trim per togliere lo spazio finale
+      function space() {
+        console.log("--------------------------------------");
+      }
+
+      function findAndReplace(string, instring, repstring) {
+        let nArr = [];
+        let myString = "";
+        let finalString = "";
+
+        // cercare di sostituire ciò che fa .split
+        for (let i = 0; i < string.length; i++) {
+          if (string[i] == " ") {
+            myString += string[i]; // aggiungo lo spazio alla mia nuova parola
+            nArr.push(myString); // pusho la formatasi nel mio ciclo else arrivata all' if perchè incontra lo spazio
+            myString = ""; // ridefinisco mystring come stringa vuota in modo tale da sommare poi solo la seconda parola della frase cioè mia
+          } else if (string[i] == string.length - 1) {
+            myString += string[i];
+            nArr.push(myString);
+            //
+          } else {
+            myString += string[i];
+          }
+        }
+        nArr.push(myString); // pusho il risultato della mia stringa dentro l' array
+        // return nArr;
+
+        // ora devo in modo modulare sostiure nell array creato il suo secondo indice con il mio terzo parametro
+
+        //quindi farò un ciclo for sul mio array
+        //gli dovrò mettere la condizione di confrontare i miei indici con il secondo parametro
+        for (let i = 0; i < nArr.length; i++) {
+          if (nArr[i] == instring + " ") {
+            instring = repstring;
+            finalString += repstring + " ";
+          } else {
+            finalString += nArr[i];
+          }
+        }
+        return finalString.trimEnd();
+      }
+
+      console.log(findAndReplace("mamma mia", "mia", "doia"));
+      space();
+
+      function findAndReplace(stringa, str, strN) {
+        let newString = "";
+
+        if (stringa.includes(str)) {
+          newString = stringa.split(str).join(strN);
+        }
+
+        return newString;
+      }
+      console.log(findAndReplace("mamma mia", "mia", "doia"));
+      space();
+
+      //       2 - Find and update
+      // Scrivere una funzione che, dato in ingresso un array di oggetti così strutturato:
+      // sia in grado di attribuire un valore di default dove sia presente un null, seguendo queste
+      // regole:
+      // ● se il type e’ “boolean” deve aggiornare usando false
+      // ● se il type e’ “string” deve aggiornare usando stringa vuota
+      // ● se il type e’ “number” deve aggiornare usando 0
+      // ● se il type e’ “array” deve aggiornare usando array vuoto
+      // ● se il type e’ “object” deve aggiornare usando oggetto vuoto
+      // Come vedete ogni singolo oggetto ha sempre due attributi, uno la cui chiave non e’ dato a
+      // sapere a priori, un altro la cui chiave e’ sempre “type” e il valore e’ nella lista qui sopra.
+      // La funzione deve ritornare lo stesso oggetto ricevuto in input, con i valori aggiornati.
+
+      //pseudo
+      //una volta costruito il mio array di oggetti
+      //farò un foreach per iterarlo
+      // creerò una condizione che prende tutte le altre sotto dove gli dico che se il valore della prima propietà è null allora eseguirò le seguenti operazioni
+      //all interno metterò delle condizioni usando il type of
+      //a questi type of dovrò fare in modo di riuscire a sostituire il null con un valore diverso a seconda del valore della sua chiave type
+      // const myArr = [
+      //   { job: null, type: true },
+      //   { name: null, type: "string" },
+      //   { surname: null, type: 10 },
+      //   { mode: null, type: [3, "js", "op"] },
+      //   { period: null, type: { fast: 200, slom: 100 } },
+      // ];
+
+      // questo è un risultato non modulare
+      //per renderlo modulare dovrò crearmi una variabile che corrisponda ad un nuovo oggetto
+      //avrà come valore le chiavi del mio array di oggetti
+      const myArr = [
+        { job: null, type: true },
+        { name: null, type: "string" },
+        { surname: null, type: 10 },
+        { mode: null, type: [3, "js", "op"] },
+        { period: null, type: { fast: 200, slom: 100 } },
+      ];
+
+      function findAndUpdate(arr) {
+        let newArr = [];
+        let newObj = {};
+        arr.forEach(function (n) {
+          if (Object.values(n).includes(null)) {
+            if (Object.keys(n)) {
+              if (typeof n.type == "boolean") {
+              }
+              if (typeof n.type == "string") {
+                n.name = " ";
+              }
+              if (typeof n.type == "number") {
+                n.surname = 0;
+              }
+              if (n.type instanceof Array) {
+                n.mode = [];
+              }
+              if (n.type instanceof Object) {
+                n.period = {};
+              }
+            }
+          }
+        });
+        return arr;
+      }
+      console.log(findAndUpdate(myArr));
+
+      //creo un forEach per iterare sul mio array di oggetti
+      //creo due variabili una conterra un nuovo array aggionrato dei suoi nuovi valori
+      //una conterrà gli oggetti da metterci dentro
+
+      // function findAndUpdate(arr) {
+      //   let newArr = []; //creo una var con array vuoto dove andrò poi a pushare i miei nuovi oggetti
+      //   arr.forEach(function (indexA, n) {
+      //     console.log(indexA, n);
+      //     // faccio un forEach per iterare sull array di oggetti
+      //     if (Object.keys(indexA) == "type") {
+      //       if (indexA.type == null) {
+      //         newArr.push(indexA);
+      //       }
+      //     }
+      //     // console.log(Object.values(indexA)[1]);
+      //   });
+      //   return newArr;
+      // }
+      // console.log(findAndUpdate(myArr));
+    </script>
+  </body>
+</html>

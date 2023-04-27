@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      /*
+              Ex 1
+
+              Utilizzando un apposita strategia e utilizzando il ciclo WHILE, stampare i numeri da 20 a 15 (scalando) omettendo il numero 19
+              */
+
+      let i = 20;
+      while (i >= 15) {
+        if (i != 19) {
+          console.log(i);
+        }
+        i--;
+      }
+
+      // stampa solo i pari
+
+      let j = 30;
+      while (j >= 20) {
+        if (j % 2 == 0) {
+          console.log(j);
+        }
+        j--;
+      }
+
+      /*
+      Ex 2
+
+      Creare un array di 5 parole.
+      Iterare su questo array in 2 modi.
+      PRIMA con un while, per stampare tutte le singole parole nell'array MAIUSCOLE. In questo caso, vogliamo ciclare l'array in senso invertito.
+
+      DOPO con un foreach, per stampare tutte le parole dell'array in ordine
+      */
+
+      let array = ["ciao", "miao", "op", "gg", "sium", "lapittura"];
+
+      let z = array.length - 1;
+      while (z >= 0) {
+        console.log(array[z].toUpperCase());
+        z--;
+      }
+      console.log("-------------------");
+
+      array.forEach(function (n) {
+        if (n == "gg" || n == "op" || n == "sium") {
+          console.log(n.toUpperCase());
+        } else if (n == "lapittura") {
+          console.log(n.split("").reverse("").join("").toUpperCase());
+        } else console.log(n);
+      });
+
+      console.log("-----------------------");
+
+      //       creare un oggetto chiamato "language" che rappresenta un linguaggio di programmazione, e che abbia le seguenti caratteristiche:
+
+      // - proprietà label, indica il nome del linguaggio
+      // - proprietà tags; un array di 3 stringhe che indica le caratteristiche dell'oggetto
+      // - un metodo printTags che itera sui tag dell'oggetto e li stampa con un WHILE
+
+      // chiamare il metodo printTags per mostrare i dati in console
+
+      const language = {
+        label: "photoshop",
+        tags: ["mask", "fade", "collage"],
+        printTags: function () {
+          console.log(this.label + " caratteristiche: ");
+          let i = 0;
+          while (i < this.tags.length) {
+            console.log(this.tags[i]);
+            i++;
+          }
+        },
+      };
+      language.printTags();
+    </script>
+  </body>
+</html>

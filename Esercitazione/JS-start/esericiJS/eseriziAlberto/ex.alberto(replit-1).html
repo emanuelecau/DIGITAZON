@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // scrivere una funzione chiamata between che
+      // dati due numeri a e b in ingresso
+      // ritorni un array che contiene tutti i numeri compresi tra a e b, estremi esclusi
+      let array = [];
+      function between(a, b) {
+        for (let i = a + 1; i < b; i++) {
+          array.push(i);
+        }
+        return array;
+      }
+
+      console.log("--------------------");
+      console.log(between(1, 10));
+      // console.log(between(4, 8));
+      console.log("--------------------");
+
+      // scrivere una funzione chiamata biggerString che
+      // date due stringhe in ingresso
+      // ritorni la piu' lunga
+      let firstS = "ciao";
+      let secodS = "ultralightbeam";
+
+      function biggerString(a, b) {
+        if (firstS.length > secodS.length) {
+          return `la stringa ${firstS} è più lunga della stringa ${secodS}`;
+        } else {
+          return `la stringa ${secodS} è più lunga della stringa ${firstS}`;
+        }
+      }
+      console.log(biggerString(firstS, secodS));
+
+      // scrivere una funzione chiamata countNoSpaces che
+      // data una stringa come parametro
+      // ritorni un intero n che rappresenti i caratteri presenti nella
+      // string passata, senza contare gli spazi
+      let stri = "";
+      function countNoSpaces(string) {
+        for (let i = 0; i < string.length; i++) {
+          stri += string[i].trim();
+        }
+        return stri;
+      }
+      console.log(countNoSpaces("mamma mia come sto messo"));
+      console.log("--------------------------");
+
+      // scrivere una funzione chiamata countUndefinedKeys che
+      // dato un oggetto come parametro
+      // ritorni un intero che rappresenti il numero di chiavi, presenti
+      // nell'oggetto, che hanno valore undefined o null
+      function countUndefinedKeys(params) {
+        let intero = 0;
+        let array = 0;
+
+        array = Object.values(params);
+        for (let x = 0; x < array.length; x++) {
+          console.log(array[x]);
+
+          if (array[x] == undefined || array[x] == null) {
+            intero++;
+          }
+        }
+
+        return intero;
+      }
+
+      
+      const objecto = {
+        name: "jhonas",
+        age: 23,
+        lastname: undefined,
+        drivelicence: undefined,
+        job: "teacher",
+        carrier: undefined,
+        name2: null,
+      };
+      console.log(objecto.age);
+      // console.log(Object.entries(objecto));
+      // console.log(Object.values(objecto));
+      console.log(Object.keys(objecto));
+      console.log(countUndefinedKeys(objecto));
+
+      //versione alessandro corretta
+
+      const obj = {1:"flour", 2:"sugar", 3:"", 4:"salt", 5:undefined, 6:"0", 7:null}
+
+function countUndefinedKeys(obj) {
+    let count = 0
+    for (let i=0; i<Object.keys(obj).length; i++) {
+        let key = Object.keys(obj)[i]
+        if (obj[key] == null) {
+            count++
+        }
+    }
+return count
+}
+
+console.log(countUndefinedKeys(obj))
+
+      console.log("----------------------");
+      //scrivere una funzione che prende in ingresso una stringa e ritorna il numero di occorrenze di ogni singolo carattere della stringa
+
+      //ESRCIZIO FATTO IN CLASSE CON SALVATORE ALLA CONSOLE
+      console.log(count("caramella"));
+      function count(stringa) {
+        const mappa = new Map();
+        for (let i = 0; i < stringa.length; i++) {
+          if (mappa.has(stringa[i])) {
+            mappa.set(stringa[i], mappa.get(stringa[i]) + 1);
+          } else {
+            mappa.set(stringa[i], 1);
+          }
+        }
+        return mappa;
+      }
+      //creo una stringa qualsiasi
+      //creo una funzione che prende una stringa come parametro
+      //dichiaro una variabile contatore
+      //faccio un ciclo for per farla iterare
+      //faccio un ciclo if dove metto la condizione di comparazione tra la stringa iterata e le lettere dell'alfabeto
+      //creo una mappa con chiavi valori dove chiave = n occorrenze e valore = lettera
+      console.log(count("caramella"));
+      function count(params) {
+        const mappy = new Map();
+        for (let i = 0; i < params.length; i++) {
+          let par = params[i];
+          if (mappy.has(par)) {
+            mappy.set(par, mappy.get(par) + 1);
+          } else {
+            mappy.set(par, 1);
+          }
+        }
+
+        return mappy;
+      }
+
+      // scrivere una funzione che data in ingresso una stringa rimuove tutti i caratteri dupplicati
+      //scrivere la strigna
+      //scrivere la funzione rimoveDouble
+      //cerco un metodo che possa eliminare i doppioni e mi viene subito in mente il set
+      //faccio un ciclo per vedrificare l iterazione della stringa
+      //creo un set
+      //allego all iterazione della stringa un metodo per inserirla nel set
+      //faccio il return del set
+
+      let x = "mammamia";
+      function rimoveDouble(string) {
+        const setty = new Set();
+        for (let i = 0; i < string.length; i++) {
+          setty.add(string[i]);
+        }
+        return setty;
+      }
+      console.log(rimoveDouble(x));
+      console.log("------------------------------------");
+
+      // scrivere una funzione chiamata countVowels che
+      // data una stringa in ingresso
+      // ritorni il numero di vocali presenti nella stringa
+      //creo la funzione con stringa in ingresso
+      //cerco un modo per ricavare solo le vocali dopo aver ciclato la stringa
+      //creo una mappa che racchiudi come key gli indici della stringa e come values le sue vocali
+
+      function countVowels(string) {
+        let vocals = 0;
+        const mappet = new Map();
+        for (let i = 0; i < string.length; i++) {
+          if (mappet.has(string[i])) {
+            mappet.set(string[i], mappet.get(string[i]) + 1);
+          } else {
+            mappet.set(string[i], 1);
+          }
+        }
+        return mappet;
+      }
+
+      function countVowels(string) {
+        let vocals = 0;
+        for (let i = 0; i < string.length; i++) {
+          if (
+            string[i] == "a" ||
+            string[i] == "e" ||
+            string[i] == "i" ||
+            string[i] == "o" ||
+            string[i] == "u"
+          ) {
+            vocals++;
+          }
+        }
+        return vocals;
+      }
+      console.log(countVowels("papaya"));
+      console.log("---------------------");
+      // scrivere una funzione chiamata createArray che
+      // dato un numero n in ingresso
+      // ritorni un array lungo n che contiene tutti n
+
+      // ad esempio per 3 ritorna [3, 3, 3]
+      // ad esempio per 5 ritorna [5, 5, 5, 5, 5]
+      // ad esempio per 0 ritorna []
+      // ad esempio per -1 ritorna []
+
+      //scrivo la funzione
+      //preso un solo parametro devo riuscire a ripeterlo per il numero stesso del suo valore rappresentato
+      //fare una funzione che ritorni in valore numerico in quantita di iterazione
+      let arrayl = [];
+      function createArray(n) {
+        for (let i = 0; i < n; i++) {
+          arrayl.push(n);
+        }
+        return arrayl;
+      }
+      console.log(arrayl);
+      console.log(createArray(3));
+      console.log("---------------------");
+
+      // scrivere una funzione chiamata even che
+      // dato un array di numeri in ingresso
+      // ritorni un array che contiene solo i numeri pari
+
+      function even(arr) {
+        let pari = [];
+        for (let i = 0; i < arr.length; i++) {
+          if (arr[i] % 2 == 0) {
+            pari.push(arr[i]);
+          } else {
+            console.log(`il numero ${arr[i]} è dispari `);
+          }
+        }
+        return pari;
+      }
+      console.log(even([2, 3, 4, 5, 6, 7, 8]));
+      console.log("--------------------------");
+
+      // scrivere una funzione chiamata isDivisible che
+      // dato un numero a e un numero b
+      // ritorni true se a e' divisibile per b, false altrimenti
+
+      function isDivisible(a, b) {
+        if (a % b == 0) {
+          return true;
+        } else {
+          return false;
+        }
+      }
+      console.log(isDivisible(6, 2));
+      console.log("--------------------");
+      // scrivere una funzione chiamata isInArray che
+      // dato un array di numeri e un numero in ingresso
+      // ritorna true se il numero e' presente nell'array
+      // false altrimenti
+
+      function isInArray(n, ns) {
+        if (n.includes(ns)) {
+          return true;
+        } else {
+          return false;
+        }
+      }
+      console.log(isInArray([2, 5, 23, 77], 23));
+      console.log(isInArray([, 45, 54, 55, 100], 10));
+      // console.log(isInArray([2, 5, 23, 77], 23));
+      console.log("------------------");
+      // scrivere una funzione chiamata isInString che
+      // date due stringhe in ingress
+      // ritorna true se la seconda stringa e' contenuta nella prima
+      // false altrimenti
+
+      //dopo aver dichiarato la funzione che prende in ingresso due stringe
+      //cerco un metodo per metterle a confronto
+      //faccio un primo ciclo for per analizzare la prima stringa e definirle gli indici
+      // faccio un secondo ciclo for per analizzare anche l'altra stringa
+      //faccio un if dove metto la stringaS a confronto con la stringaT
+
+      function isInString(s, t) {
+        let result = "";
+        for (let i = 0; i < s.length; i++) {
+          for (let x = 0; x < t.length; x++) {
+            if (s.includes(t)) {
+              return true;
+            } else {
+              return false;
+            }
+          }
+        }
+      }
+      console.log(isInString("ciao come stai", "ciao"));
+      console.log(isInString("maloreddos ad honorem", "ad"));
+      console.log(isInString("campania", "campetto"));
+      console.log("----------------------");
+
+      // scrivere una funzione chiamata larger che
+      // dati due numeri a e b che ritorna il maggiore
+
+      function larger(a, b) {
+        if (a > b) {
+          return a;
+        } else {
+          return b;
+        }
+      }
+      console.log(larger(2, 4));
+      console.log(larger(100, 99));
+      console.log("---------------------");
+
+      // scrivere una funzione chiamata lessThan che
+      // dati due numeri a e b che ritorna true se a e' minore di b
+      // false altrimenti
+
+      function lessThan(a, b) {
+        if (a < b) {
+          return true;
+        } else {
+          return false;
+        }
+      }
+
+      console.log(lessThan(3, 7));
+      console.log(lessThan(5, 1));
+      console.log("--------------------");
+
+      // scrivere una funzione chiamata stringConcat che
+      // date due stringhe
+      // ritorni una stringa risultato della concatenazione
+      // delle due, con in mezzo il simbolo #
+
+      // ad esempio per "link" e "query" ritorna "link#query"
+
+      //dichiaro una variabile che mi servirà per concatenarci le due strighe
+      // faccio un ciclo for per la prima
+      // faccio un ciclo for per la seconda
+      //unisco i risultati nella variabile vuota tramite += e dopo la prima aggiungo #
+      //stampo la variabile che sarà il mio risultato
+
+      function stringConcat(a, b) {
+        let union = "";
+        union += a + "#" + b;
+        return union;
+      }
+      console.log(stringConcat("Hello", "World"));
+      console.log("--------------------");
+      // scrivere una funzione chiamata sum che
+      // dato un array di numeri in ingresso
+      // ritorni la somma dei numeri contenuti nell'array
+
+      function sum(arr) {
+        let sum = 0;
+        for (let i = 0; i < arr.length; i++) {
+          sum += arr[i];
+        }
+        return sum;
+      }
+      console.log(sum([2, 7, 99, 32, 77]));
+      console.log("------------------------------");
+    </script>
+  </body>
+</html>

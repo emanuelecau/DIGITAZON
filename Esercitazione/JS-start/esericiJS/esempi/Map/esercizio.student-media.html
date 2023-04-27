@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>student-medi</title>
+  </head>
+  <body>
+    <script>
+      // realizzare due istanze di Map che rappresentano due studenti che abbiano la seguente struttura:
+      // - name, lastname, rates
+      // dove name e lastname sono stringhe e rates è un array di 5 numeri
+      // assegnare valori a piacere per ogni chiave, es mario rossi 4, 5, 6, 4, 3 e luigi verdi 8, 7, 4, 9, 9
+      // creare la funzione bestStudent, che prende in ingresso due mappe che rappresentano uno studente, e restituisce il nome e il cognome dello studente che ha la media voto migliore tra i due.
+
+      const student1 = new Map([
+        ["name", "Mario"],
+        ["surname", "Scotti"],
+        ["rates", [30, 25, 18, 28, 22]],
+      ]);
+      const student2 = new Map([
+        ["name", "Anna"],
+        ["surname", "Ballas"],
+        ["rates", [30, 29, 20, 23, 22]],
+      ]);
+      let media1 = 0;
+      let media2 = 0;
+      function bestStudent(a, b) {
+        let rat1 = student1.get("rates");
+        let rat2 = student2.get("rates");
+        for (let i = 0; i < rat1.length; i++) {
+          media1 += rat1[i] / rat1.length;
+        }
+        for (let x = 0; x < rat2.length; x++) {
+          media2 += rat2[x] / rat2.length;
+        }
+        if (media1 > media2) {
+          console.log(
+            `lo studente di nome ${student1.get(
+              "name"
+            )} e cognome ${student1.get("surname")} ha la media voti più alta`
+          );
+        } else {
+          console.log(
+            `lo studente di nome ${student2.get(
+              "name"
+            )} e cognome ${student2.get("surname")} ha la media voti più alta`
+          );
+        }
+      }
+
+      bestStudent(student1, student2);
+
+      student1.get("rates");
+    </script>
+  </body>
+</html>

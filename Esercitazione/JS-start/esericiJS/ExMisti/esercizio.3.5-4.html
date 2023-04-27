@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ex3</title>
+  </head>
+  <body>
+    <script>
+      // Ex 3
+      // creare la funzione invertCase che prende in ingresso una stringa.
+      // Se la stringa è in lower case, restituisce la stringa in upper case.
+      // Se la stringa è in uppe rcase restituisce la stringa in lower case.
+      // Assumere che sia in una forma o l'altra.
+      // ---------------------------------------
+
+      function inverCase(string) {
+        for (let i = 0; i < string.length; i++) {
+          if (string.toUpperCase() == string) {
+            console.log(string.toLowerCase());
+          } else {
+            console.log(string.toUpperCase());
+          }
+        }
+      }
+      inverCase("ULTRALIGHTBEAM");
+      inverCase("ultralightbeam");
+    </script>
+  </body>
+</html>

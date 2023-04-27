@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ex-3-object</title>
+  </head>
+  <body>
+    <script>
+      // Ex 3
+      // creare, a piacere, due letterali oggetto, che descriveranno rispettivamente:
+      // - uno studente (avrà nome, cognome, età, voti, un metodo per calcolare e stampare la sua media voti, un metodo per stabilire se è maggiorenne o meno)
+      // - un'automobile (avrà modello, marca, prezzo e tipoMotore. tipoMotore a sua volta avrà cilindrata, tipo (benzina, diesel o elettrico) e cv. L'automobile avrà un metodo printInfo che stampa in modo correttamente formattato e leggibile le sue feature
+      // richiamare i metodi dei due oggetti per stampare in output i risultati
+      // [13:15]
+      // ----------------------------------------------------------------------
+
+      const student = {
+        name: "ghon",
+        lastName: "fricss",
+        age: 14,
+        rates: [30, 28, 29, 30, 26],
+        media: function () {
+          let sum = 0;
+          for (let i = 0; i < student.rates.length; i++) {
+            sum += student.rates[i] / student.rates.length;
+          }
+          return `lo studente ${this.name} ${this.lastName} ha una media voti di ${sum}`;
+        },
+        adult: function () {
+          if (this.age >= 18)
+            return `lo studente ${this.name} di ${this.age} età è maggiorenne`;
+          else
+            return `lo studente ${this.name} di ${
+              this.age
+            } anni non è ancora maggiorenne aspettare ancora ${
+              18 - this.age
+            } anni`;
+        },
+      };
+      //   // - un'automobile (avrà modello, marca, prezzo e tipoMotore. tipoMotore a sua volta avrà cilindrata, tipo (benzina, diesel o elettrico) e cv. L'automobile avrà un metodo printInfo che stampa in modo correttamente formattato e leggibile le sue feature//
+      const car = {
+        model: "california",
+        brand: "ferrari",
+        price: "125.000000$",
+        motor: "motor",
+        motortype: {
+          vapor: "4.3 V8",
+          engine: "benzina",
+          capacity: "4.296cm3",
+          cv: 460,
+        },
+        printInfo: function () {
+          return `la ${this.brand} ${this.model} ha ${this.motor} ${car.motortype.vapor} a ${car.motortype.engine} con ${car.motortype.capacity} di cilindrata e ${car.motortype.cv} cavalli`;
+        },
+      };
+      console.log(student.media());
+      console.log(student.adult());
+      console.log(car.printInfo());
+    </script>
+  </body>
+</html>

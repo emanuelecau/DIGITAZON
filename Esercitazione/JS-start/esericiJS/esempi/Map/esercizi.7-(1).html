@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ex-1-data</title>
+  </head>
+  <body>
+    <script>
+      //         Ex 1
+      // --------------------------------------------------------------------
+      // creare una funzione formatDate che, presi in ingresso un numero, una stringa e un numero, stampi una data formattata.
+      // Il primo numero rappresenta l'anno, la stringa il nome del mese e il secondo numero il giorno.
+      // es: formatDate(2023, 'maggio', 17)   stampa "17-05-2023"
+
+      function formatDate(y, m, d) {
+        let months = new Map([
+          ["gennaio", 00],
+          ["febbraio", 01],
+          ["marzo", 02],
+          ["aprile", 03],
+          ["maggio", 04],
+          ["giugno", 05],
+          ["luglio", 06],
+          ["agosto", 07],
+          ["settembre", 08],
+          ["ottobre", 09],
+          ["novembre", 10],
+          ["dicembre", 11],
+        ]);
+
+        if (months.has(m)) {
+          let mese = months.get(m);
+          let getMonth;
+          console.log(mese);
+          const data = new Date(y, mese, d);
+
+          if (data.getMonth() < 10) getMonth = "0" + data.getMonth();
+
+          console.log(
+            data.getDate() + "-" + getMonth + "-" + data.getFullYear()
+          );
+          return 0;
+        }
+      }
+
+      let year = 2023;
+      let mesi = "maggio";
+      let day = 17;
+
+      console.log(formatDate(year, mesi, day));
+    </script>
+  </body>
+</html>

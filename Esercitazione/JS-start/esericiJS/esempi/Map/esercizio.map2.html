@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>map forEach</title>
+  </head>
+  <body>
+    <script>
+      // creare una funzione compareMap che accetta in ingresso due mappe.
+      // La funzione restituisce true SE le due mappe sono mappe, SE hanno lo stesso numero di elementi e per le stesse chiavi, gli stessi valori.
+      // Testare il funzionamento di compareMap passando due mappe diverse nella prima chiamata, e due mappe uguali nella seconda chiamata
+
+      function compareMap(m1, m2) {
+        let verify = "";
+        console.log("ok");
+        if (m1 instanceof Map && m2 instanceof Map) {
+          console.log("le mappe sono entrambe mappe");
+          if (m1.size == m2.size) {
+            console.log("le mappe hanno stessa grandezza");
+            function CompareKey(v, k) {
+              if (m1.has(k)) {
+                console.log("le mappe hanno le stesse chiavi");
+                if (m1.get(k) == v) {
+                  console.log("i valori corrispondono");
+                } else {
+                  console.log("i valori non corrispondono");
+                }
+              } else {
+                console.log("le mappe non hanno le stesse chiavi");
+              }
+            }
+            m2.forEach(CompareKey);
+          } else {
+            console.log("error!");
+          }
+        } else {
+          console.log("non sono entrambe mappe");
+        }
+        // console.log(verify);
+      }
+
+      let map1 = new Map([
+        ["nome", "luigi"],
+        ["cognome", "verdi"],
+        ["voto", 9],
+      ]);
+      let map2 = new Map([
+        ["nome", "luigi"],
+        ["cognome", "verdi"],
+        ["voto", 9],
+      ]);
+      let map3 = new Map([
+        ["nome", "luigi"],
+        ["cognome", "verdi"],
+      ]);
+      compareMap(map1, map2);
+    </script>
+  </body>
+</html>

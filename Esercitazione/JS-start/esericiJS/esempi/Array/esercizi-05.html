@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>esercizi</title>
+  </head>
+  <body>
+    <script>
+      //ex1
+
+      let array1 = [2, 2, 5, 8];
+      let array2 = [10, 33, 44, 8, 2, 4];
+
+      function diffArray(a1, a2) {
+        console.log(a1);
+        console.log(a2);
+
+        let minore = a2[0];
+        let maggiore = 0;
+
+        for (let i = 0; i < a1.length; i++) {
+          if (a1[i] >= maggiore) {
+            maggiore = a1[i];
+          }
+        }
+        console.log(maggiore);
+
+        for (let j = 1; j < a2.length; j++) {
+          if (a2[j] <= minore) {
+            minore = a2[j];
+          }
+        }
+        console.log(minore);
+
+        return maggiore - minore;
+      }
+
+      console.log(diffArray(array1, array2));
+
+      console.log(Number.MAX_VALUE);
+
+      //ex2
+    </script>
+  </body>
+</html>

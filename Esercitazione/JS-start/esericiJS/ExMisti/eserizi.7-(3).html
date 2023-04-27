@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // Ex 3
+      // --------------------------------------------------------------------
+      // creare una funzione getDateDay che prende in ingresso una data formattata nel formato americano visto a lezione e restituisce il giorno della settimana relativo, in parola.
+      // Chiamare la funzione con 3 date a piacere.
+      // es: getDateDay('2023-05-17')  -> 'mercoledì' -->
+
+      let today = new Date("2023-04-09");
+      let oneY = new Date(2024, 04, 09);
+      let twoY = new Date(2025, 04, 09);
+
+      //Function To Convert Day Integer to String
+
+      function getDateDay(params) {
+        const daysOfWeek = [
+          "Domenica",
+          "Lunedì",
+          "Martedì",
+          "Mercoldì",
+          "Giovedì",
+          "Venerdì",
+          "Sabato",
+        ];
+        return daysOfWeek[params.getDay()];
+      }
+
+      console.log(getDateDay(today));
+    </script>
+  </body>
+</html>

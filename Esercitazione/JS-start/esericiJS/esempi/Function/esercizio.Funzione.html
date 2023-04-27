@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      /*
+               Ex 1
+
+               creare una funzione getStr che prende in ingresso un array di stringhe e restituisce il valore della stringa alla posizione 2
+
+               chiamare la funzione getStr con un array di 5 stringhe a piacere e stampare il valore prodotto.
+               Per chi riesce: stampare il valore prodotto in upper case
+               */
+
+      //pseudocodice
+      //creo la mia funzione che prende in ingresso un array
+      //
+
+      function getStr(arr) {
+        return arr[1].toUpperCase();
+      }
+      const myArr = ["gigi", "concilio", "rizzu", "giga", "colo"];
+
+      console.log(getStr(myArr));
+      console.log("--------------------");
+
+      /*
+               Ex 2
+
+               Creare una funzione makeObj che prende in ingresso due parametri:
+               una stringa e un numero.
+               La funzione crea e RESTITUISCE un oggetto con due proprietà: label, che avrà come valore il valore passato come primo parametro, e rate, che avrà come valore il valore passato come secondo parametro.
+               Chiamare la funzione makeObj due volte con valori a piacere per creare e stampare in output due oggetti con i valori indicati.
+       */
+      function makeObj(string, n) {
+        return { label: string, rate: n };
+      }
+
+      const student = [makeObj("colo", 30), makeObj("marta", 29)];
+
+      student.forEach(function (en) {
+        console.log(`lo studente ${en.label} ha un rate di ${en.rate}`);
+      });
+
+      function makeObj(string, n) {
+        return { label: string, rate: n };
+      }
+
+      console.log(makeObj("colo", 30));
+      console.log(makeObj("marta", 30));
+      console.log("----------------------");
+
+      //       creare una funzione getMaxMinAsArray che prende in ingresso un array di 6 numeri e restiuisce un array di 2 numeri: il primo, che rappresenta il numero più piccolo del primo array, e il secondo che rappresenta il numero più grande del primo array.
+      // Richiamare la funzione getMaxMinAsArray con un array di 6 numeri a piacere, salvare l'array restituito dalla funzione e stampare il numero più grande e più piccolo con un apposito messaggio
+
+      function getMaxMinAsArray(arr) {
+        let max = 0;
+        let min = arr[0];
+        let newAr = [];
+        for (let i = 0; i < arr.length; i++) {
+          //   console.log(arr[i]);
+
+          if (arr[i] > max) {
+            max = arr[i];
+          }
+          if (arr[i] < min) {
+            min = arr[i];
+          }
+        }
+        // newAr.push(min, max);
+        return [min, max];
+        // (newAr = `[${min} , ${max}]`);
+        // return (newAr = "[" + min + "," + max + "]");
+      }
+      const myarr = [20, 45, 2, 10, 7, 98];
+      const minMax = getMaxMinAsArray(myarr);
+      console.log(
+        `all'interno dell'array il numero più piccolo è ${minMax[0]} e il numero più grande è ${minMax[1]}`
+      );
+    </script>
+  </body>
+</html>

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        /*
+        Ex 3
+        crea una funzione 'xRayArray' che prende in ingresso un array e mi stampa:
+        - la lunghezza dell'array
+        - se l'array contiene SOLO numeri o meno
+        - se l'array è vuoto
+        - se è un array oppure un altro tipo di dato
+        La funzione NON restituisce nessun valore.
+        Chiamare la funzione con i seguenti valori:
+        - [10, 20, 30]
+        - []
+        - ['ciao', 100]
+        - 'ciao'
+        */
+
+        function xRayArray( a ) {
+            
+            console.log('sto analizzando il seguente array: ' + a);
+
+            // step 1: lunghezza
+            if( typeof a == 'object' )
+                console.log( 'Lunghezza array: ' + a.length );
+            else if( typeof a == 'string' )
+                console.log( 'l elemento non è un array, ma una stringa' );
+
+            // step 2: solo numeri o meno
+            let onlyNumbers = true
+            for(let i = 0; i < a.length; i++) {
+                if( typeof a[i] != 'number' ) {
+                    onlyNumbers = false
+                }
+            }
+
+            if( a.length == 0 ) {
+                console.log('l array non contiente nessun elemento');
+            }
+            else {
+                if( onlyNumbers ) {
+                    console.log('l\'array contiene solo numeri');
+                }
+                else {
+                    console.log('l\'array non contiene solo numeri');
+                }
+            }
+
+            // step 3
+            if( typeof a == 'object' ) {
+                if( a.length == 0 ) {
+                    console.log( 'l array è vuoto' );
+                }
+                else {
+                    console.log('l array non è vuoto');
+                }
+            }
+
+            // step 4
+            if( typeof a == 'number' || typeof a == 'string' || typeof a == 'boolean' ) {
+                console.log( 'non è un array, ma è un ' + (typeof a) );
+            }
+            else {
+                console.log( 'è un array' );
+            }
+
+            console.log('-----------------');
+
+        }
+
+        xRayArray( [10, 20, 30] )
+        xRayArray( [] )
+        xRayArray( ['ciao', 100] )
+        xRayArray( 'ciao' )
+    </script>
+
+    <script>
+        /*
+        Ex 5
+        creare una funzione 'evenInMatrix' che mi restituisce un contatore che tiene traccia di tutti i numeri pari presenti in una matrice passata in ingresso (controllare tutti gli array di un array).
+        Chiamare la funzione con i seguenti valori:
+        - 
+        [
+        [1, 3, 3],
+        [2, 3, 3],
+        [4, 9, 8]
+        ]
+        - 
+        [
+        [2, 1, 6],
+        [3, 4, -10],
+        [9, 9, 240]
+        ]
+        */
+
+        function evenInMatrix(m) {
+            let evenCounter = 0
+
+            for(let i = 0; i < m.length; i++) {
+                for(let j = 0; j < m[i].length; j++) {
+                    if( m[i][j] % 2 == 0 ) {
+                        evenCounter++
+                    }
+                }
+            }
+
+            console.log( 'in questa matrice ci sono ' + evenCounter + ' numeri pari' );
+        }
+
+        const m1 =  [
+            [1, 3, 3],
+            [2, 3, 3],
+            [4, 9, 8]
+        ]
+
+        const m2 = [
+            [2, 1, 6],
+            [3, 4, -10],
+            [9, 9, 240]
+        ]
+
+        evenInMatrix(m1)
+        evenInMatrix(m2)
+    </script>
+    
+</body>
+</html>

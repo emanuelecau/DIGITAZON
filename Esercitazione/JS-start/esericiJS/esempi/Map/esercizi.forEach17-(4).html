@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      /*
+              Ex 1
+
+              dato l'array chiamato 'a1' con valori [10, 'ciao', true, 20, 'js', 4] usare un foreach per calcolare la somma degli elementi numerici e stamparla in output
+            */
+
+      // itero con un ciclo for
+      const ai = [10, "ciao", true, 20, "js", 4];
+      function calc(arr) {
+        let sum = 0;
+        for (let i = 0; i < arr.length; i++) {
+          if (typeof arr[i] == "number") {
+            sum += arr[i];
+          }
+        }
+        return sum;
+      }
+      console.log(calc(ai));
+      console.log("-----------------");
+
+      // ora con il for.each
+      let sium = 0;
+      ai.forEach(function (n) {
+        if (typeof n == "number") {
+          sium = sium + n;
+        }
+      });
+
+      console.log(`la somma è ${sium}`);
+
+      // differenze tra i due
+      // un forEach non si comporta propriamente come una funzione
+      // dovrà avere la variabile esterna per non farla inizializzare di continuo
+      //avrà un console log esterno che richiamerà la variabile
+
+      /*
+        Ex 2
+
+        creare una mappa chiamata m1, che rappresenta un'automobile, con la seguente struttura:
+        model -> 'Panda', maxSpeed: 250, price: 1000
+
+        creare una mappa chiamata m2, che rappresenta un'automobile, con la seguente struttura:
+        model -> 'Audi', maxSpeed: 200, price: 5000
+
+        tramite due foreach, stampare le singole caratteristiche delle due automobile.
+        DOPO, stampare in output il modello della macchina con la velocità massima più elevata
+
+      */
+      //forEach su una mappa
+
+      const m1 = new Map([
+        ["model", "panda"],
+        ["maxSpeed", 250],
+        ["price", 1000],
+      ]);
+
+      const m2 = new Map([
+        ["model", "audi"],
+        ["maxSpeed", 200],
+        ["price", 5000],
+      ]);
+
+      m1.forEach(function (v, k) {
+        console.log(` ${k} : ${v}`);
+      });
+      m2.forEach(function (v, k) {
+        console.log(` ${k} : ${v}`);
+      });
+
+      if (m1.get("maxSpeed") > m2.get("maxSpeed"))
+        console.log(`l'auto più veloce è
+        : ${m1.get("model")}`);
+      else if (m2.get("maxSpeed") > m1.get("maxSpeed"))
+        console.log(`l'auto più veloce è: ${m2.get("model")}`);
+      else console.log("le due auto hanno la stessa velocità massima");
+
+      //ex2
+    </script>
+  </body>
+</html>

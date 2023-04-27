@@ -1,0 +1,176 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+}
+
+header{
+    background-size: cover;
+    background-position: top center;
+    height: 150px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 5px;
+    width: 100%;
+    position: relative;
+    
+}
+.head-menu{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    color: azure;
+    margin-bottom: 5px; 
+}
+header::before{
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    left: 0px;
+    bottom: 0px;
+    background-image: url(background.gif);
+    background-position: top center;
+    background-size: cover;
+    opacity: 0.8;
+    content: "";
+    border: 2px solid whitesmoke;
+    box-shadow: 0px 55px 46px 9px rgba(51,2,51,0.98);
+    border-radius: 33px;
+    margin:5px 0px;
+}
+header div{
+    position: relative;
+}
+.head-menu input{
+    background-color: rgb(167, 102, 228);
+    color: aliceblue;
+    border: none;
+    border-radius: 10px;
+    padding: 5px;
+}
+.head-menu div:nth-child(1),
+.head-menu div:nth-child(3){
+    color: rgb(255, 254, 255);
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    padding: 5px;
+    font-size: small;
+}
+main{
+    display: flex;
+    position: relative;
+    height: 225vh;
+    padding: 50px;
+    
+}
+main::before{
+    background-image: url(circle-2.gif);
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    right: 0px;
+    left: 0px;
+    content: "";
+    opacity: 0.8;
+    background-position: top center;
+    background-size: cover;
+    padding: 50px;
+}
+.container{
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    
+    
+    
+
+}
+button{
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    font-size: 100%;
+    position: relative;
+    background: none;
+    cursor: pointer;
+    
+    
+}
+span{
+   
+}
+#first-sign{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 0px 0px 0px;
+}
+#second-line-s{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 50px;
+}
+
+#center-e{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    color: black;
+    padding: 5px;
+    text-align: center;
+}
+#therd-line-s{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 50px;
+}
+#last-sign{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 0px 50px 0px;
+}
+button:hover{
+    transition: 1s;
+    color: rgb(249, 247, 250);
+    background-color: rgb(64, 139, 182);
+}
+.column{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+}
+.column p{
+    visibility: hidden;
+    font-size: x-small;
+}
+.column div{
+    visibility: hidden;
+    font-size: large;
+}
+button:hover + div{
+    visibility: visible;
+    font-size: large;
+    transition: all 1s ease-out;
+    color: white;  
+}
+button:hover ~ p{
+    visibility: visible;
+    font-size: x-small;
+    color: white;
+    transition: all 1s ease-out
+}
+
+
+
+

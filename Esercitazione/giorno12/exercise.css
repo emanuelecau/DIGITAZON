@@ -1,0 +1,40 @@
+main{
+    display: flex;
+    flex-direction: column;
+}
+
+.top{
+    display: flex;
+}
+
+.leftside{
+    background-color: aquamarine;
+    color: black;
+    flex-grow: 2;
+}
+.rightside{
+    flex-direction: column;
+    display: flex;
+    flex-grow: 8;
+}
+.rightside > .detail{
+    background-color: cadetblue;
+    color: black;
+}
+
+.rightside > .songstot{
+    background-color: chartreuse;
+    color: black;
+    height: 100%;
+    justify-content: space-between;
+}
+.songstot > .songs{
+    display: flex;
+    justify-content: space-around;
+}
+.footer{
+    display: flex;
+    background-color: darkcyan;
+    color: black;
+    justify-content: space-between;
+}

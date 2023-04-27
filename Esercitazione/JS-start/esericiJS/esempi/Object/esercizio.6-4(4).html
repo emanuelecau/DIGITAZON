@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ex-4-object</title>
+  </head>
+  <body>
+    <script>
+      // Ex 4
+      // creare un array di oggetti, che rappresentano le dimensioni dei lati di un rettangolo, e avranno proprietà base e altezza.
+      // Nell'array inserire 5 oggetti con questo template e valori a piacere.
+      // Creare una funzione parseRectangles che prende in ingresso un array di oggetti con la struttura descritta e restituisca l'indice del rettangolo con l'area maggiore.
+
+      const rectangular = [
+        { base: 120, altezza: 180 },
+        { base: 85, altezza: 270 },
+        { base: 20, altezza: 80 },
+        { base: 200, altezza: 100 },
+        { base: 40, altezza: 380 },
+      ];
+      //ottengo i singoli oggetti dall' array corrente
+
+      function area(params) {
+        let ope = 0;
+        let areaM = 0;
+        let rectI = 0;
+
+        for (let i = 0; i < rectangular.length; i++) {
+          ope = (rectangular[i].base * rectangular[i].altezza) / 2;
+          if (ope > areaM) areaM = ope;
+          rectI = i;
+        }
+        console.log(rectI);
+        console.log(areaM);
+        console.log("--------");
+        console.log(
+          `l'area maggiore di tutti i rettangoli è ${areaM} e corrisponde al rettangolo numero ${rectI}`
+        );
+      }
+
+      area(rectangular);
+
+      //   rectangular.forEach(function area(v, k) {
+      //     console.log(rectangular[0].base * rectangular[0].altezza) / 2;
+      //   });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+                  function fn1(a /* array */) {
+                    if (!Array.isArray(a)) {
+                      console.log("Errore! Il dato non è un array");
+                      return;
+                    }
+
+                    for (let i = 0; i < a.length; i++) {
+                      console.log("iterazione " + i + ": " + a[i]);
+                    }
+                  }
+
+                  fn1(10);
+                  fn1([10, 20, 30]);
+                  fn1(["ciao", "js", 10, 30]);
+                  console.log("-----------------------");
+
+                  // produrre un array in uscita
+                  function fn1() / : array / {
+               return [10, 20, 30, 40]
+            }
+
+            const a1 / : array */ = fn1()
+            console.log( a1[1] )
+            console.log('--------------------------------');
+
+
+
+            //funzione che ritorna un oggetto con nome e cognome
+
+            let id = 1
+
+      function makePerson( n, ln ) {
+        return {'id': id++, 'name': n, 'lastname': ln, 'race': 'human'}
+      }
+
+
+
+            //array con funzione di sopra integrata che contiene 3 oggetti
+
+      const people = [makePerson('mario', 'rossi'), makePerson('luigi', 'verdi'), makePerson('peach', 'pink'), makePerson('anna', 'bianchi')]
+
+
+            //forEach che lo itera per stamparne le sue k e v
+
+      people.forEach(function(el) {
+        console.log( ID matricola: ${el.id} Nome: ${el.name} Cognome: ${el.lastname} Race: ${el.race} )
+      })
+
+
+            //prendo un elemento tramite il suo id tramite un ciclo for
+            function getPersonById( _id, arr ) {
+        for(let i = 0; i < arr.length; i++) {
+          if( arr[i].id == _id )
+            return arr[i]
+        }
+      }
+
+      //stampo in console
+
+      console.log( getPersonById(1, people) )
+    </script>
+  </body>
+</html>

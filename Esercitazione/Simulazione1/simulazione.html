@@ -1,128 +1,185 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Simulazione</title>
-    <link rel="stylesheet" href="simulazione.css">
-    <script src="https://kit.fontawesome.com/4db4e27520.js" crossorigin="anonymous"></script>
-</head>
-<body>
-    
+    <link rel="stylesheet" href="simulazione.css" />
+    <script
+      src="https://kit.fontawesome.com/4db4e27520.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <!-- il file lo nomini .htmlvalidate.json e lo alleghi al progetto. se non vuoi che ti consideri errori gli spazi quando vai a capo nel file html , all' interno del .htmlvalidate.json ci copi e incolli quanto segue
+{
+    "extends": ["html-validate:recommended"],
+    "rules": {
+        "no-trailing-whitespace": "off"
+    }
+} -->
+  <body>
     <div class="full-p">
+      <div class="left-box">
+        <nav>
+          <ul>
+            <li><i class="fa-solid fa-ellipsis"></i></li>
+            <li><i class="fa-solid fa-igloo"></i><span>Home</span></li>
+            <li>
+              <i class="fa-solid fa-magnifying-glass"></i><span>Cearch</span>
+            </li>
+            <li><i class="fa-regular fa-folder"></i><span>Library</span></li>
+          </ul>
+          <ul>
+            <li><i class="fa-solid fa-plus"></i><span>NewPlaylist</span></li>
+            <li><i class="fa-solid fa-heart"></i><span>Liked</span></li>
+          </ul>
+          <ul id="list-play">
+            <li><em>MyMix</em></li>
+            <li>Coding</li>
+            <li>Loofi</li>
+            <li>Boiler</li>
+            <li>Trainig</li>
+            <li>Focus</li>
+          </ul>
+          <ul>
+            <li id="last-list">
+              <img src="Hermanos-album.jpg" alt="" /><i
+                class="fa-regular fa-circle-play"
+              ></i>
+              <em>Mi Alma - Hermanos Gutierrez</em>
+            </li>
+          </ul>
+        </nav>
+      </div>
 
-        <div class="left-box">
-            <nav>
-                <ul>
-                    
-                    <li><i class="fa-solid fa-ellipsis"></i></li>
-                    <li><i class="fa-solid fa-igloo"></i><span>Home</span> </li>
-                    <li><i class="fa-solid fa-magnifying-glass"></i><span>Cearch</span> </li>
-                    <li><i class="fa-regular fa-folder"></i><span>Library</span> </li>
-                    
-                </ul>
-                <ul>
+      <div class="head-box">
+        <div class="first-line">
+          <div class="icon">
+            <i class="fa-solid fa-circle"></i>
+            <i class="fa-regular fa-circle"></i>
+          </div>
 
-                    <li><i class="fa-solid fa-plus"></i><span>NewPlaylist</span> </li>
-                    <li><i class="fa-solid fa-heart"></i><span>Liked</span></li>  
-
-                </ul>
-                <ul id="list-play"> 
-                    
-                    <li><em>MyMix</em></li>
-                    <li>Coding</li>
-                    <li>Loofi</li>
-                    <li>Boiler</li>
-                    <li>Trainig</li>
-                    <li>Focus</li>
-                    
-                </ul>
-                <ul>
-                    <li id="last-list"><img src="Hermanos-album.jpg" alt=""><i class="fa-regular fa-circle-play"></i> <em>Mi Alma - Hermanos Gutierrez</em></li>
-                </ul>
-            </nav>
-            
+          <div>
+            <button class="button">
+              <img src="Hermanos-profile2.jpg" alt="" />
+              <div>
+                <p>GENGISCAU</p>
+                <i class="fa-solid fa-chevron-down"></i>
+              </div>
+            </button>
+          </div>
         </div>
-        
-        <div class="head-box">
-            <div class="first-line">
-                <div class="icon">
-                    <i class="fa-solid fa-circle"></i>
-                    <i class="fa-regular fa-circle"></i>
-                </div>
-
-                <div>
-                    <button class="button" > <img src="Hermanos-profile2.jpg" alt=""><div> <p>GENGISCAU</p> <i class="fa-solid fa-chevron-down"></i></div></button>
-                </div>
-            </div>
-            <div class="mid-element">
-            <p> <i class="fa-regular fa-sun"></i> Cerficated Artist</p>
-            <h1>Hermanos Gutierrez</h1>
-            <h3><em>15,700,000 Monthly Listeners</em></h3>
+        <div class="mid-element">
+          <p><i class="fa-regular fa-sun"></i> Cerficated Artist</p>
+          <h1>Hermanos Gutierrez</h1>
+          <h3><em>15,700,000 Monthly Listeners</em></h3>
         </div>
         <div class="center-bar">
-            <div class="play-bar">
+          <div class="play-bar">
             <i class="fa-regular fa-circle-pause"></i>
-            <button> FOLLOWING</button>
+            <button>FOLLOWING</button>
             <i class="fa-solid fa-ellipsis"></i>
-            </div>
-            
+          </div>
         </div>
         <div class="music">
-            <div class="music-sx">
-                <nav>
-                    <h4>PoPular</h4>
-                    <ul>
-                        <li>1 <img src="Hermanos-album.jpg" alt=""><p> Hermanos Gutierrez - Mexico</p> <em>10,450,200 </em> <i class="fa-solid fa-heart"> </i> 5.30</li>
-                        <li>2 <img src="Hermanos-album.jpg" alt=""><p> Hermanos Gutierrez - Nuevo Mundo</p> <em>10,450,200 </em> <i class="fa-solid fa-heart"> </i> 5.30</li>
-                        <li id="on-play"> <i class="fa-solid fa-chart-simple"></i> <img src="Hermanos-album1.jpg" alt=""><p> Hermanos Gutierrez - Esperanza</p> <em>10,450,200 </em> <i class="fa-solid fa-heart"> </i> 5.30</li>
-                        <li>4 <img src="Hermanos-album2.jpg" alt=""><p> Hermanos Gutierrez - Hombre onrado</p> <em>10,450,200 </em> <i class="fa-solid fa-heart"> </i> 5.30</li>
-                        <li>5 <img src="Hermanos-album1.jpg" alt=""><p> Hermanos Gutierrez - Mesa Redonda</p> <em>10,450,200 </em> <i class="fa-solid fa-heart"> </i> 5.30</li>
-                        <li>6 <img src="Hermanos-album2.jpg" alt=""><p> Hermanos Gutierrez - Hijo del Sol</p> <em>10,450,200 </em> <i class="fa-solid fa-heart"> </i> 5.30</li>
-                        <li>7 <img src="Hermanos-album.jpg" alt=""><p> Hermanos Gutierrez - Tres hermanos</p> <em>10,450,200 </em> <i class="fa-solid fa-heart"> </i> 5.30</li>
-                        <li>8 <img src="Hermanos-album2.jpg" alt=""><p> Hermanos Gutierrez - Nueva vida</p> <em>10,450,200 </em> <i class="fa-solid fa-heart"> </i> 5.30</li>
-                        
-                        
-                    </ul>
-                </nav>
-            </div>
-            <div class="music-dx">
-                <nav>
-                    <h4>Liked Song</h4>
-                    <ul>
-                        <li><img id="first-pic" src="Hermanos-profile.jpg" alt=""> <div> <p>You've liked 23 songs</p> <em>By Hermanos Gutierrez</em></div></li>
-                        <li></li>
-                    </ul>
-                    <h4>Artist Pick</h4>
-                    <ul>
-                        <li><img src="Hermanos-album3.jpeg.crdownload" alt=""> <div> <button>Mejor!</button> <p>Playlist on your choice</p> <em>Playlist</em></div></li>
-                        <li></li>
-                    </ul>
-                    
-                </nav>
-
-
-            </div>
+          <div class="music-sx">
+            <nav>
+              <h4>PoPular</h4>
+              <ul>
+                <li>
+                  1 <img src="Hermanos-album.jpg" alt="" />
+                  <p>Hermanos Gutierrez - Mexico</p>
+                  <em>10,450,200 </em> <i class="fa-solid fa-heart"> </i> 5.30
+                </li>
+                <li>
+                  2 <img src="Hermanos-album.jpg" alt="" />
+                  <p>Hermanos Gutierrez - Nuevo Mundo</p>
+                  <em>10,450,200 </em> <i class="fa-solid fa-heart"> </i> 5.30
+                </li>
+                <li id="on-play">
+                  <i class="fa-solid fa-chart-simple"></i>
+                  <img src="Hermanos-album1.jpg" alt="" />
+                  <p>Hermanos Gutierrez - Esperanza</p>
+                  <em>10,450,200 </em> <i class="fa-solid fa-heart"> </i> 5.30
+                </li>
+                <li>
+                  4 <img src="Hermanos-album2.jpg" alt="" />
+                  <p>Hermanos Gutierrez - Hombre onrado</p>
+                  <em>10,450,200 </em> <i class="fa-solid fa-heart"> </i> 5.30
+                </li>
+                <li>
+                  5 <img src="Hermanos-album1.jpg" alt="" />
+                  <p>Hermanos Gutierrez - Mesa Redonda</p>
+                  <em>10,450,200 </em> <i class="fa-solid fa-heart"> </i> 5.30
+                </li>
+                <li>
+                  6 <img src="Hermanos-album2.jpg" alt="" />
+                  <p>Hermanos Gutierrez - Hijo del Sol</p>
+                  <em>10,450,200 </em> <i class="fa-solid fa-heart"> </i> 5.30
+                </li>
+                <li>
+                  7 <img src="Hermanos-album.jpg" alt="" />
+                  <p>Hermanos Gutierrez - Tres hermanos</p>
+                  <em>10,450,200 </em> <i class="fa-solid fa-heart"> </i> 5.30
+                </li>
+                <li>
+                  8 <img src="Hermanos-album2.jpg" alt="" />
+                  <p>Hermanos Gutierrez - Nueva vida</p>
+                  <em>10,450,200 </em> <i class="fa-solid fa-heart"> </i> 5.30
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <div class="music-dx">
+            <nav>
+              <h4>Liked Song</h4>
+              <ul>
+                <li>
+                  <img id="first-pic" src="Hermanos-profile.jpg" alt="" />
+                  <div>
+                    <p>You've liked 23 songs</p>
+                    <em>By Hermanos Gutierrez</em>
+                  </div>
+                </li>
+                <li></li>
+              </ul>
+              <h4>Artist Pick</h4>
+              <ul>
+                <li>
+                  <img src="Hermanos-profile2.jpg" alt="" />
+                  <div>
+                    <button>Mejor!</button>
+                    <p>Playlist on your choice</p>
+                    <em>Playlist</em>
+                  </div>
+                </li>
+                <li></li>
+              </ul>
+            </nav>
+          </div>
         </div>
-        
+
         <footer class="footer">
-            <div class="music-sx">
-                 <i class="fa-solid fa-chart-simple"></i> <p> Hermanos Gutierrez - Esperanza</p>  <i class="fa-solid fa-heart"> </i> 5.30
-            </div>
-            <div class=" fot-c">
-                <i class="fa-solid fa-angle-left"></i><i class="fa-regular fa-circle-pause"></i><i class="fa-solid fa-angle-right"></i>
-            </div>
-            <div class=" fot-dx">
-                <i class="fa-solid fa-circle"></i><i class="fa-regular fa-circle"></i><i class="fa-solid fa-sliders"></i><i class="fa-solid fa-shapes"></i><i class="fa-solid fa-up-right-and-down-left-from-center"></i>
-            </div>
+          <div class="music-sx">
+            <i class="fa-solid fa-chart-simple"></i>
+            <p>Hermanos Gutierrez - Esperanza</p>
+            <i class="fa-solid fa-heart"> </i> 5.30
+          </div>
+          <div class="fot-c">
+            <i class="fa-solid fa-angle-left"></i
+            ><i class="fa-regular fa-circle-pause"></i
+            ><i class="fa-solid fa-angle-right"></i>
+          </div>
+          <div class="fot-dx">
+            <i class="fa-solid fa-circle"></i
+            ><i class="fa-regular fa-circle"></i
+            ><i class="fa-solid fa-sliders"></i
+            ><i class="fa-solid fa-shapes"></i
+            ><i class="fa-solid fa-up-right-and-down-left-from-center"></i>
+          </div>
         </footer>
-        </div>
-
-        
-
-
+      </div>
     </div>
-
-</body>
+  </body>
 </html>

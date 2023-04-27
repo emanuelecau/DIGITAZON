@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>teoria-object</title>
+  </head>
+  <body>
+    <script>
+      //gli oggetti possono essere definiti come tipi di dati che contengono al loro interno una collezione di chiavi ( proprietà, valori) e possono avere anche dei metodi
+      //es.
+      const jonas = {
+        firstName: "jonas",
+        lastName: "cossu",
+        age: 19,
+        haveDriveLicence: true,
+        adult: function mag(adulto) {
+          if (this.age > 18) {
+            console.log(`${this.firstName} è maggiorenne`);
+          } else {
+            console.log(`${this.firstName} non è maggiorenne `);
+          }
+        },
+        friend: {
+          firstName: "giorgio",
+          lastName: "cicu",
+          age: 17,
+          adult: function () {
+            if (jonas.friend.age > 18) {
+              console.log(`${jonas.friend.firstName} è maggiorenne`);
+            } else {
+              console.log(`${jonas.friend.firstName} non è maggiorenne `);
+            }
+          },
+        },
+      };
+      console.log(`${jonas.firstName}`);
+      console.log(
+        `${jonas.friend.firstName} è il best di ${jonas.firstName}
+      e ha ${jonas.friend.age} anni e // non si puà mettere la funzione `
+      );
+      jonas.friend.adult();
+
+      //
+    </script>
+  </body>
+</html>

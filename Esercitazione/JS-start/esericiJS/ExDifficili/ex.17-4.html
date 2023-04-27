@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ex-pome</title>
+  </head>
+  <body>
+    <script>
+      // Data una stringa, ad esempio PAYPALISHIRING, scrivere una funzione che la ritorna a "ZigZag":
+      //       La funzione accetta in ingresso la stringa e un numero di righe, in questo caso e' stata invocata cosi: converti("PAYPALISHIRING", 3)
+
+      //       immaginate di avere una matrice dove inserite nelle opportune celle le lettere corrette, quindi una cosa del genere:
+
+      // [
+      //   ['P', undefined, 'A', undefined, 'H', undefined, 'N'],
+      //   ['A', 'P', 'L', 'S', 'I', 'I','G'],
+      //   ['Y', undefined, 'I', undefined, 'R'
+      // ]
+
+      // Perche' voi sapete bene a quali indici dovete inserire le lettere, vi basta partire dall'alto, scendere in basso fino a che non toccate il fondo, poi salire uno a dx e uno in su fino a che non toccate la cima, poi scendere in basso fino a che non toccate il fondo, etc... fino a che non esaurite la stringa.
+      // Dovete in sostanza immaginare di avere una sorta di scacchiera, e a certe celle dovete mettere una lettera
+
+      //PSEUDOCODICE
+      //dichiaro la funzione che prende in ingresso una stringa e un numero
+      //il numero agirerà sulla stringa come un limitatore che ne definirà il numero di linee verticali
+      // creo due variabili una per i numeri pari e una per i dispari
+      //userò i miei numeri p e d come accumulatori di indici della stringa
+      //creo un ciclo iniziale per iterare sulla stringa
+
+      function zigZag(string) {
+        let odd = "";
+        let even = [];
+        let riga1 = [];
+        let riga2 = [];
+        let matrix = [];
+
+        for (let i = 0; i < string.length; i++) {
+          if (i % 2 == 0) {
+            odd += string[i];
+          } else {
+            even.push(string[i]);
+          }
+        }
+        for (let x = 0; x < odd.length; x++) {
+          if (x % 2 == 0) {
+            riga1.push(odd[x] + "     ");
+          } else {
+            riga2.push(odd[x] + "     ");
+          }
+        }
+        matrix.push(riga1, even, riga2);
+        return matrix;
+      }
+
+      console.log(zigZag("THEWINDISAULING"));
+
+      //thewindisaulyn
+
+      // Data una stringa che contiene solo parentesi tonde aperte e parentesi tonde chiuse, scrivere una funzione che ritorna true se tutte le parentesi sono bilanciate, false altrimenti
+
+      //PSEUDO CODICE
+      //faccio un ciclo for che analizza la stringa
+      // creo un contatore per le ( e uno per le )
+      // quando li confronto se sono stesso num = true se no false
+      console.log("----------------------------");
+      function checkPar(parentesi) {
+        let par1 = 0;
+        let par2 = 0;
+        for (let i = 0; i < parentesi.length; i++) {
+          if (parentesi[i] == "(") {
+            par1++;
+          }
+          if (parentesi[i] == ")") {
+            par2++;
+          }
+        }
+        if (par1 == par2) {
+          return true;
+        } else {
+          return false;
+        }
+        console.log(par1);
+        console.log(par2);
+      }
+      console.log(checkPar("((()))"));
+    </script>
+  </body>
+</html>

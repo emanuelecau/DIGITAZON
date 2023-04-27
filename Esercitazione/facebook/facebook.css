@@ -1,0 +1,162 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+
+header{
+    
+    background-color: rgb(9, 19, 26);
+    display: flex;
+    
+}
+
+div.menu-bar{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    
+    padding: 5px;
+   
+}
+
+div.menu-bar nav{
+    display: flex;
+    width: 100%;
+    
+    justify-content: space-between;
+    
+}
+
+ul{
+    list-style-type: none;
+}
+
+.menu-bar nav ul{
+    
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+
+}
+
+.menu-bar nav ul:first-child{
+    justify-content: start;
+    flex: 1;
+}
+.menu-bar nav ul:nth-child(2){
+    justify-content: space-around;
+    flex: 2;
+}
+.menu-bar nav ul:last-child{
+    justify-content: end;
+    flex: 1;
+}
+
+.menu-bar nav ul li{
+    margin-right: 5px;
+    cursor: pointer;
+    
+}
+
+i{
+    color: whitesmoke;
+}
+
+
+
+
+main{
+    padding-top: 30px;
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+    background-color: rgb(86, 94, 94);
+}
+
+
+.left-b,
+.right-b{
+    flex: 1;
+    flex-direction: column;
+    width: 100%;
+    border: none;
+    margin: 0px 10px;
+}
+
+
+
+.central-b{
+    flex: 2;
+    flex-direction: column;
+    background-color: rgb(86, 94, 94);
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    margin: 0px 15px;
+    width: fit-content;
+}
+
+.first-c{
+    background-color: rgb(51, 53, 54);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.box-c{
+    background-color: rgb(51, 53, 54);
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex: 1;
+    text-align: center;
+    padding: 10px; 
+    border-bottom: 0.5px solid rgb(165, 156, 156);  
+}
+.first-c div:first-child{
+    border-bottom: 1px solid white;
+    color: white;
+}
+div.stories{
+    background-color: rgb(51, 53, 54);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+.stories img{
+    width: 100px;
+    border-radius: 5px ;
+    margin: 5px;
+
+}
+
+.second-c{
+    flex-direction: row;
+    display: flex;
+    width: 100%;
+    background-color: rgb(51, 53, 54);
+    margin-top: 20px;
+    padding: 10px;
+    align-items: center;
+    border-bottom: 0.5px solid rgb(165, 156, 156);
+
+}
+
+.second-c img{
+    border-radius: 50%;
+}
+
+.second-c input{
+    margin-left: 5px;
+    width: 100%;
+    height: 30px;
+    background-color: gray;
+    border-radius: 33px;
+}
+
+
+

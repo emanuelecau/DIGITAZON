@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ex-replit-2</title>
+  </head>
+  <body>
+    <script>
+      // scrivere una funzione chiamata addUpFromNumber che
+      // dato un numero positivo in input
+      // ritorni la somma di tutti i numeri da 1 fino al numero passato
+
+      // ad esempio: con 4 ritornerebbe 1 + 2 + 3 + 4 = 10
+
+      // so che se io facessi un ciclo che parte da 0 e si ferma a n
+      // stampando la sua n[i] avrei la sua storyboard crescente
+      // devo salvare la storyboard
+      // concatenarla in questo modo storyboard 'n[i]' + 'n' = n[i]+n
+      //
+
+      function addUpFromNumber(n) {
+        let story = "";
+        let sum = 0;
+        for (let i = 1; i < n; i++) {
+          sum += i;
+          story += i + " + ";
+        }
+
+        return `${story}${n} = ${sum + n}`;
+      }
+      console.log(addUpFromNumber(7));
+      console.log("---------------------");
+
+      // scrivere una funzione chiamata alfabetoStrambo che
+      // data una stringa in ingresso
+      // ritorni una copia della stringa modificata come negli esempi
+
+      // ad esempio con "ciao a tutti" ritorna "ciaoro ara tuttiri"
+      // ad esempio con "" ritorna ""
+      // ad esempio con "ad esempio" ritorna "ad esempioro"
+      // ad esempio con "funziona solo con vocali alla fine" ritorna
+      // "funzionara soloro con vocaliri allara finere"
+
+      //dopo aver creato la funzione
+      // creare un array che contiene tutte le vocali
+      // ci servirà per usarlo come condizione i un if
+      // dichiariamo una variabile che prende il valore di
+      // in forma sarebbe se la parola finisce con vocale aggiungi alla fine di essa r+ultimo carattere
+
+
+      //modi per risolvere il problema 
+      //1 senza .split
+
+      function alfabetoStrambo(s) {
+        let parola = '';
+        let array = [];
+        let vocali = ['a','e','i','o','u']
+        for (let i = 0; i < s.length; i++) {
+          if (s[i] == ' ' && vocali.includes(s[i-1]) ) {
+            parola += s[i] + 'r' + s[i -1]
+          } else {
+            parola += s[i]
+          }
+          
+        }
+        return parola
+      }
+      
+      console.log(alfabetoStrambo("ad maiora ella cum vino"));
+
+      //2 usando il .split
+
+      function alfabetoStrambo(s) {
+        let word = s.split(' ')
+        let vocali = ["a", "e", "i", "o", "u"];
+        let parolara= ''
+        for (let i = 0; i < word.length; i++) {
+          
+          if(word[i].charAt(word[i].length-1) && vocali.includes(word[i].charAt(word[i].length -1))){
+          parolara += word[i] + 'r' + word[i].charAt(word[i].length -1) + ' '
+          
+        } else {
+          parolara += word[i] + ' '
+        }
+      }
+        return parolara
+         
+      }
+      console.log(alfabetoStrambo("ad maiora cum aere"));
+      // adesso bisogna scoprire come far capire alla funzione di aggiungere +r+ultimavocale
+      //anche quando la nostra stringa pur essendo unica e composta da più parole separate da spazzi
+      console.log("------------------------------");
+
+      // scrivere una funzione chiamata algebra che
+      // dato un array di interi
+      // ritorni il prodotto degli elementi di indice pari a cui vengono
+      // sottratti tutti gli elementi di indice dispari
+
+      // ad esempio: con [1, 2, 3, 4] ritornerebbe 3 - 6 = -3
+
+      //creo due variabili una per i pari una per i dispari
+      // le variabili partono da 0 e mi servono per sommare nella prima i numeri pari dell arr
+      // nella seconda i numeri dispari dell arr
+      // farò un ciclo per controllare gli indici dell' arrai
+      // da qui dividerò nelle due variabili i numeri mettendo una condizione di parità o disparità in un if
+      // che gonfierà una variabile e con l'else gonfierà l' altra
+      // ritorno la differenza delle due variabili
+
+      function algebra(arr) {
+        let odd = 0;
+        let even = 0;
+        for (let i = 0; i < arr.length; i++) {
+          let indix = arr[i];
+          if (indix % 2 == 0) {
+            odd += indix;
+          } else {
+            even += indix;
+          }
+        }
+        return `${odd} - ${even} = ${odd - even}`;
+      }
+
+      console.log(algebra([1, 4, 7, 9, 12, 3, 8, 21]));
+      console.log("-------------------------------");
+
+      // scrivere una funzione chiamata arraySwap che
+      // dato un array di interi
+      // ritorni un nuovo array dove, partendo da 0, il valore alla posizione i
+      // e il valore alla posizione i + 1 sono invertiti di posizione
+
+      // ad esempio: con [5, 6] ritornerebbe [6, 5]
+      // ad esempio: con [1, 2, 3, 4] ritornerebbe [2, 1, 4, 3]
+      // ad esempio: con [7, 8, 9] ritornerebbe [8, 7, 9] perche' il 9 non puo'
+      // essere scambiato con niente siccome l'array e' terminato
+
+      // creo la mia funzione
+      //creo una variabile che sarà un array vuoto
+      //faccio un ciclo sul mio array parametro
+      //pusho con ordine i+1, i a ogni iterazione dentro la mia varibile vuota così da unirli in un nuovo array
+      //finito
+
+      // potrei agire su numeri pari e dispari dell array così da ordinarli secondo una precisa sequenza binaria
+      function arraySwap(myArray) {
+        let temp = [];
+        let primo 
+        let secondo
+        
+        for (let i = 0; i < myArray.length; i++) {
+          primo = myArray[i]
+          secondo = myArray[i+1]
+          if (i % 2 == 0 ) {
+            if ( secondo == undefined) {
+              temp.push(primo)
+            } else{
+              temp.push(secondo,primo)
+            }
+          } 
+          }
+        return temp
+      }
+      
+      console.log(arraySwap([1, 2, 3, 4, 5]));
+      console.log(arraySwap([1, 2, 3, 4]));
+      console.log(arraySwap([1,2]));
+      //   let matrix = [];
+
+      //   for (let i = 0; i < arr.length; i++) {
+      //     if (i % 2 == 0) {
+      //       arr[i].slice().reverse();
+      //       matrix.push(arr[i]);
+      //     }
+      //   }
+
+      //   return matrix;
+      // }
+      // console.log(arraySwap([3, 4, 5, 6]));
+      console.log("-----------------------");
+
+      // scrivere una funzione chiamata concatAll che
+      // dato in ingresso un numero variabile di array
+      // ritorni un nuovo array che e' la concatenazione di tutti gli array
+      // passati
+
+      // ad esempio: con [1] [2] [3] ritornerebbe [1,2,3]
+      // ad esempio: con [1, 2, 3, 4] ritornerebbe [1, 2, 3, 4]
+      // ad esempio: con [1, 2, 3] [1, 2] [3] ritornerebbe [1, 2, 3, 1, 2, 3]
+
+      function concatAll(...arrs) {
+    let matrix = [];
+    matrix += arrs;
+    return matrix.split(',')
+  }
+
+      function concatAll(...arrs) {
+        let newAr = []
+        let matrix = [];
+        matrix += arrs;
+        matrix = matrix.split(',')
+        newAr.push(matrix)
+      
+        return newAr;
+        
+      }
+
+      console.log(concatAll([4, 6], [7], [2, 8]));
+      console.log(concatAll([7], [4, 6, 9, 10], [8888]));
+      console.log("-------------------------");
+
+
+
+
+
+
+
+
+      // scrivere una funzione chiamata createRandomSortedArray che
+      // dato un numero n in ingresso
+      // ritorni un array ordinato in
+      // modo crescente lungo n che
+      // contiene numeri casuali compresi tra 0 e 1,
+      // estremi esclusi
+
+      // ad esempio per 3 puo' ritornare
+      // [0.29576384904091846, 0.8219993580808898, 0.99213923917851]
+      // "puo'" perche' i numeri devono essere casuali
+      // ad esempio per 0 ritorna []
+      // ad esempio per -1 ritorna []
+
+      function createRandomSortedArray(n) {
+    let ar=[]
+    let arSort=[]
+    let min
+    for (let i = 0; i < n; i++) {
+     ar.push(Math.random())
+        
+    }
+    return ar.sort()
+  }
+  let numero=6
+  console.log(createRandomSortedArray(numero));
+  console.log('------------------------------------');
+
+  // scrivere una funzione chiamata fattoriale che 
+// dato un numero in ingresso
+// ritorni il fattoriale di quel numero
+
+// ad esempio per 3 deve ritornare 6
+// ad esempio per 4 deve ritornare 24
+
+// https://en.wikipedia.org/wiki/Factorial
+
+function fattoriale(n) {
+  let number = n
+  for (let i = 1; i < n; i++) {
+    number = number * i
+    
+  }
+  return number
+
+}
+console.log(fattoriale(4)); 
+console.log('--------------------------');
+
+// scrivere una funzione chiamata firstMatrix che 
+// dato un array e un numero n
+// ritorni una matrice con l'array riprodotto n volte
+
+// ad esempio con [1,2,3] e 3 ritorna [[1,2,3],[1,2,3],[1,2,3]]
+// ad esempio con [1,2] e 1 ritorna [1,2]
+// ad esempio con [1,2,3,4] e 0 ritorna []
+
+function firstMatrix(arr, n) {
+  let matrix = []
+  let arry = [] 
+  let matrixArry = []
+  for (let i = 0; i < arr.length; i++) {
+    matrix.push(arr[i])
+    
+  }
+  arry.push(matrix)
+  for (let x = arry.length; x < n; x++) { 
+    arry.push(matrix)
+  }
+  return arry
+}
+console.log(firstMatrix([1,3,5],4));
+console.log('---------------------------------------------');
+
+// scrivere una funzione chiamata intersection che 
+// dati due array di interi
+// ritorni un array che rappresenti l'intersezione di questi array
+
+// ad esempio con [1,2,3] e [4,5,6] ritorna []
+// ad esempio con [1,2] e [2,3] ritorna [2]
+
+
+function intersection(a, b) {
+  let inter = []
+  for (let i = 0; i < a.length; i++) {
+    for (let j = 0; j < b.length; j++) {
+      if (a[i] == b[j]){
+        inter.push(a[i]);
+      } else{
+        
+      }
+      
+    }
+    
+  }
+  return inter
+
+}
+console.log(intersection([1,2,3,4],[4,5,6,7]));
+console.log(intersection([1,2,3,4],[5,6,7]));
+console.log('--------------------------------------');
+
+
+// scrivere una funzione chiamata isHomogeneous che 
+// dato un array di elementi in ingresso
+// ritorni true se l'array contiene elementi tutti dello stesso tipo
+// o false altrimenti
+
+function isHomogeneous(arr) {
+  let og = true
+  for (let i = 0; i < arr.length; i++) {
+    
+    if(typeof arr[i] == typeof arr[1] ){
+       og = true
+    } else{
+      og = false
+    }
+    
+  }
+  return og
+}
+console.log(isHomogeneous(['ciao',34,false,null]));
+console.log(isHomogeneous(['ciao','come','stai']));
+console.log(isHomogeneous(['ciao','come',33]));
+console.log('----------------------------------');
+
+
+
+// scrivere una funzione chiamata largestSwap
+// che prende in ingresso un numero di due cifre,
+// ritorna true se e' il piu' grande dei due possibili scambi di
+// cifre, false altrimenti
+
+// ad esempio per 27 deve ritornare false perche' posso invertire 
+// le due cifre per ottere 72
+// ad esempio per 43 deve ritornare true perche' 34 sarebbe minore
+
+function largestSwap(n) {
+  let string = n.toString()
+  let numeroInvert = ''
+  console.log(string);
+
+  for (let i = string.length -1; i >=0; i--) {
+    numeroInvert+= string[i]
+
+   
+    
+  }
+  if (numeroInvert > n) {
+    return false
+  } else if (numeroInvert == n){
+    return 'i numeri della cifra sono uguali'
+  }
+    return true
+}
+console.log(largestSwap(67));
+console.log(largestSwap(76));
+console.log(largestSwap(77));
+console.log('----------------------------------');
+
+// scrivere una funzione chiamata mapsUnion che 
+// date due mappe (in JS chiamate anche oggetti) in ingresso
+// ritorni una mappa (o oggetto) che contenga tutte le chiavi e 
+// tutti i valori delle due mappe
+// in caso di chiavi duplicate deve rimanere il valore della 
+// seconda mappa (o oggetto)
+
+// e' una funzione che volendo si puo' scrivere in una riga sola
+
+function mapsUnion(m1, m2) {
+  m2.forEach(function(v,k){
+    if(!m1.has(k)){
+      m1.set(k,v)
+    }
+  })
+return m1
+}
+
+
+let mapy = new Map ([['name','tony'],['surname', 'bis'],['age',23]])
+let mapet = new Map ([['name','giga'],['nickname', 'biggy'],['bornY',1995]])
+console.log(mapsUnion(mapy,mapet));
+console.log('------------------------------');
+
+// scrivere una funzione chiamata removeVowels che 
+// data una stringa in ingresso
+// ritorna la stringa senza le vocali
+
+// suggerimento, ritornate una nuova stringa senza tentare di 
+// modificare la stringa originale
+
+// ad esempio "ciao" deve ritornare "c"
+// ad esempio "aeiou" deve ritornare ""
+// ad esempio "esercizio" deve ritornare "srcz"
+
+function removeVowels(string) {
+  let word = ''
+
+  for (let i = 0; i < string.length; i++) {
+
+    if (string[i] == 'a' || string[i] == 'e' || string[i] == 'i' || string[i] == 'o' || string[i] == 'u') {
+      
+    } else{
+      word+= string[i]
+    }
+    
+  //   if(!string[i].includes('a' || 'e' || 'i' || 'o' || 'u')){
+  // word+= string[i]
+
+  // } 
+  }
+  return word
+}
+console.log(removeVowels('annamaria'));
+console.log('-------------------------------------');
+
+
+
+// scrivere una funzione chiamata reverse che 
+// data una stringa in ingresso
+// ritorni la stringa inversa
+
+// ad esempio "ciao" deve ritornare "oaic"
+// ad esempio "Jessica" deve ritornare "acisseJ"
+
+
+// function reverse(string) {
+//   let word = ''
+//   for(let i = string.length-1;i>=0;i--){
+// word+= string[i]
+//   }
+//   return word
+// }
+// console.log(reverse('regina'));
+
+function reverse(string){
+  
+  return string.split('').reverse().join('')
+}
+
+
+console.log(reverse('laPIttuRa'));
+
+console.log('--------------------------');
+// scrivere una funzione chiamata union che 
+// dati due array di interi
+// ritorni un array che rappresenti l'unione di questi array
+
+// ad esempio con [1,2,3] e [4,5,6] ritorna [1,2,3,4,5,6]
+
+function union(arr1, arr2) {
+  let matrix = []
+  matrix.push(arr1,arr2)
+  return matrix
+}
+
+console.log(union([1,2,3],[3,2,1]));
+
+
+
+
+
+
+    </script>
+  </body>
+</html>

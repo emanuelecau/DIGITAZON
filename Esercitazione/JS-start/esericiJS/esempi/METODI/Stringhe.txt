@@ -1,0 +1,54 @@
+                                            
+                                            
+                                            
+                                            
+                                                        ------------Metodi delle stringhe------------
+
+
+
+
+                    charAt(index) - Restituisce il carattere in una posizione specifica della stringa.
+
+                    charCodeAt(index) - Restituisce il codice Unicode del carattere in una posizione specifica della stringa.
+
+                    concat(str1, str2, ..., strN) - Unisce due o più stringhe e restituisce il risultato.
+
+                    endsWith(searchString[, length]) - Verifica se una stringa termina con una specifica sottostringa.
+
+                    fromCharCode(charCode1, charCode2, ..., charCodeN) - Restituisce una stringa creata da una sequenza di codici Unicode specificati.
+
+                    includes(searchString[, position]) - Verifica se una stringa contiene una specifica sottostringa.
+
+                    indexOf(searchValue[, fromIndex]) - Restituisce l'indice della prima occorrenza di una specifica sottostringa all'interno della stringa.
+
+                    lastIndexOf(searchValue[, fromIndex]) - Restituisce l'indice dell'ultima occorrenza di una specifica sottostringa all'interno della stringa.
+
+                    localeCompare(compareString[, locales[, options]]) - Confronta due stringhe in base all'ordinamento locale.
+
+                    match(regexp) - Restituisce un array contenente tutte le corrispondenze di una espressione regolare nella stringa.
+
+                    normalize([form]) - Restituisce una stringa normalizzata in base alla forma specificata.
+
+                    padEnd(targetLength[, padString]) - Aggiunge caratteri alla fine di una stringa fino a raggiungere la lunghezza specificata.
+
+                    padStart(targetLength[, padString]) - Aggiunge caratteri all'inizio di una stringa fino a raggiungere la lunghezza specificata.
+
+                    repeat(count) - Restituisce una stringa contenente una ripetizione del valore specificato.
+
+                    replace(searchValue, replaceValue) - Sostituisce la prima occorrenza di una specifica sottostringa con un'altra stringa o un valore.
+
+                    replaceAll(searchValue, replaceValue) - Sostituisce tutte le occorrenze di una specifica sottostringa con un'altra stringa o un valore.
+
+                    slice(beginIndex[, endIndex]) - Restituisce una porzione di una stringa, specificando l'indice di inizio e fine.
+
+                    split([separator[, limit]]) - Divide una stringa in un array di sottostringhe, utilizzando un separatore opzionale.
+
+                    startsWith(searchString[, position]) - Verifica se una stringa inizia con una specifica sottostringa.
+
+                    substr(start[, length]) - Restituisce una porzione di una stringa, specificando l'indice di inizio e la lunghezza.
+
+                    substring(indexStart[, indexEnd]) - Restituisce una porzione di una stringa, specificando l'indice di inizio e fine.
+
+                    toLocaleLowerCase([locales[, options]]) - Restituisce una stringa convertita in minuscolo in base all'ordinamento locale.
+
+                    toLocaleUpperCase([locales[, options]]) - Restituisce una stringa convertita in maiuscolo

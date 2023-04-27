@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rep3</title>
+</head>
+<body>
+    <script>
+
+
+    // scrivere una funzione chiamata chessboard
+    // che prende in ingresso un numero l,
+    // la funzione deve ritornare una matrice quadrata lunga l 
+    // contenente '#' e ' ', opportunamente alternati, che rappresentino 
+    // una scacchiera di lato l 
+
+    // la prima casella deve essere un '#'
+
+    // speudo codice
+    //creo la mia funzione che prende un numero come parametro
+    //creo una variabile che sarà la mia matrice
+    // un altra variabile che rappresenterà la mia riga di lunghezza l 
+
+    //[PRIMA TROVO LA PRIMA RIGA]
+
+        //faccio un ciclo for che va da 0 a <l
+        // metterò una condizione if i pari riga.push(#)
+        // se dispari riga.push(' ')
+
+        // finito ciclo pusho in matrix
+
+    // a questo punto devo creare un ulteriore funzione che stampi invece le altre righe
+    //le altre righe dovranno partire alternate ovvero da ' ' poi da pari ovvero da #
+    // questo fino a = l
+    // per invertire questo processo dovrò sicuramente creare una variabile booleana 
+    
+// function chessboard(l) {
+// let matrix =[]
+// let riga = []
+
+// for (let i = 0; i < l; i++) {
+//    if(i % 2 == 0){
+//     riga.push('#')
+//    }else{
+//     riga.push(' ')
+//    }
+
+// }
+// // matrix.push(riga)
+// // console.log(riga);
+// for (let j = 0; j < riga.length; j++) {
+    
+//     if (riga[j] == ' ') {
+//      console.log(riga.reverse()); matrix.push(riga.reverse())  
+//     }else if (riga[j] == '#') {
+//       console.log(riga); matrix.push(riga) 
+//     }
+    
+// }
+
+
+// return matrix
+
+// }
+
+// console.log(chessboard(4));
+
+
+
+function chessboard(l) {
+let matrix =[]
+let riga = []
+
+for (let i = 0; i < l; i++) {
+   if(i % 2 == 0){
+    riga.push('#')
+   }else{
+    riga.push(' ')
+   }
+}
+for (let j = 0; j < riga.length; j++) {
+    // if (j % 2  == 0) {
+     riga.reverse()
+     console.log(riga); 
+     matrix.push([...riga])
+    // }else {
+    //   console.log(riga); 
+    //   matrix.push(riga) 
+    // }
+}
+return matrix
+}
+
+// devo stampare l righe
+// ogni riga avra' lunghezza l
+// per tenere in memoria da cosa sono partito la volta precedente utilizzo una variabile,
+// la chiamo ULTIMO e assegno il valore ' '
+// ciclo da 0 a l escluso per ottenere le righe
+//   creo la riga
+//   ciclo da 0 a l escluso per ottnere il "dettaglio" di una riga
+//     costruisco la riga
+//     se ULTIMO e' '#'
+//       ULTIMO diventa ' '
+//     altrimenti
+//       ULTIMO diventa '#'
+//   pusho nella matrice
+function chessboard2(l) {
+    let chessboard = []
+    let ultimo = ' '
+    for (let i = 0; i < l; i++) {
+        let riga = []
+        for (let j = 0; j < l; j++) {
+            if (ultimo === '#') {
+                ultimo = ' '
+            } else {
+                ultimo = '#'
+            } 
+            riga.push(ultimo)
+        }
+        chessboard.push(riga)
+    }
+    return chessboard
+}
+
+console.log(chessboard2(5))
+
+
+console.log(chessboard(4));
+
+// stampare una scacchiera
+
+// per stampare una riga:
+// ricevo in ingresso l, che e' la lunghezza della riga
+// inizio con il cancelletto e lo memorizzo in RIGA
+// ULTIMO e' true
+// ciclo da 0 a l escluso
+//   metto dentro RIGA un cerchio se ULTIMO e' true
+//   oppure metto dentro RIGA un cancelletto se ULTIMO e' false
+//   inverto ULTIMO
+// ho finito
+
+// function row(l, toggle) {
+//   let riga = ''
+//   for (let i = 0; i < l; i++) {
+//     if (toggle) {
+//       riga += ' '
+//     } else {
+//       riga += '#'
+//     }
+//     toggle = !toggle
+//   }
+//   return riga
+// }
+
+// disegnare la scacchiera
+// utilizzo row chiamandolo l volte
+// detto in altro modo: ciclo l volte e ad ogni iterazione chiamo row passandogli l e stampo il risultato
+
+// function chessboard(l) {
+//   let toggle = false
+//   for (let i = 0; i < l; i++) {
+//     console.log(row(l, toggle))
+//     toggle = !toggle
+//   }
+// }
+
+// chessboard(6)
+
+
+
+
+// scrivere una funzione chiamata filterString
+// che prende in ingresso una funzione e una stringa
+// la funzione filterString deve ritornare una nuova stringa
+// le cui lettere sono presenti solo se 
+// l'applicazione della funzione alla i-esima lettera
+// restituisce true
+
+// ad esempio per l => l == "a" e "abc" deve 
+// ritornare "a"
+// ad esempio per l => l == "c" e "bbbbb" deve 
+// ritornare ""
+// ad esempio per l => l != "c"e "cabbac"  deve 
+// ritornare "abba"
+
+function filterString(funx, str,) {
+    let stringa = ''
+    for (let i = 0; i < str.length; i++) {
+       let lettera = str[i]
+        if(funx(lettera)){
+            stringa+= lettera
+        }
+    }
+    return stringa
+}                        
+                        //function(l){return l == 'a'}
+console.log(filterString(l => l == "a",'pappa')); 
+
+
+// scrivere una funzione chiamata findLongestSubstring
+// che prende in ingresso una stringa
+// la funzione deve ritornare la stringa piu' lunga che non ha 
+// ripetizioni
+
+// ad esempio per "abcabcbb" deve ritornare "abc"
+// ad esempio per "bbbbb" deve ritornare "b"
+// ad esempio per "pwwkew" deve ritornare "wke"
+
+function findLongestSubstring(string) {
+    let stringa = ''
+    let set = new Set()
+    for (let i = 0; i < string.length; i++) {
+        set.add(string[i])
+        
+    }
+    set.forEach(function (el){
+        stringa += el
+    })
+    
+    return stringa
+}
+console.log(findLongestSubstring('mammammmiaa'));
+
+    //FATTO DA SALVA A LEZIONE
+
+    function findLongestSubstring2(string) {
+        let result =''
+        let corrent = ''
+        for (let i = 0; i < string.length; i++) {
+            corrent += string[i]
+            for (let j = i+1; j < string.length; j++) {
+                if (result.includes(string[j])) {
+                    if (corrent.length > result.length) {
+                        result = corrent
+                        
+                    }
+                    corrent = ''
+                    break
+                    
+                }
+                corrent += string[j]
+                 
+            }
+            
+        }
+        return result
+    }
+
+    console.log(findLongestSubstring2('casesssroma'));
+
+// scrivere una funzione chiamata firstSum
+// che prende in ingresso un array e un numero,
+// la funzione deve ritornare la prima coppia di numeri la cui 
+// somma e' pari al numero passato come argomento
+
+// suggerimento: per ritornare una coppia di numeri utilizzate
+// un array, chiaramente a lunghezza 2
+
+function firstSum(arr, n) {
+    let ar=[]
+ for (let i = 0; i < arr.length; i++) {
+    for (let j = i +1; j < arr.length; j++) {
+        if (arr[i] + arr[j] == n) {
+            ar.push(arr[i], arr[j])
+        }
+        
+    }
+    
+ }
+    return ar
+}
+console.log(firstSum([2,3,4,5,6],10));
+
+
+// scrivere una funzione chiamata isPalindrome che 
+// data una parola 
+// ritorni true se e' palindroma, false altrimenti
+
+// ad esempio con "ciao" ritorna false
+// ad esempio con "abba" ritorna true
+// ad esempio con "ada" ritorna true
+// ad esempio con "1234321" ritorna true
+// ad esempio con "123321" ritorna true
+// ad esempio con "123421" ritorna false
+
+function isPalindrome(string) {
+    for (let i = 0; i < string.length; i++) {
+        for(let j = string.length-1 ; j>=0; j--){
+           if(string[i] == string[j]){
+            return true
+           } else{
+            return false
+           }
+        }
+        
+        
+    }
+}
+console.log(isPalindrome('ana')); 
+
+// scrivere una funzione chiamata mapString
+// che prende in ingresso una funzione e una stringa
+// la funzione mapString deve ritornare una nuova stringa
+// le cui lettere sono il risultato dell'applicazione
+// della funzione all'i-esima lettera
+
+// ad esempio per l => l + "a" e "bbb" deve 
+// ritornare "bababa"
+// ad esempio per l => l e "bbb" deve 
+// ritornare "bbb"
+// ad esempio per l => "-" + l + "-" e "abc" deve 
+// ritornare "-a--b--c-"
+
+function mapString(funx, str) {
+    let newString = ''
+    for (let i = 0; i < str.length; i++) {
+        let lettera = str[i]
+        newString += funx(lettera) // SI SCRIVE COSI' PERCHE' IL RISULTATO DELLA MIA NUOVA STRINGA E' UNA CONCATENAZIONE DI INDICI DELLA STRINGA + OPERAZIONE DELLA FUNZIONE SU DI ESSI
+    }
+    return newString
+}
+
+// SE PASSO UNA FUNZIONE COME PARAMETRO UNA FUNZIONE 
+//QUANDO RICHIAMERO' LA FUNZIONE MADRE ESSA AVRA' UNA FUNZIONE DICHIARATA COME ARGOMENTO 
+//CHE FARA' UN DETERMINATO TIPO DI OPERAZIONE 
+// ES. l => l + "a" IN QUESTO CASO DATO UN PARAMETRO STRINGA ALLA FUNZIONE 
+// ESSA AGGIUNGERA' LA STRINGA 'A' ALLA STRINGA PASSATA COME PARAMETRO
+
+console.log(mapString(l => l + "a",'bbb')); 
+console.log(mapString( l => "-" + l + "-",'bbb'));
+console.log(mapString( l => l,'bbb'));
+console.log('ciao'? true : false);
+console.log(''? true : false);
+
+
+
+// scrivere una funzione chiamata mergeSortedArrays che 
+// dati due array ordinati in ingresso
+// ritorni un unico array ordinato
+
+// non si puo' usare il metodo sort
+
+// ad esempio per [1,2,3] e [4,5] ritorna [1,2,3,4,5]
+// ad esempio per [5,9] e [1,6,7] ritorna [1,5,6,7,9]
+
+// function mergeSortedArrays(arr1,arr2){
+//     let unico = addArray(arr1,arr2)
+    
+//     let min= unico[0]
+    
+//     let newArr=[]
+//     for (let i = 0; i < unico.length; i++) {
+//         if (unico[i]<min) {
+//             min = unico[i] 
+//             newArr.push(min) 
+            
+//         }
+//     }
+//     console.log(unico);
+//     unico.splice(unico.indexOf(min),1)
+    
+//     console.log(unico);
+   
+    
+
+
+//     return newArr
+// }
+
+
+function mergeSortedArrays(arr1,arr2){
+    let unico = addArray(arr1,arr2)
+    let max = unico[0]
+    let min= unico[0]
+    let pos=0
+    let newArr=[]
+ 
+for (let x = 0; x < unico.length; x++) {
+    if (unico[x]>max) {
+    max = unico[x] 
+}
+}
+for (let j = 0; j < unico.length; j++) {
+    for (let i = 0; i < unico.length; i++) {
+        if(unico[i]!= null){
+            if (unico[i]<min) {
+            min = unico[i] 
+            pos = i
+            
+            } 
+        }
+        
+    }
+      
+newArr.push(min);
+unico[pos]=null 
+min = max   
+
+}
+return newArr
+    
+}                        // [null,5,3,null,7,4]
+console.log(mergeSortedArrays([2,5,3],[1,7,4]));
+// funzione somma array
+// pusho nel mio array il suo valore min momentaneo in quell iterazione
+// dichiariamo quindi che nell array iniziale la posizione del numero min che corrisponde a min stesso diventa valore null in modo da cancellarlo dall array iniziale e poter rifare il ciclo in modo da trovare il secondo più piccolo e a sua volta dargli la sua posizione i dare all newArr quindi il suo valore e mettere null nella posizione dell array unico originale e così via per tutto il ciclo 
+//mettendo il valore di max a min mi permette di ricominciare il ciclo ridefinendo il nuovo valore min 
+function addArray(ar1,ar2){
+    let matrix = []
+    for (let i = 0; i < ar1.length; i++) {
+        matrix.push(ar1[i])
+    }
+    for (let x = 0; x < ar2.length; x++) {
+        matrix.push(ar2[x])
+        
+    }
+    return matrix
+
+}
+console.log(addArray([2,5,3],[1,7,4]));
+
+
+
+
+
+ 
+
+// sorting an array
+
+
+// const least_num = (arr)=>{
+//   let smallest = arr[0];
+//   let smallest_index = 0;
+//   for(let i=1; i<arr.length;i++){
+//     if (arr[i] < smallest) {
+//       smallest = arr[i];
+//       smallest_index = i;
+//     }
+//   }
+//   return smallest_index
+// }
+
+
+// const sortArray = (arr)=>{
+//     const newArr = [];
+//     while(arr.length) {
+//         let smallest = least_num(arr);
+//         console.log(smallest)
+//         newArr.push(...arr.splice(smallest,1));
+//         console.log(arr)
+//     }
+//     return newArr;
+// }
+
+// console.log(sortArray([5,4,3,2,1]));
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //   <!-- // Ex 2
+      // Creare una funzione parseShape che prende in ingresso un oggetto che abbia questo template:
+      // { x: number, y: number, name: string }
+      // e produca un ouput relativo ad area e perimetro, in base al valore della proprietà name che stabilisce il tipo di figura geometrica in uso.
+      // Richiamare la funzione due volte con:
+
+      // const quadrato = {x: 5, x:4, shape: 'square'}
+      // const rettangolo = {x: 5, x:4, shape: 'rectangle'}
+      // per stampare area e perimetro di quadrato e rettangolo.
+      // ---------------------------------------------------------------
+
+      const quadrato = { x: 5, y: 5, shape: "square" };
+      const rettangolo = { x: 5, y: 4, shape: "rectangle" };
+
+      function parseShape(object) {
+        if (object == quadrato) {
+          return `${quadrato.shape} ha area ${quadrato.x} e perimetro ${quadrato.y}`;
+        } else if (object == rettangolo) {
+          return `${rettangolo.shape} ha area ${rettangolo.x} e perimetro ${rettangolo.y}`;
+        }
+        return `la figura in questione non è un rettangolo ne un quadrato`;
+      }
+      parseShape(quadrato);
+
+      console.log(parseShape(rettangolo));
+    </script>
+  </body>
+</html>

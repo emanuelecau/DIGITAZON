@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // [
+      //     {
+      //         "name": "mario",
+      //         "active": true,
+      //         "feat": {
+      //             "role": "protagonist"
+      //         }
+      //     },
+      //     {
+      //         "name": "luigi",
+      //         "active": true,
+      //         "feat": {
+      //             "role": "protagonist"
+      //         }
+      //     },
+      //     {
+      //         "name": "wario",
+      //         "active": false,
+      //         "feat": {
+      //             "role": "antagonist"
+      //         }
+      //     },
+      //     {
+      //         "name": "yoshi",
+      //         "active": false,
+      //         "feat": {
+      //             "role": "protagonist"
+      //         }
+      //     }
+      // ]
+      // creare una funzione getInfo che, preso in ingresso l'array di oggetti ottenuto dal JSON, mi dice:
+      // - quanti protagonisti ci sono nell'array
+      // - quanti protagonisti attivi ci sono nell'array
+      // - quanti antagonisti ci sono nell'array
+      let json = `
+      [
+          {
+              "name": "mario",
+              "active": true,
+              "feat": {
+                  "role": "protagonist"
+              }
+          },
+          {
+              "name": "luigi",
+              "active": true,
+              "feat": {
+                  "role": "protagonist"
+              }
+          },
+          {
+              "name": "wario",
+              "active": false,
+              "feat": {
+                  "role": "antagonist"
+              }
+          },
+          {
+              "name": "yoshi",
+              "active": false,
+              "feat": {
+                  "role": "protagonist"
+              }
+          }
+      ]`;
+      //   creare una funzione getInfo che, preso in ingresso l'array di oggetti ottenuto dal JSON, mi dice:
+      // - quanti protagonisti ci sono nell'array
+      // - quanti protagonisti attivi ci sono nell'array
+      // - quanti antagonisti ci sono nell'array
+
+      const jsonObj = JSON.parse(json);
+      // console.log(jsonObj);
+      // console.log(jsonObj[0].feat.role);
+      let roles = "";
+      let pro = 0;
+      let player = "";
+      let ant = 0;
+      let active = "";
+      let actPlayer = 0;
+      let inactiveP = 0;
+
+      function getInfo(params) {
+        for (let i = 0; i < params.length; i++) {
+          roles = params[i].feat.role;
+          active = params[i].active;
+          if (roles == "protagonist") {
+            pro++;
+            player += params[i].name + " ";
+          } else if (roles == "antagonist") {
+            ant++;
+          }
+          if (active == true) {
+            actPlayer++;
+          } else inactiveP++;
+        }
+
+        console.log("-----------------");
+        console.log(`there are ${pro} protagonist ${player}   `);
+        console.log("-----------------");
+        console.log(`there is ${ant} antagonist `);
+        console.log("-----------------");
+        console.log(`the are ${actPlayer} active player in the game `);
+        console.log("-----------------");
+        console.log(inactiveP);
+      }
+
+      getInfo(jsonObj);
+    </script>
+  </body>
+</html>

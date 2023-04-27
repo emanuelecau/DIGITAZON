@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // scrivere una funzione chiamata findLongestSubstring
+// che prende in ingresso una stringa
+// la funzione deve ritornare la stringa piu' lunga che non ha 
+// ripetizioni
+
+function findLongestSubstring(string){
+    let moment = ''
+    let memory = ''
+    for (let i = 0; i < string.length; i++) {
+        for (let x = 0; x < string.length; x++) {
+            if(moment.includes(string[x])){
+                if(moment.length > memory.length){
+                    memory = moment
+                }
+                moment = ''
+                break
+            }
+            moment+=string[x]
+        }
+        
+    }
+    return memory
+}
+console.log(findLongestSubstring('pappardella'));
+
+//SOLUZIONE GIADINA
+
+function findLongestSubstring(s){
+    let parola=''
+    let res=''
+    for (let i = 0; i < s.length; i++) {
+        const lettera = s[i];
+        if(parola.includes(lettera)){
+            if(parola.length>res.length){
+                res=parola
+            }
+            parola=''
+        }else{
+            parola+=lettera
+        }
+    }
+    if(parola.length>res.length){
+        res=parola
+    }
+    return res
+}
+    </script>
+</body>
+</html>

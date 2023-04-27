@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      .container {
+        width: 100%;
+        height: 200vh;
+        background-color: rgb(139, 84, 65);
+        color: whitesmoke;
+        display: flex;
+
+        padding: 5px;
+      }
+      .firstSec {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        text-align: center;
+      }
+      div.box {
+        text-align: center;
+        display: flex;
+        flex: 1;
+        padding-top: 10px;
+      }
+      .box {
+        margin: 10px;
+        padding-top: 10px;
+        width: 100%;
+        font-size: large;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        background-color: darkorange;
+        color: whitesmoke;
+        padding: 5px;
+        gap: 10px;
+        border: 1px solid black;
+      }
+      span {
+        display: flex;
+        width: 40%;
+        flex-direction: column;
+      }
+    </style>
+  </head>
+  <h1 style="text-align: center; margin-top: 60px">DIZIONARIO/GLOSSARIO</h1>
+  <h4 style="text-align: center">metodi a confronto fra le strutture JS</h4>
+  <hr />
+  <body>
+    <div class="container">
+      <div class="firstSec">
+        <div class="box">
+          <h2>MAPPE</h2>
+          <article style="">
+            <span>map.set(key,value)</span>
+            <span>map.get(key||value)</span>
+            <span>map.has(key||value)</span>
+            <span>map.delete(key||value)</span>
+            <span>map.clear()</span>
+            <span>map.size(key||value)</span>
+            <span>map.keys(key||value)</span>
+            <span>map.entries(key||value)</span>
+            <span>map.values(key||value)</span>
+            <span>map.forEach(callback[thisArg])</span>
+          </article>
+          <article></article>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facebook</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+        <style type="text/tailwindcss">
+            @layer base {
+               
+            }
+
+            @layer components {
+              .left-voice {
+                @apply flex gap-2 items-center;
+              }
+
+              .left-voice img {
+                @apply rounded-lg w-12 h-12;
+              }
+
+              .reel {
+                @apply bg-blue-800 w-24 h-36 rounded-lg bg-cover text-sm flex items-end justify-center pb-2 bg-center;
+              }
+            }
+        </style>
+    </head>
+
+<body>
+
+    <header class="p-4 bg-slate-800 flex justify-between">
+        <div class=" flex gap-4">
+            <img src="assets/images/fb-img/logo.png" alt="fb logo">
+
+            <input type="text" class="bg-gray-600 rounded-lg p-1 px-3 self-center" placeholder="Cerca su Facebook">
+        </div>
+
+        <div class="">
+            <div class="flex gap-2 items-center">
+                <img src="assets/images/fb-img/home.png" alt="">
+                <img src="assets/images/fb-img/omini.png" alt="">
+                <img src="assets/images/fb-img/tv.png" alt="">
+                <img src="assets/images/fb-img/casina.png" alt="">
+                <img src="assets/images/fb-img/giochi.png" alt="">
+            </div>
+        </div>
+
+        <div class="flex items-center">
+            <img src="assets/images/fb-img/roba.png" alt="">
+        </div>
+    </header>
+
+    <section class="flex bg-black text-white">
+        <div class="w-3/12 p-4 flex flex-col gap-4">
+            <div class="left-voice">
+                <img src="assets/images/fb-img/user.png" alt="">
+                <div>Mario Rossi</div>
+            </div>
+
+            <div class="left-voice mt-10">
+                <img src="assets/images/fb-img/amici.png" alt="">
+                <div>Amici</div>
+            </div>
+
+            <div class="left-voice">
+                <img src="assets/images/fb-img/recenti.png" alt="">
+                <div>Più recenti</div>
+            </div>
+            <div class="left-voice">
+                <img src="assets/images/fb-img/gruppi.png" alt="">
+                <div>Gruppi</div>
+            </div>
+            <div class="left-voice">
+                <img src="assets/images/fb-img/market.png" alt="">
+                <div>Marketing</div>
+            </div>
+            <div class="left-voice">
+                <img src="assets/images/fb-img/watch.png" alt="">
+                <div>Watch</div>
+            </div>
+            <div class="left-voice">
+                <img src="assets/images/fb-img/ricordi.png" alt="">
+                <div>Ricordi</div>
+            </div>
+            <div class="left-voice">
+                <img src="assets/images/fb-img/elementi.png" alt="">
+                <div>Elementi salvati</div>
+            </div>
+            <div class="left-voice">
+                <img src="assets/images/fb-img/pagine.png" alt="">
+                <div>Pagine</div>
+            </div>
+            <div class="left-voice">
+                <img src="assets/images/fb-img/v.png" alt="">
+                <div>Altro...</div>
+            </div>
+
+            <div class="border-t border-gray-700"></div>
+
+            <div>
+                <div class="text-gray-300">I tuoi collegamenti rapidi</div>
+            </div>
+        </div>
+
+        <div class="w-6/12 p-4">
+            <div class="p-4 bg-slate-800 rounded-lg text-center">
+                <div class="flex">
+                    <div class="w-1/2 border-b-2 border-blue-800">
+                        <img src="assets/images/fb-img/storie.png" alt="" class="mx-auto">
+                    </div>
+                    <div class="w-1/2">
+                        <img src="assets/images/fb-img/reels.png" alt="" class="mx-auto">
+                    </div>
+                </div>
+
+                <div class="flex gap-2 mt-4">
+                    <div class="reel bg-[url('https://cdn.pixabay.com/photo/2016/10/21/14/50/plouzane-1758197__480.jpg')]">
+
+                        <div class="flex flex-col gap-1 justify-center">
+                            <button class="bg-blue-400 text-white rounded-full">+</button>
+                            <div>Sea</div>
+                        </div>
+                    </div>
+                    <div class="reel bg-[url('https://www.artemedialab.it/wp-content/uploads/2019/04/immagini-sfondo-1-700x400.jpg')]">
+
+                        <div>Flower</div>
+                    </div>
+                    <div class="reel bg-[url('https://imgp.clickiocdn.com/ZDEgBG9UmpIvbjeZVYAvjlc2FkhdS1JYOa6ZxDuS4uc/rs:fill:500:0/g:ce/q:70/aHR0cHM6Ly93d3cuY2hpbWVyYXJldm8uY29tL3dwLWNvbnRlbnQvdXBsb2Fkcy8yMDIwLzA0L2ltbWFnaW5pLWdyYXRpcy5qcGc')]">
+
+                        <div>Tree</div>
+                    </div>
+                    <div class="reel bg-[url('https://images.corsidia.com/ckeditor/pictures/data/000/000/086/content/immagini-e-tabelle-html-00.jpg')]">
+
+                        <div>Dog</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="p-4 bg-slate-800 rounded-lg mt-4">
+                <div class="flex gap-2 items-center">
+                    <div>
+                        <img src="assets/images/fb-img/user.png" alt="" class="w-12 h-12 rounded-lg">
+                    </div>
+                    <div class="w-full">
+                        <input placeholder="A cosa stai pensando Mario Rossi?" type="text" class="bg-gray-600 rounded-lg p-1 px-2 w-full">
+                    </div>
+                </div>
+
+                <div class="border-t border-gray-700 mt-2">
+                    <div class="flex text-center pt-4">
+                        <div class="w-1/3 text-red-400">
+                            Video in diretta
+                        </div>
+                        <div class="w-1/3 text-green-400">
+                            Foto/video
+                        </div>
+                        <div class="w-1/3 text-yellow-400">
+                            Stato d'animo/attività
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- news 1 -->
+            <div class="p-4 bg-slate-800 rounded-lg mt-4">
+                <div class="flex justify-between items-center">
+                    <div class="flex gap-4">
+                        <img src="assets/images/fb-img/user.png" alt="" class="w-12 h-12 rounded-lg">
+                        <div class="flex flex-col">
+                            <span>Il Socio ACI</span>
+                            <span class="text-xs text-gray-400">1 h</span>
+                        </div>
+                    </div>
+    
+                    <div class="flex self-start">
+                        <img src="assets/images/fb-img/points.png" alt="" class="w-6 h-6 rounded-lg">
+                        <img src="assets/images/fb-img/close.png" alt="" class="w-6 h-6 rounded-lg">
+                    </div>
+                </div>
+
+                <div class="mt-4 text-gray-300 text-sm">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni, recusandae vero quisquam explicabo pariatur ex nulla totam laudantium adipisci assumenda voluptates, odio odit tempore nam id! Dignissimos ipsum quidem cumque?
+                </div>
+
+                <div>
+                    <img src="https://images.corsidia.com/ckeditor/pictures/data/000/000/086/content/immagini-e-tabelle-html-00.jpg" alt="" class="mt-4 w-full">
+                </div>
+            </div>
+
+             <!-- news 2 -->
+             <div class="p-4 bg-slate-800 rounded-lg mt-4">
+                <div class="flex justify-between items-center">
+                    <div class="flex gap-4">
+                        <img src="assets/images/fb-img/user.png" alt="" class="w-12 h-12 rounded-lg">
+                        <div class="flex flex-col">
+                            <span>Flowers</span>
+                            <span class="text-xs text-gray-400">1 h</span>
+                        </div>
+                    </div>
+    
+                    <div class="flex self-start">
+                        <img src="assets/images/fb-img/points.png" alt="" class="w-6 h-6 rounded-lg">
+                        <img src="assets/images/fb-img/close.png" alt="" class="w-6 h-6 rounded-lg">
+                    </div>
+                </div>
+
+                <div class="mt-4 text-gray-300 text-sm">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni, recusandae vero quisquam explicabo pariatur ex nulla totam laudantium adipisci assumenda voluptates, odio odit tempore nam id! Dignissimos ipsum quidem cumque?
+                </div>
+
+                <div>
+                    <img src="https://www.artemedialab.it/wp-content/uploads/2019/04/immagini-sfondo-1-700x400.jpg" alt="" class="mt-4 w-full">
+                </div>
+            </div>
+
+
+        </div>
+
+        <div class="w-3/12 p-4">
+            <div>
+                <div>Contatti</div>
+            </div>
+            <div class="flex flex-col gap-4 mt-10">
+                <div class="flex gap-4 items-center">
+                    <div class="w-6 h-6 rounded-full bg-white"></div>
+                    <div>Luigi Verdi</div>
+                </div>
+
+                <div class="flex gap-4 items-center">
+                    <div class="w-6 h-6 rounded-full bg-white"></div>
+                    <div>Daisy Yellow</div>
+                </div>
+
+                <div class="flex gap-4 items-center">
+                    <div class="w-6 h-6 rounded-full bg-white"></div>
+                    <div>Peach Pink</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+</body>
+</html>

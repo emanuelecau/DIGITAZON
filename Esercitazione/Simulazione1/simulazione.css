@@ -22,7 +22,8 @@
     left: 0;
     bottom: 0;
     top: 0;
-
+    border-right: 1px solid orange;
+    
 }
 
 nav{
@@ -354,6 +355,7 @@ h4{
 }
 .music-dx li p{
     margin-left: 14px;
+    
 }
 
 .music-dx div{
@@ -371,10 +373,11 @@ h4{
 }
 
 .music-dx button{
-    margin-left: 15px;
+    margin-left: 70px;
     width: 150px;
     margin-top: 10px;
     margin-bottom: 15px;
+    
 }
 
 li:hover,
@@ -449,3 +452,4 @@ div.fot-dx{
     justify-content: space-around;
     align-content: flex-end;
 }
+

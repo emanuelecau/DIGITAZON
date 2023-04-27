@@ -1,0 +1,27 @@
+
+span.red{
+    color: crimson;
+}
+div.green{
+    background-color: green;
+}
+
+.green{
+    background-color: greenyellow;
+}
+
+.red{
+    color: red;
+}
+
+div{
+    width: 100%;
+}
+span{
+    width: 100%;
+
+}
+
+nav{
+    width: 100%;
+}

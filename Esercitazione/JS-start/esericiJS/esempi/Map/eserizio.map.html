@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>map</title>
+  </head>
+  <body>
+    <script>
+      //         Ex 1
+      // creare una funzione compareMap che accetta in ingresso due mappe.
+      // La funzione restituisce true SE le due mappe sono mappe, SE hanno lo stesso numero di elementi e per le stesse chiavi, gli stessi valori.
+      // Testare il funzionamento di compareMap passando due mappe diverse nella prima chiamata, e due mappe uguali nella seconda chiamata
+      // -----------------------------------------------------------
+
+      // -----------------------------------------------------------
+      // Ex 3
+      // realizzare la funzione uniqueArray che prende in ingresso un array e rimuove tutti gli elementi duplicati, restituendo un nuovo array privo quindi di valori duplicati.
+      // Chiamare la funzione con il valore [10, 'ciao', 20, 'ciao', 'javascript', 10] e stampare in output il nuovo valore
+      // -----------------------------------------------------------
+      // Ex 4
+      // realizzare due istanze di Map che rappresentano due studenti che abbiano la seguente struttura:
+      // - name, lastname, rates
+      // dove name e lastname sono stringhe e rates è un array di 5 numeri
+      // assegnare valori a piacere per ogni chiave, es mario rossi 4, 5, 6, 4, 3 e luigi verdi 8, 7, 4, 9, 9
+      // creare la funzione bestStudent, che prende in ingresso due mappe che rappresentano uno studente, e restituisce il nome e il cognome dello studente che ha la media voto migliore tra i due.
+      // Richiamare questa funzione passando le due mappe create precedentemente
+      // -----------------------------------------------------------
+
+      // creare una funzione compareMap che accetta in ingresso due mappe.
+      // La funzione restituisce true SE le due mappe sono mappe, SE hanno lo stesso numero di elementi e per le stesse chiavi, gli stessi valori.
+      // Testare il funzionamento di compareMap passando due mappe diverse nella prima chiamata, e due mappe uguali nella seconda chiamata
+
+      const m1 = new Map([["name", ["jhonny"]]]);
+      const m2 = new Map([["name", ["jhonny"]]]);
+      const m3 = new Map([["job", ["broker"]]]);
+
+      console.log(compareMap(m1, m3));
+      compareMap(m1, m2);
+      console.log("---------------------------");
+      // Ex 2
+      // creare una funzione compareSet che accetta in ingresso due set.
+      // La funzione restituisce true SE i due set sono set, SE hanno lo stesso numero di elementi e  gli stessi valori.
+      // Testare il funzionamento di compareSet passando due set diversi nella prima chiamata, e due set uguali nella seconda chiamata
+      const n1 = new Set([1, 4]);
+      const n2 = new Set([1, 4]);
+      const n3 = new Set([3, 7, 5]);
+      let vaar = false;
+      function compareSet(x, y) {
+        if (
+          x instanceof Set == y instanceof Set &&
+          x.size == y.size &&
+          x.has(1) == y.has(1)
+        ) {
+          //   x.forEach() == y.forEach()
+          vaar = true;
+          console.log(vaar);
+          console.log("i Set sono uguali");
+        } else {
+          verify = false;
+          console.log("i due Set non sono uguali");
+        }
+      }
+
+      console.log(compareSet(n1, n3));
+      compareSet(n1, n2);
+      console.log("---------------------------");
+
+      // Ex 3
+      // realizzare la funzione uniqueArray che prende in ingresso un array e rimuove tutti gli elementi duplicati, restituendo un nuovo array privo quindi di valori duplicati.
+      // Chiamare la funzione con il valore [10, 'ciao', 20, 'ciao', 'javascript', 10] e stampare in output il nuovo valore
+
+      // function uniqueArray(params) {
+      //   let unico = [];
+      //   for (let i = 0; i < params.length; i++) {
+      //     if (unico.indexOf(params[i]) === -1) {
+      //       unico.push(params[i]);
+      //     }
+      //   }
+      //   console.log(unico);
+      // }
+
+      // uniqueArray([10, "ciao", 20, "ciao", "javascript", 10]);
+
+      function uniqueArray(params) {
+        let unico = [];
+        for (let i = 0; i < params.length; i++) {
+          unico += params[i];
+          unico = new Set(params);
+        }
+        console.log(unico);
+      }
+
+      uniqueArray([10, "ciao", 20, "ciao", "javascript", 10]);
+
+      //   function uniqueArray(params) {
+      //     console.log(params);
+      //     return [new Set(params)];
+      //   }
+      //   console.log(uniqueArray(params));
+
+      //   uniqueArray([10, "ciao", 20, "ciao", "javascript", 10]);
+
+      // realizzare due istanze di Map che rappresentano due studenti che abbiano la seguente struttura:
+      // - name, lastname, rates
+      // dove name e lastname sono stringhe e rates è un array di 5 numeri
+      // assegnare valori a piacere per ogni chiave, es mario rossi 4, 5, 6, 4, 3 e luigi verdi 8, 7, 4, 9, 9
+      // creare la funzione bestStudent, che prende in ingresso due mappe che rappresentano uno studente, e restituisce il nome e il cognome dello studente che ha la media voto migliore tra i due.
+
+      const student1 = new Map([
+        ["name", "Mario"],
+        ["surname", "Scotti"],
+        ["rates", [30, 25, 18, 28]],
+      ]);
+      const student2 = new Map([
+        ["name", "Anna"],
+        ["surname", "Ballas"],
+        ["rates", [30, 29, 20, 23]],
+      ]);
+
+      function bestStudent(a, b) {}
+      bestStudent(student1, student2);
+    </script>
+  </body>
+</html>

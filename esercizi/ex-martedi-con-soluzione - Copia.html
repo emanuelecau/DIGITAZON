@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        // ex 1
+        // trovare la stringa più lunga tra due stringhe salvate in 2 variabili e stamparla in output con l'aggiunta del messaggio 'la stringa più lunga è:'
+
+
+        const s1 = 'digitazon'
+        const s2 = 'mela'
+
+        if( s1 > s2 ) {
+            console.log( 'stringa più lunga è:' + s1 )
+        }
+        else {
+            console.log( 'stringa più lunga è:' + s2 )
+        }
+    </script>
+
+    <script>
+        // ex 2
+        // crea una variabile stringa con un valore a piacere e stampa i suoi caratteri invertiti separati da -, su un'unica riga
+        // es mela -> a-l-e-m
+
+        const s3 = 'mela'
+        console.log( 
+            s3.charAt(3) + '-' +
+            s3.charAt(2) + '-' +
+            s3.charAt(1) + '-' +
+            s3.charAt(0) 
+        )
+    </script>
+
+    <script>
+        // ex 3
+        // crea due variabili x e y con valori a piacere.
+        // se x è minore o uguale a y, stampa green.
+        // in quel contesto se y è uguale a zero, stampa red.
+        // se è maggiore di y, stampa blue
+
+        const x = 10, y = 5
+        if( x <= y ) {
+
+            console.log('green');
+
+            if( y == 0 ) {
+                console.log('red');
+            }
+
+        }
+        else {
+            console.log('blue');
+        }
+    </script>
+
+    <script>
+        // ex 4
+        // date due variabili con valori 'kiwi' e 'banana', stampa in output
+        // il seguente risultato (la prima e la terza lettera della prima string concatenata ad un underscore e alla seconda stringa maiuscola):
+        // kw_BANANA
+
+        const s4 = 'kiwi', s5 = 'banana'
+        console.log( s4.charAt(0) + s4.charAt(1) + '_' + s5.toUpperCase() );
+    </script>
+
+    <script>
+        // ex 5
+        // crea un complesso di controlli condizionali a piacere per stampare in output un risultato, a patto di utilizzare:
+        // almeno un else-if, almeno un if innestato, almeno una comparazione per valore di stringa
+
+        const s6 = 'mela', s7 = 10, s8 = 4
+
+        if( s6 == 'kiwi' ) {
+            if( s7 > s8 ) {
+                console.log('red');
+            }
+        }
+        else if( s6 == 'mela' ) {
+            console.log(s7 + s8);
+        }
+    </script>
+    
+</body>
+</html>

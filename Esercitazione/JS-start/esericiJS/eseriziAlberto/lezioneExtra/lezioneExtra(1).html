@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //data una stringa in ingresso la funzione deve calcolare
+      //la sottostringa palindroma piu lunga
+      // es. abba 1abba1 c ''
+
+      //PSEUDOCODICE-------------------
+      //scrivere una stringa
+      //scrivere una funzione di nome inverti
+      //scrivo un for che parte dall'ultimo carattere e si avvicina al primo
+      //ad ogni ciclo inserisce la corrente letterra del ciclo in una nuova stringa
+
+      function inverti(a) {
+        let b = "";
+        for (let i = a.length - 1; i >= 0; i--) {
+          b += a[i];
+        }
+        return b;
+      }
+
+      function palindroma(a) {
+        return a == inverti(a);
+      }
+
+      console.log(palindroma("esse"));
+      console.log("--------------");
+
+      //funzione somma
+
+      function numbers(arr, n) {
+        for (let i = 0; i < arr.length; i++) {
+          for (let j = i + 1; j < arr.length; j++) {
+            if (arr[i] + arr[j] == n) {
+              return [i, j];
+            }
+          }
+        }
+        return [];
+      }
+      console.log(numbers([10, 20, 30, 40, 50], 80));
+      console.log("--------------------");
+
+      // scrivere una funzione che prende in ingresso una stringa che contiene
+      // un numero in notazione romana,deve tradurlo in notazione araba
+
+      // pseudocodice
+      // creo la funzione e il suo richiamo
+      // come parametro ha una stringa
+      // devo creare una variabile che mi servirà a restituire la risposta
+      // creo una mappa per tradurre i caratteri che trovo nella stringa del parametro
+      // riempo la mappa con i caratteri romani
+      // controllo se esiste corrispondenza del carattere corrente nel parametro con una delle chiavi nella mappa
+      // se si, prendo il valore corrispondente a quella chiave e lo memorizzo nella variabile risultato
+      // se ci sono altri caratteri da controllare sommo il risultato alla variabile
+      // se il carattere corrente è preceduto da un carattere che corrisponde ad un numero piu piccolo
+
+      function romaniToArab(numRomano) {
+        let result = 0;
+        let map = new Map([
+          ["x", 10],
+          ["v", 5],
+          ["i", 1],
+        ]);
+        for (let i = 0; i < numRomano.length; i++) {
+          let current = numRomano[i];
+          let pre = numRomano[i - 1];
+          if (map.has(current)) {
+            if (current > pre) {
+              result -= map.get(current);
+              result = Math.abs(result);
+            } else {
+              result += map.get(current);
+            }
+          }
+        }
+        return result;
+      }
+
+      console.log(romaniToArab("viii"));
+    </script>
+  </body>
+</html>

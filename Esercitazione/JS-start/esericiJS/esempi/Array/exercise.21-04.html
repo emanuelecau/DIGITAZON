@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      /*
+        Ex 1
+
+        creare un array in cui occorre includere 5 dati di tipi diversi:
+        - un letterale oggetto con proprietà x: 10 e y: 5
+        - un numero (100)
+        - una stringa ("javascript")
+        - una mappa ("label" -> "sono una mappa")
+        - un array [40, 50, 60]
+
+        Iterare sull'array esterno con un foreach e...
+        se l'elemento corrente è...
+
+        un letterale oggetto, stampa la somma delle sue proprietà x e y
+
+        un numero, controlla se è > 100 scrivi red, altrimenti blue
+
+        una stringa, stampa il suo primo carattere
+
+        una mappa, stampa il valore della sua proprietà "label", se ce l'ha
+
+        un array, stampa i numeri in ordine inverso
+        */
+
+      let array = [
+        { x: 10, y: 5 },
+        100,
+        "javascript",
+        new Map([["label", "sono una mappa"]]),
+        [40, 50, 60],
+      ];
+
+      array.forEach(function (n) {
+        if (n instanceof Object) {
+          console.log(n.x + n.y);
+        }
+        if (n instanceof Array) {
+          console.log(" sono un array invertito " + n.reverse());
+        }
+        if (typeof n == "number") {
+          if (n > 100) {
+            console.log("red");
+          } else {
+            console.log("blue");
+          }
+        }
+        if (typeof n == "string") {
+          console.log(n.charAt(0));
+        }
+        if (n instanceof Map) {
+          if (n.has("label")) {
+            console.log(n.get("label"));
+          }
+        }
+      });
+    </script>
+  </body>
+</html>

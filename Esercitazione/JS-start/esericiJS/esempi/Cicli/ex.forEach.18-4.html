@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      /*
+      Ex 1
+
+      Creare un array che è composto da 3 oggetti, che rappresentano dei rettangoli, e avranno le proprietà base e altezza (numeri).
+      Crea quindi 3 oggetti che rappresentano 3 rettangoli con le caratteristiche indicate, mettili in un array.
+      Cicla questo array SIA con un foreach PRIMA che con un for DOPO, per stampare l'area di ogni rettangolo (ad ogni iterazione)
+      */
+
+      const myrect = [
+        { name: "triangolo1", base: 30, altezza: 20 },
+        { name: "triangolo2", base: 300, altezza: 200 },
+        { name: "triangolo3", base: 60, altezza: 40 },
+      ];
+
+      myrect.forEach(function (el) {
+        console.log(
+          `il triangolo ${el.name} ha un area ${(el.base * el.altezza) / 2} `
+        );
+      });
+      console.log("------------------------------");
+      for (let i = 0; i < myrect.length; i++) {
+        console.log(
+          "il triangolo " +
+            myrect[i].name +
+            "ha area " +
+            (myrect[i].base * myrect[i].altezza) / 2
+        );
+      }
+    </script>
+  </body>
+</html>

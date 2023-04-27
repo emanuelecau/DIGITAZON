@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // Scrivere una funzione che dato in ingresso un numero, ritorni il fattoriale di quel numero.
+      // 5!=5*4*3*2*1
+      // pseudo codice
+
+      // quello che ho fatto io
+      function fac(numb) {
+        // let n = 0;
+        for (let i = numb - 1; i >= 1; i--) {
+          // n += numb * i;
+          numb = numb * i;
+          console.log(numb);
+          // console.log(n);
+        }
+
+        return numb;
+      }
+      console.log(fac(5));
+      console.log("--------------------");
+
+      // procedimenti visti dal link di davide
+
+      function factor(n) {
+        let fact = n;
+        if (n === 0 || n === 1) {
+          return 1;
+        }
+        while (n > 1) {
+          n--;
+          fact = fact * n;
+        }
+        return fact;
+      }
+      console.log(factor(5));
+
+      function factorialize(num) {
+        if (num < 0) return -1;
+        else if (num == 0) return 1;
+        else {
+          return num * factorialize(num - 1);
+        }
+      }
+      console.log(factorialize(5));
+
+      function wat(a) {
+        if (!a) {
+          return 1;
+        }
+
+        return 2;
+      }
+      wat();
+
+      function sum(mat) {
+        let sium = 0;
+        for (let i = 0; i < mat.length; i++) {
+          for (let x = 0; x < mat[i].length; x++) {
+            sium += mat[i][x];
+          }
+        }
+        return sium;
+      }
+
+      function conCat(x) {
+        let pari = "";
+        let dispari = "";
+        let newString = "";
+        for (let i = 0; i < x.length; i++) {
+          //DEVO AGIRE SUI SUOI INDICI PER CAPIRE QUALI SONO PARI
+          //GLI INDICI HANNO NUMERI MAAA SE FACESSI X[I] STAREI AGENDO SULLA LETTERA
+          // QUINDI I = INDICE NUMERICO X[I] = VALORE DI QUELL INDICE
+          // SE HO UN INSIEME DI NUMERI E CAPIRE QUALI SONO DISPARI ALLORA POTREI AGIRE SU X[I]
+          // MA SE HO DELLE LETTERE DOVRò AGIRE SOLO SUL LORO INDICE
+          if (i % 2 == 0) {
+            pari += x[i];
+            console.log(pari);
+          } else {
+            dispari += x[i];
+            console.log(dispari);
+          }
+
+          newString = pari + dispari;
+        }
+        return newString;
+      }
+      console.log(conCat("gandalf"));
+
+      // come creare la clessidra o una ripetizione di numeri stile
+      // x
+      //xxx
+      //xxxxx
+      // pseudo codice
+      //
+
+      // funzione di filippo
+      function tri(n) {
+        for (let i = 1; i < 2 * n; i++) {
+          let a = "";
+          for (let j = 0; j < n - Math.abs(n - i); j++) {
+            a += "x";
+          }
+          console.log(a);
+        }
+      }
+      tri(4);
+
+      // versione ricorsiva filippo
+      function tri(n) {
+        if (n <= 0) return;
+        else {
+          let a = "";
+          for (let i = 0; i < n; i++) {
+            a += "x";
+          }
+          return tri(n - 1) + console.log(a);
+        }
+      }
+      tri(5);
+    </script>
+  </body>
+</html>
