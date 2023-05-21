@@ -1,0 +1,85 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+
+.App {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.container {
+  display: flex;
+  width: 70%;
+  height: 80%;
+  align-items: center;
+  justify-content: space-around;
+}
+
+
+.home {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: space-around;
+}
+
+
+.navbar {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-between;
+}
+
+
+ul {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+
+ul li {
+  list-style-type: none;
+  border: 1px solid;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+s .body {
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+  border: 1px solid;
+  height: 100%;
+  overflow: scroll;
+  border-radius: 10px;
+}
+
+.commentsList {
+  width: 80%;
+  height: 100%;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+
+}
+
+
+
+.body h2 {
+  text-align: center;
+  width: 90%;
+}
